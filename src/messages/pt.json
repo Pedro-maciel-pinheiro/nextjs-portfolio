@@ -1,8 +1,12 @@
-
-
 {
-    "Home":{
-     "title":"Ola Mundo",
-     "description":"sou um desenvolvedor front-end criando experiências para a web transformando ideias em realidade digital"
-}
-}
+    "home": {
+      "title": "Olá mundo",
+      "description": "Sou um desenvolvedor front-end criando experiências para a web, transformando ideias em realidade digital."
+    },
+    "nav": {
+      "home": "Início",
+      "projects": "Projetos",
+      "about": "Sobre"
+    }
+  }
+  

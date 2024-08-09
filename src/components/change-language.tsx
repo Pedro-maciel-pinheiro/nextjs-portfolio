@@ -1,20 +1,29 @@
 "use client";
 
-import { Link, usePathname } from "@/navigation";
+import { useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
+import { ChangeEvent, useTransition } from "react";
 
 export const ChangeLanguage = () => {
-  const pathname = usePathname();
+  const [isPanding, startTransition] = useTransition();
+  const router = useRouter();
+  const localPath = useLocale();
+  const onSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    const nextLocale = e.target.value;
+    startTransition(() => {
+      router.replace(`/${nextLocale}`);
+    });
+  };
   return (
-    <div className="flex  gap-4 items-center">
-      <Link href={pathname} locale="en">
-        EN
-      </Link>
-      <Link href={pathname} locale="pt">
-        PT
-      </Link>
-      <Link href={pathname} locale="jp">
-        JP
-      </Link>
-    </div>
+    <select
+      defaultValue={localPath}
+      onChange={onSelectChange}
+      disabled={isPanding}
+      className="bg-transparent dark:bg-black/60  font-semibold border-none text-sm"
+    >
+      <option  value="en">EN</option>
+      <option  value="pt">PT</option>
+      <option  value="jp">JP</option>
+    </select>
   );
 };

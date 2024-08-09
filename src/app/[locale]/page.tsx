@@ -9,11 +9,9 @@ export default function Home() {
   return (
     <main
       className={`w-full flex flex-col justify-center items-center 
-        min-h-screen bg-fixed ${
-          resolvedTheme === "dark" ? "hero-dark" : "hero-light"
-        }`}
+        min-h-screen bg-white/5 dark:bg-black/30  mx-auto`}
     >
-      <Hero />
+      
     </main>
   );
 }
