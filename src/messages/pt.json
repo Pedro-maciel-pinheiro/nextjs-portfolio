@@ -1,12 +1,15 @@
 {
-    "home": {
-      "title": "Olá mundo",
-      "description": "Sou um desenvolvedor front-end criando experiências para a web, transformando ideias em realidade digital."
-    },
-    "nav": {
-      "home": "Início",
-      "projects": "Projetos",
-      "about": "Sobre"
-    }
+  "home": {
+    "description": "Meu nome é Pedro, sou um desenvolvedor com mais de 2 anos de experiência construindo para a web.",
+    "skills-h1": "Tecnologias",
+    "skills-p": "Experiências",
+    "skills-text":"Usando a tecnologia mais recente que este mundo tem a oferecer"
+  },
+  "nav": {
+    "home": "Início",
+    "skills":"Habilidades",
+    "projects": "Projetos",
+    "about": "Sobre",
+    "contact": "Contato"
   }
-  
+}

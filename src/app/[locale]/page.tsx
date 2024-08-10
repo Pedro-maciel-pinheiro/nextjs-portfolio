@@ -1,17 +1,16 @@
-"use client";
-import { useTheme } from "next-themes";
-
-import { Hero } from "./home/hero";
+import About from "./about/page";
+import Contact from "./contact/page";
+import Hero from "./home/hero";
+import Projects from "./projects/page";
 
 export default function Home() {
-  const { resolvedTheme } = useTheme();
-
   return (
     <main
-      className={`w-full flex flex-col justify-center items-center 
-        min-h-screen bg-white/5 dark:bg-black/30  mx-auto`}
+      className={`w-full flex flex-col justify-center items-center  overflow-hidden
+        min-h-screen  mx-auto `}
     >
-      
+      <Hero />
+     
     </main>
   );
 }

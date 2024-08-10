@@ -1,11 +1,15 @@
 {
   "home": {
-    "title": "Hello world",
-    "description": "I'm a front-end developer building experiences for the web, transforming ideas into digital reality."
+    "description": "My name is Pedro, I'm a developer with more than 2 years of experience  building  for the web.",
+    "skills-h1": "Technologies ",
+    "skills-p": "Experiences",
+    "skills-text":"Using the latest tech this world has to offer"
   },
   "nav": {
     "home": "Home",
+    "skills":"Skills",
     "projects": "Projects",
-    "about": "About"
+    "about": "About",
+    "contact": "Contact"
   }
 }
