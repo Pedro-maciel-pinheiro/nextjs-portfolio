@@ -1,6 +1,6 @@
 import { IoShieldCheckmark } from "react-icons/io5";
 import { FaReact } from "react-icons/fa";
-import { TbBrandReactNative ,TbBrandHeadlessui } from "react-icons/tb";
+import { TbBrandReactNative, TbBrandHeadlessui } from "react-icons/tb";
 import {
   SiJavascript,
   SiTypescript,
@@ -14,7 +14,7 @@ import {
   SiSwiper,
   SiMongodb,
   SiCss3,
-  SiWebflow
+  SiWebflow,
 } from "react-icons/si";
 import { AiFillDatabase } from "react-icons/ai";
 import { IconType } from "react-icons/lib";
@@ -107,18 +107,13 @@ export const Skill_data: SkillDataProps[] = [
     href: "https://webflow.com/",
   },
   {
-    skill_name: "Swiper",
-    Image: SiSwiper,
-    href: "https://swiperjs.com/",
-  },
-  {
     skill_name: "Mongodb",
     Image: SiMongodb,
     href: "https://www.mongodb.com",
   },
-  // {
-  //   skill_name: "Neon-tech",
-  //   Image: AiFillDatabase,
-  //   href: "https://neon.tech/",
-  // },
+  {
+    skill_name: "Neon-tech",
+    Image: AiFillDatabase,
+    href: "https://neon.tech/",
+  },
 ];
