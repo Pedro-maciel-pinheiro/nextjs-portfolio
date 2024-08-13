@@ -11,5 +11,20 @@
     "projects": "Projetos",
     "about": "Sobre",
     "contact": "Contato"
+  },
+  "experiences": {
+    "title-1": "Técnico de informática",
+    "title-2": "Jornada de estudos",
+    "title-3": "Desenvolvedor Front-end & Web designer",
+    "dialog-text-1": "Estudei hardware por 2 anos e depois comecei a trabalhar montando PCs e fazendo manutenção",
+    "dialog-text-2": "Foi aqui que comecei a mudar de carreira, mas continuei trabalhando com computadores. Estudei por 2 anos antes de começar a trabalhar como desenvolvedor.",
+    "dialog-text-3": "Agora, trabalho como freelancer fazendo diferentes tipos de trabalho como sites completos e apps usando todas as tecnologias ao lado"
+  },
+  "project": {
+    "main-title": "Projetos",
+    "subtitle": "Aqui está meu projeto mais recente e algumas informações sobre ele",
+    "title-h3": "Tecnologias utilizadas neste projeto",
+    "info-text-1": "Este projeto de e-commerce em Next.js é construído usando React, TypeScript, Redux e Tailwind CSS. Ele possui um catálogo de produtos dinâmico buscado de uma API, com funcionalidades como filtragem por categorias, marcas e preços. A loja Redux gerencia o estado global, garantindo atualizações contínuas entre os componentes.",
+    "info-text-2": "O Tailwind CSS é usado para um design de UI moderno e responsivo. O aplicativo inclui páginas para listagem de produtos, visualização detalhada de produtos, carrinho de compras e checkout, com atualizações em tempo real e desempenho otimizado para uma experiência de usuário fluida em todos os dispositivos."
   }
 }

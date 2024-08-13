@@ -1,12 +1,13 @@
 import React, { MouseEventHandler } from "react";
 
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 interface MaskButtonProps {
   linkBasePath?: any;
   title: string;
   btnColor: string;
-  key?: number;
+
   handleclick?: MouseEventHandler<HTMLButtonElement>;
   disable?: boolean;
 }
@@ -15,13 +16,12 @@ const MaskButton = ({
   title,
   btnColor,
   handleclick,
-  key,
   linkBasePath,
   disable,
 }: MaskButtonProps) => {
   return (
-    <Link href={linkBasePath} key={key} className="">
-      <button
+    <Link href={linkBasePath} className="">
+      <Button
         disabled={disable}
         onClick={handleclick}
         className={`shadow-xl border-2 z-20 
@@ -37,7 +37,7 @@ const MaskButton = ({
          `}
       >
         <p className="absolute z-10 ">{title}</p>
-      </button>
+      </Button>
     </Link>
   );
 };

@@ -3,13 +3,29 @@
     "description": "My name is Pedro, I'm a developer with more than 2 years of experience  building  for the web.",
     "skills-h1": "Technologies ",
     "skills-p": "Experiences",
-    "skills-text":"Using the latest tech this world has to offer"
+    "skills-text": "Using the latest tech this world has to offer"
   },
   "nav": {
     "home": "Home",
-    "skills":"Skills",
+    "skills": "Skills",
     "projects": "Projects",
     "about": "About",
     "contact": "Contact"
+  },
+  "experiences": {
+    "title-1": "Computer technician",
+    "title-2": "Study journey",
+    "title-3": "Front-end developer & Web designer",
+    "dialog-text-1": "I studied hardware for 2 years and then I started working building PC's and doing maintenance",
+    "dialog-text-2": "This is where I started to change careers, but I continued working with computers, I studied for 2 years before starting to work as a developer.",
+    "dialog-text-3": "Now. I work as a freelancer doing different types of work like complete websites and apps using all the technologies alongside"
+  },
+
+  "project": {
+    "main-title": "Projects",
+    "subtitle": "Here is my latest project and some information about it",
+    "title-h3": "Technologies used in this project",
+    "info-text-1": "This Next.js e-commerce project is built using React, TypeScript, Redux, and Tailwind CSS. It features a dynamic product catalog fetched from an API, with functionalities like filtering based on categories, brands, and prices. The Redux store manages the global state, ensuring seamless updates across components.",
+    "info-text-2": "Tailwind CSS is used for responsive, modern UI design. The app includes pages for product listings, detailed product views, shopping cart, and checkout, with real-time updates and optimized performance for a smooth user experience across devices."
   }
 }

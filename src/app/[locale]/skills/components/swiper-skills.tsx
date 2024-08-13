@@ -1,6 +1,6 @@
 "use client";
 
-import { Skill_data } from "@/constant";
+import { Skill_data } from "@/constant/icons-index";
 import { useInViewHook } from "@/hooks/in-view";
 import { motion } from "framer-motion";
 
@@ -12,7 +12,7 @@ export const SwiperSkills = () => {
   return (
     <motion.div
       ref={ref}
-      className="grid grid-cols-4 md:grid-cols-6   gap-4  
+      className="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-6   gap-4  
      items-center justify-center max-w-7xl mx-auto"
     >
       {Skill_data.map((icon, index) => (
@@ -25,13 +25,13 @@ export const SwiperSkills = () => {
         >
           <Link
             href={icon.href}
-            className="flex flex-col items-center justify-center gap-2"
+            className="flex flex-col items-center justify-center gap-2 w-14 md:w-20 h-20"
             target="blank"
           >
             <icon.Image
               size={45}
-              className="rounded-sm hover:scale-105 
-              transition-all duration-300 hover:bg-white"
+              className={`rounded-sm hover:scale-105 
+              transition-all duration-300 ${icon.text_style}`}
             />
             <p className="text-sm font-medium">{icon.skill_name}</p>
           </Link>

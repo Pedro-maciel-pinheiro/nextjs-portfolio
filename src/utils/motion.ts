@@ -74,7 +74,7 @@ export function underlineHeight(duration: number) {
   return {
     hidden: { height: 0 },
     visible: {
-      height: "100%",
+      height: "90%",
       transition: {
         delay: 0.5,
         duration: duration,
@@ -191,7 +191,7 @@ export function fadeIn(delay: number) {
       opacity: 0,
       transition: {
         delay: 0,
-        duration: 0.5,
+        duration: 0.2,
         type: "spring",
         stiffness: 50,
         damping: 20,

@@ -5,7 +5,7 @@ import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/navbar/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
