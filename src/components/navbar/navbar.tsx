@@ -5,6 +5,9 @@ import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 import ThemeSwitch from "../theme-switch";
 import { useEffect, useState } from "react";
+import { Button } from "../ui/button";
+import { DownloadIcon } from "@radix-ui/react-icons";
+import { DownloadResume } from "./download-resume";
 
 const Navbar = () => {
   const [navScroll, setNavScroll] = useState(false);
@@ -30,19 +33,27 @@ const Navbar = () => {
   return (
     <>
       <nav className="w-full  fixed z-50  h-10 ">
+        <DownloadResume/>
+
         <div
           className={`transition-all duration-1000 
-        hidden    lg:flex  rounded-md px-4 
-      items-center justify-between  mx-auto  ${
-        navScroll ? " max-w-7xl bg-white/90 dark:bg-black/90  h-12" : "  max-w-6xl"
+        hidden    lg:flex  rounded-md px-4 relative
+      items-center justify-center  mx-auto  ${
+        navScroll
+          ? " max-w-7xl bg-white/90 dark:bg-black/90  h-12 mt-0"
+          : " max-w-6xl h-8 mt-1"
       }`}
         >
-          <div className="uppercase font-bold">
+          <Link
+            href={"https://www.linkedin.com/in/jpmp1998/"}
+            target="blank"
+            className="uppercase font-bold absolute left-0 px-2 z-10"
+          >
             <h1>Maciel Pinheiro</h1>
-          </div>
+          </Link>
           <ul
             className="flex gap-5 items-center 
-          justify-center font-semibold "
+          justify-center font-semibold z-10"
           >
             <li className="navHover">
               <Link href={"/"}>{t("home")}</Link>
@@ -59,11 +70,12 @@ const Navbar = () => {
             <li className="navHover">
               <Link href={"/contact"}>{t("contact")}</Link>
             </li>
-            <li className="flex items-center">
-              <LanguageSelector />
-              <ThemeSwitch />
-            </li>
           </ul>
+
+          <div className="flex items-center absolute w-full justify-end px-2">
+            <LanguageSelector />
+            <ThemeSwitch />
+          </div>
         </div>
       </nav>
     </>

@@ -6,12 +6,14 @@
 
 
 .navHover {
-  @apply hover:-translate-y-[2px] transition-all duration-300;
+  @apply hover:-translate-y-[2px] transition-all duration-300 hover:underline;
+
 }
 
 body {
   --background-image: var(--background-image-light);
   background-image: var(--background-gradient), var(--background-image);
+ 
 }
 
 .dark body {

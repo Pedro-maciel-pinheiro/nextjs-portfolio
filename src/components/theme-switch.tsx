@@ -20,15 +20,17 @@ export default function ThemeSwitch() {
       alt="Loading Light/Dark Toggle"
       priority={false}
       title="Loading Light/Dark Toggle"
+      
+      
     />
   )
 
   if (resolvedTheme === 'dark') {
-    return <FiMoon onClick={() => setTheme('light')} />
+    return <FiMoon onClick={() => setTheme('light')} className="cursor-pointer"/>
   }
 
   if (resolvedTheme === 'light') {
-    return <FiSun onClick={() => setTheme('dark')} />
+    return <FiSun onClick={() => setTheme('dark')} className="cursor-pointer"/>
   }
 
 }
