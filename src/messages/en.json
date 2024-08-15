@@ -10,8 +10,10 @@
     "skills": "Skills",
     "projects": "Projects",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "resume":"Resume"
   },
+
   "experiences": {
     "title-1": "Computer technician",
     "title-2": "Study journey",
@@ -22,10 +24,23 @@
   },
 
   "project": {
-    "main-title": "Projects",
+    "main-title": "Project E-commerce",
+    "main-title-2": "Project Showcase",
     "subtitle": "Here is my latest project and some information about it",
     "title-h3": "Technologies used in this project",
-    "info-text-1": "This Next.js e-commerce project is built using React, TypeScript, Redux, and Tailwind CSS. It features a dynamic product catalog fetched from an API, with functionalities like filtering based on categories, brands, and prices. The Redux store manages the global state, ensuring seamless updates across components.",
-    "info-text-2": "Tailwind CSS is used for responsive, modern UI design. The app includes pages for product listings, detailed product views, shopping cart, and checkout, with real-time updates and optimized performance for a smooth user experience across devices."
+    "info-text-1": "Next.js e-commerce project is built using React, Next.js, TypeScript, Redux, and Tailwind CSS. It features a dynamic product catalog fetched from an API, with functionalities like filtering based on categories, brands, and prices. The Redux store manages the global state, ensuring seamless updates across components.",
+    "info-text-2": "Tailwind CSS is used for responsive, modern UI design. The app includes pages for product listings, detailed product views, shopping cart, and checkout, with real-time updates and optimized performance for a smooth user experience across devices.",
+    "info-text-3": "The Next.js showcase project uses React, Next.js, TypeScript, and Tailwind CSS. It features a dynamic phone catalog, including iPhone 15 and RedMagic 9 Pro. Showcase pages highlight these phones' unique features with animations created using Framer Motion. The Redux store efficiently manages global state, ensuring real-time updates with filtering options for brand, specs, and price.",
+    "info-text-4": "Tailwind CSS ensures a modern, responsive UI design across devices. The app includes pages for phone listings, detailed views, shopping cart, and checkout, all optimized for performance. Framer Motion provides visually appealing interactions, enhancing the shopping experience."
+  },
+
+  "contact": {
+    "main-title": "Contact",
+    "subtitle": "Email Contact",
+    "name": "Name",
+    "email": "Email",
+    "type": "Type your message",
+    "button": "Send Email",
+    "social":"Social media"
   }
 }

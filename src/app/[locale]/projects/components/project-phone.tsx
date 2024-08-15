@@ -29,7 +29,7 @@ export const ProjectPhone = () => {
       className="w-full h-full"
     >
       {/* images */}
-      <div className="flex flex-col xl:flex-row w-full h-full items-center justify-between">
+      <div className="backdrop-blur-sm flex flex-col xl:flex-row w-full h-full items-center justify-between">
         <motion.div
           variants={fadeIn(1)}
           className="max-w-[100%]  overflow-hidden"
@@ -52,7 +52,7 @@ export const ProjectPhone = () => {
                     alt="projects images"
                     width={1200}
                     height={1200}
-                    className="object-cover md:h-[535px] rounded-sm"
+                    className="object-cover lg:h-[555px] rounded-sm"
                   />
                 </Link>
               </SwiperSlide>
@@ -63,20 +63,20 @@ export const ProjectPhone = () => {
         <div className="flex flex-col items-center justify-center w-full h-full  ">
           <motion.div
             variants={slideInFromRight(0.5)}
-            className="backdrop-blur-2xl h-full w-full md:w-[635px]  
-          mx-auto  border-black dark:border-white shadow-md rounded-lg
-           text-center md:text-start lg:p-4"
+            className=" h-full w-full lg:w-[635px]  
+          mx-auto  border-black dark:border-white  rounded-lg
+           text-center md:text-start lg:p-4 mt-2 mb-2 lg:md:0 lg:mt-0"
           >
             <h3 className="text-2xl md:text-4xl
              font-semibold mb-4 text-center">
               Next.js Phone Shop
             </h3>
-            <p className="font-medium mt-1 mb-4">{t("info-text-1")}</p>
-            <p className="font-medium ">{t("info-text-2")}</p>
+            <p className="font-medium mb-4 mt-1  text-sm md:text-[16px]">{t("info-text-3")}</p>
+            <p className="font-medium hidden md:block md:text-[16px]">{t("info-text-4")}</p>
 
             <div className="flex flex-col justify-center items-center 
              w-full h-full mt-2 border-t-2 border-black dark:border-white">
-              <h3 className="text-xl md:text-2xl font-semibold mt-4">{t("title-h3")}</h3>
+              <h3 className="text-lg md:text-2xl font-semibold mt-4">{t("title-h3")}</h3>
               <motion.section className="grid grid-cols-3 md:flex  items-center justify-start text-sm gap-8 mt-8">
                 {projects_tools_phone.map((item, index) => (
                   <motion.div
@@ -101,7 +101,7 @@ export const ProjectPhone = () => {
             </div>
             <motion.div
               variants={slideInFromBottom(1)}
-              className="flex  w-full items-center justify-evenly mt-4"
+              className="flex  w-full  items-center justify-evenly mt-8"
             >
               <MaskButton
                 title={"Live"}

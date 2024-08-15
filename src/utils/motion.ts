@@ -89,7 +89,7 @@ export function getTransitionProps(delay: number) {
   return {
     transition: {
       delay: delay,
-      duration: 0.2, // Increase duration for a smoother transition
+      duration: 0.1, // Increase duration for a smoother transition
       type: "spring",
       stiffness: 20, // Lower stiffness for a smoother, less rigid spring
       damping: 10, // Increase damping to reduce oscillation
@@ -193,8 +193,8 @@ export function fadeIn(delay: number) {
         delay: 0,
         duration: 0.2,
         type: "spring",
-        stiffness: 50,
-        damping: 20,
+        stiffness: 30,
+        damping: 10,
         mass: 0.5,
       },
     },
