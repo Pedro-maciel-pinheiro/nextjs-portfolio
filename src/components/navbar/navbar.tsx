@@ -120,6 +120,7 @@ const Navbar = () => {
             >
               {Nav_links.map((item, index) => (
                 <motion.li
+                   key={item.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={
                     navIsOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
