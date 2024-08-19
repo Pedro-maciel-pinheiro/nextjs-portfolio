@@ -10,7 +10,6 @@ import "swiper/css/pagination";
 import { EffectFade, Autoplay, Navigation } from "swiper/modules";
 import {
   projects_images_eco,
-  projects_tools_eco,
 } from "@/constant/projects-images";
 import { useTranslations } from "next-intl";
 import { useInViewHook } from "@/hooks/in-view";
@@ -31,7 +30,8 @@ export const ProjectEcommerce = () => {
       className="w-full h-full"
     >
       {/* images */}
-      <div className="backdrop-blur-sm flex flex-col xl:flex-row w-full h-full items-center justify-between">
+      <div className="backdrop-blur-sm  dark:backdrop-blur-none dark:bg-black/50 
+      flex flex-col xl:flex-row w-full h-full items-center justify-between">
         <motion.div
           variants={fadeIn(1)}
           className="max-w-[100%]  overflow-hidden"
@@ -47,7 +47,7 @@ export const ProjectEcommerce = () => {
             className="mySwiper "
           >
             {projects_images_eco.map((item, index) => (
-              <SwiperSlide key={index} className="p-[2px] ">
+              <SwiperSlide key={index} className="p-2 ">
                 <Link
                   href={"https://dev-market-redux.vercel.app/"}
                   target="blank"
@@ -57,7 +57,7 @@ export const ProjectEcommerce = () => {
                     alt="projects images"
                     width={1200}
                     height={1200}
-                    className="object-cover md:h-[555px] rounded-sm"
+                    className="object-cover md:h-[555px] rounded-2xl"
                   />
                 </Link>
               </SwiperSlide>
@@ -89,25 +89,8 @@ export const ProjectEcommerce = () => {
                 {t("title-h3")}
               </h3>
               <motion.section className="grid grid-cols-3 md:flex  items-center justify-start text-sm gap-8 mt-8">
-                {projects_tools_eco.map((item, index) => (
-                  <motion.div
-                    key={item.skill_name}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={
-                      inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
-                    }
-                    transition={{ delay: index * animationDelay, duration: 2 }}
-                    className="flex flex-col items-center  cursor-pointer  text-[12px] md:text-sm "
-                  >
-                    <Link href={item.href} target="blank">
-                      <item.Image
-                        size={35}
-                        className={`${item.text_style} rounded-md`}
-                      />
-                    </Link>
-                    <span>{item.skill_name}</span>
-                  </motion.div>
-                ))}
+               
+                
               </motion.section>
             </div>
             <motion.div

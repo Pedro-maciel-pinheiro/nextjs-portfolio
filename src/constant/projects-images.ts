@@ -21,9 +21,10 @@ import {
 } from "react-icons/si";
 import { TbBrandHeadlessui } from "react-icons/tb";
 
-interface ImagesProps {
+
+export interface ImagesProps {
   id: string;
-  image: StaticImageData;
+  image: StaticImageData 
 }
 
 export const projects_images_eco: ImagesProps[] = [
@@ -62,7 +63,7 @@ export const projects_images_phone: ImagesProps[] = [
     image: image_8,
   },
 ];
-export const projects_tools_eco: SkillDataProps[] = [
+export const projects_icons_eco: SkillDataProps[] = [
   {
     skill_name: "React",
     Image: FaReact,
@@ -107,7 +108,7 @@ export const projects_tools_eco: SkillDataProps[] = [
   },
 ];
 
-export const projects_tools_phone: SkillDataProps[] = [
+export const projects_icons_phone: SkillDataProps[] = [
   {
     skill_name: "React",
     Image: FaReact,
@@ -144,10 +145,5 @@ export const projects_tools_phone: SkillDataProps[] = [
     href: "https://tailwindcss.com/",
     text_style: "hover:text-cyan-500",
   },
-  {
-    skill_name: "Shadcn/ui",
-    Image: SiShadcnui,
-    href: "https://ui.shadcn.com/",
-    text_style: " hover:text-white",
-  },
+  
 ];

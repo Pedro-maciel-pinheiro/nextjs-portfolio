@@ -105,7 +105,7 @@ const Navbar = () => {
       </nav>
 
       {navIsOpen && (
-        <nav className="">
+        <nav className="fixed z-30 mt-6">
           <motion.section
             initial="hidden"
             animate={navIsOpen ? "visible" : "hidden"}

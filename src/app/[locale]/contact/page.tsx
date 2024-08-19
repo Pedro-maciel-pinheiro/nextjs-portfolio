@@ -8,14 +8,14 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useTranslations } from "next-intl";
 import { useInViewHook } from "@/hooks/in-view";
-import { fadeIn } from "@/utils/motion";
+import { fadeIn, slideInFromBottom } from "@/utils/motion";
 import { social_media } from "@/constant/social";
 import Link from "next/link";
 
 export default function Contact() {
   const { ref, inView } = useInViewHook();
   const t = useTranslations("contact");
-  const animationDelay = 0.5
+  const animationDelay = 1;
   async function handleSubmit(event: any) {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -46,27 +46,25 @@ export default function Contact() {
     <>
       <motion.section
         ref={ref}
-        initial={"hidden"}
+        initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="bg-primary dark:bg-black/80 flex flex-col items-center 
-      justify-center min-h-screen w-full "
+        className="flex min-h-screen w-full flex-col items-center justify-center bg-primary dark:bg-black/80"
       >
-        <h1 className="text-4xl lg:text-6xl font-semibold mb-4">
-          {t("main-title")}
-        </h1>
+        <motion.div variants={slideInFromBottom(0.6)}>
+          <h1 className="mb-16 text-4xl font-semibold lg:text-6xl">
+            {t("main-title")}
+          </h1>
+        </motion.div>
         <motion.div
-          variants={fadeIn(1)}
-          className="flex items-center 
-        justify-center w-full max-w-7xl h-full md:h-[600px] border-2
-         border-black dark:border-white rounded-lg bg-white dark:bg-black/50 p-2"
+          variants={slideInFromBottom(0.8)}
+          className="mb-4 grid h-full w-full max-w-[90%] grid-cols-1 items-center justify-center rounded-lg border-2 border-black bg-white p-2 dark:border-white dark:bg-black/50 md:h-[600px] md:max-w-7xl md:grid-cols-2"
         >
           <form
             onSubmit={handleSubmit}
-            className="w-full h-full flex flex-col gap-3 items-center justify-center 
-             max-w-xl text-white dark:text-white font-semibold  rounded-lg bg-black"
+            className="flex h-full w-full max-w-xl flex-col items-center justify-center gap-3 rounded-lg bg-black font-semibold text-white dark:text-white"
           >
-            <h1 className="text-2xl mb-8">{t("subtitle")}</h1>
-            <div className=" flex flex-col items-start justify-center gap-4 w-96">
+            <h1 className="mb-8 text-2xl">{t("subtitle")}</h1>
+            <div className="flex w-full flex-col items-start justify-center gap-4 md:w-96">
               <Label>{t("name")}</Label>
               <Input
                 type="text"
@@ -92,20 +90,20 @@ export default function Contact() {
             </div>
             <Button
               type="submit"
-              className="bg-white text-black dark:bg-white dark:text-black 
-             w-96 mt-4 font-bold"
+              className="mt-4 w-full bg-white font-bold text-black dark:bg-white dark:text-black md:w-96"
             >
               {t("button")}
             </Button>
           </form>
 
-          <div className="w-full h-full  ">
-            <h1 className="text-center text-2xl mt-12 font-semibold">
-            {t("social")}
+          <div className="h-full w-full">
+            <h1 className="mb-4 mt-12 text-center text-2xl font-semibold md:mb-0">
+              {t("social")}
             </h1>
-            <div className="flex flex-col items-center justify-evenly w-full h-96 ">
-              {social_media.map((social,index) => (
+            <div className="flex w-full flex-col items-center justify-evenly gap-3 md:h-96 md:gap-0">
+              {social_media.map((social, index) => (
                 <motion.div
+                  ref={ref}
                   key={social.title}
                   initial={{ opacity: 0, x: 120 }}
                   animate={
@@ -116,8 +114,7 @@ export default function Contact() {
                   <Link
                     href={social.href}
                     target="blank"
-                    className="flex  gap-2 w-48 p-1 items-center rounded-lg
-                    border-2 border-black dark:border-white navHover"
+                    className="navHover flex w-48 items-center gap-2 rounded-lg border-2 border-black p-1 dark:border-white"
                   >
                     <social.icon size={40} className={`${social.style}`} />
                     <span>{social.title}</span>

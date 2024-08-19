@@ -1,14 +1,13 @@
 import React, { MouseEventHandler } from "react";
 
-
 import { Button } from "./ui/button";
 import { Link } from "@/navigation";
 
 interface MaskButtonProps {
-  linkBasePath?: any;
+  linkBasePath: string;
   title: string;
   btnColor: string;
-  target:string
+  target: string;
   handleclick?: MouseEventHandler<HTMLButtonElement>;
   disable?: boolean;
 }
@@ -26,20 +25,9 @@ const MaskButton = ({
       <Button
         disabled={disable}
         onClick={handleclick}
-        className={`shadow-xl border-2 z-20 
-         duration-1000
-         w-28 relative after:h-[50px] after:translate-y-2 
-         after:w-72 overflow-hidden
-         after:bottom-0 after:right-full
-         after:absolute 
-         hover:after:translate-x-full 
-         after:duration-1000 
-         after:rounded-tr-full
-         active:translate-y-1 transition-all
-         ${btnColor}
-         `}
+        className={`relative z-20 w-28 overflow-hidden border-2 shadow-xl transition-all duration-1000 after:absolute after:bottom-0 after:right-full after:h-[50px] after:w-72 after:translate-y-2 after:rounded-tr-full after:duration-1000 hover:after:translate-x-full active:translate-y-1 ${btnColor} `}
       >
-        <p className="absolute z-10 ">{title}</p>
+        <p className="absolute z-10">{title}</p>
       </Button>
     </Link>
   );

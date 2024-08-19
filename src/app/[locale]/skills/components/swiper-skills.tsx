@@ -6,14 +6,14 @@ import { motion } from "framer-motion";
 
 import Link from "next/link";
 
-export const SkillsIcons = () => {
+export const MainSkillsIcons = () => {
   const { ref, inView } = useInViewHook();
   const animationDelay = 0.2;
   return (
     <motion.div
       ref={ref}
-      className="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-6   gap-6 md:gap-4  
-     items-center justify-center max-w-7xl mx-auto "
+      className="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-6   gap-1
+     items-center justify-center  mx-auto "
     >
       {Skill_data.map((icon, index) => (
         <motion.div

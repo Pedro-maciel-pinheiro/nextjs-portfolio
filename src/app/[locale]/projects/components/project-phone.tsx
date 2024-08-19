@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { EffectFade, Autoplay, Navigation } from "swiper/modules";
-import { projects_images_phone,  projects_tools_phone } from "@/constant/projects-images";
+import { projects_icons_phone, projects_images_phone } from "@/constant/projects-images";
 import { useTranslations } from "next-intl";
 import { useInViewHook } from "@/hooks/in-view";
 import { motion } from "framer-motion";
@@ -29,7 +29,7 @@ export const ProjectPhone = () => {
       className="w-full h-full"
     >
       {/* images */}
-      <div className="backdrop-blur-sm flex flex-col xl:flex-row w-full h-full items-center justify-between">
+      <div className="backdrop-blur-sm  dark:backdrop-blur-none dark:bg-black/50 flex flex-col xl:flex-row w-full h-full items-center justify-between">
         <motion.div
           variants={fadeIn(1)}
           className="max-w-[100%]  overflow-hidden"
@@ -45,14 +45,14 @@ export const ProjectPhone = () => {
             className="mySwiper "
           >
             {projects_images_phone.map((item, index) => (
-              <SwiperSlide key={index} className="p-[2px] ">
+              <SwiperSlide key={index} className="p-4 ">
                 <Link href={"https://phone-shop-mu.vercel.app/"} target="blank">
                   <Image
                     src={item.image}
                     alt="projects images"
                     width={1200}
                     height={1200}
-                    className="object-cover lg:h-[555px] rounded-sm"
+                    className="object-cover lg:h-[555px] rounded-2xl"
                   />
                 </Link>
               </SwiperSlide>
@@ -78,7 +78,7 @@ export const ProjectPhone = () => {
              w-full h-full mt-2 border-t-2 border-black dark:border-white">
               <h3 className="text-lg md:text-2xl font-semibold mt-4">{t("title-h3")}</h3>
               <motion.section className="grid grid-cols-3 md:flex  items-center justify-start text-sm gap-8 mt-8">
-                {projects_tools_phone.map((item, index) => (
+                {projects_icons_phone.map((item, index) => (
                   <motion.div
                     key={item.skill_name}
                     initial={{ opacity: 0, x: 20 }}

@@ -8,8 +8,8 @@ export const DownloadResume = () => {
   const t = useTranslations("nav")
   return (
     <Link
-      href={"/cv.pdf"}
-      download={"/cv.pdf"}
+      href={"/Resume-en-pedro-maciel.pdf"}
+      download={"/Resume-en-pedro-maciel.pdf"}
       target="blank"
       className="flex items-center  right-0 justify-end p-1"
     >

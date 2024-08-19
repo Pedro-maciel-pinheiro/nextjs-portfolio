@@ -3,7 +3,7 @@
 import { useInViewHook } from "@/hooks/in-view";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { slideInFromBottom } from "@/utils/motion";
+import { fadeIn, slideInFromBottom } from "@/utils/motion";
 import { ReactElement } from "react";
 
 interface CustomCardProps {
@@ -22,19 +22,19 @@ export const CustomCardProject = ({
   const projectText = useTranslations("project");
   return (
     <>
-      <div
+      <motion.div
+        ref={ref}
+        initial={"hidden"}
+        animate={inView ? "visible" : "hidden"}
         className="min-h-[95vh] w-full flex flex-col  
       items-center justify-center  max-w-7xl mx-auto "
       >
         <motion.div
-          ref={ref}
-          initial={"hidden"}
-          animate={inView ? "visible" : "hidden"}
-          variants={slideInFromBottom(0.2)}
+          variants={slideInFromBottom(1)}
           className="flex flex-col items-center justify-center gap-4 mt-14 mb-14"
         >
           <h1 className="text-2xl md:text-5xl flex flex-col font-semibold ">
-            {projectText(h1_text)}
+          {projectText(h1_text)}
           </h1>
           <p
             className="text-sm md:text-lg font-medium text-center
@@ -43,13 +43,15 @@ export const CustomCardProject = ({
             {projectText(h3_text)}
           </p>
         </motion.div>
-        <div
-          className=" w-full max-w-[90%] md:max-w-full h-full
-         flex flex-col md:flex-row items-center justify-between border-2 border-black dark:border-white rounded-xl overflow-hidden"
+        <motion.div
+          variants={fadeIn(0.2)}
+          className=" w-full max-w-[90%] md:max-w-[98%] mx-2 h-full 
+          backdrop-blur-sm dark:backdrop-blur-none dark:bg-black/40 
+         border-2 border-black dark:border-white rounded-xl overflow-hidden"
         >
           {dataHolder}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </>
   );
 };
