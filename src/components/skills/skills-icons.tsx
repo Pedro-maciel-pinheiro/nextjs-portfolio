@@ -18,7 +18,7 @@ export const SkillsIcons = () => {
             key={index}
             initial={{ opacity: 0, y: -120 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -120 }}
-            transition={{ delay: index * animationDelay, duration: 0.5 }}
+            transition={{ delay: index * animationDelay, duration: 1 }}
           >
             <Link
               href={skill.href}
@@ -26,7 +26,7 @@ export const SkillsIcons = () => {
               className="flex w-20 flex-col items-center gap-1"
             >
               <skill.Image
-                size={50}
+                size={60}
                 className={`rounded-md ${skill.text_style}`}
               />
               <p className="text-sm font-semibold">{skill.skill_name}</p>
@@ -40,7 +40,7 @@ export const SkillsIcons = () => {
             key={index}
             initial={{ opacity: 0, y: 120 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 120 }}
-            transition={{ delay: index * animationDelay, duration: 0.5 }}
+            transition={{ delay: index * animationDelay, duration: 1 }}
           >
             <Link
               href={skill.href}

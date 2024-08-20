@@ -21,10 +21,9 @@ import {
 } from "react-icons/si";
 import { TbBrandHeadlessui } from "react-icons/tb";
 
-
 export interface ImagesProps {
   id: string;
-  image: StaticImageData 
+  image: StaticImageData;
 }
 
 export const projects_images_eco: ImagesProps[] = [
@@ -122,18 +121,6 @@ export const projects_icons_phone: SkillDataProps[] = [
     text_style: "",
   },
   {
-    skill_name: "Headlessui",
-    Image: TbBrandHeadlessui,
-    href: "https://headlessui.com/",
-    text_style: "hover:bg-black hover:text-white",
-  },
-  {
-    skill_name: "Framer",
-    Image: SiFramer,
-    href: "https://www.framer.com/motion/",
-    text_style: "hover:text-pink-500",
-  },
-  {
     skill_name: "Type Script",
     Image: SiTypescript,
     href: "https://www.typescriptlang.org/",
@@ -145,5 +132,16 @@ export const projects_icons_phone: SkillDataProps[] = [
     href: "https://tailwindcss.com/",
     text_style: "hover:text-cyan-500",
   },
-  
+  {
+    skill_name: "Headlessui",
+    Image: TbBrandHeadlessui,
+    href: "https://headlessui.com/",
+    text_style: "hover:bg-black hover:text-white",
+  },
+  {
+    skill_name: "Framer",
+    Image: SiFramer,
+    href: "https://www.framer.com/motion/",
+    text_style: "hover:text-pink-500",
+  },
 ];

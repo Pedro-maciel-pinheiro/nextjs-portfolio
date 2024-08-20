@@ -33,7 +33,7 @@ export default function Hero() {
             className="flex w-full max-w-[100%] flex-col items-center justify-center gap-2 md:max-w-full"
           >
             <h1 className="flex flex-col text-center text-3xl md:text-6xl">
-              Front-end Developer <span>& Web Designer</span>
+              {t("main-h1")} <span>& Web Designer</span>
             </h1>
             <p className="w-[400px] max-w-[90%] text-center text-sm md:max-w-full md:text-lg">
               {t("description")}
@@ -44,8 +44,8 @@ export default function Hero() {
 
       {/* Skills */}
 
-      <div className="flex h-full w-full items-center justify-center border-white bg-primary dark:bg-black/80">
-        <div className="mb-14 mt-14 flex h-full w-full max-w-7xl flex-col items-center justify-evenly overflow-hidden md:h-[700px]">
+      <div className="flex h-full w-full  items-center justify-center border-white bg-primary dark:bg-black/80">
+        <div className="mb-14 mt-14 flex h-full w-full  max-w-7xl flex-col items-center justify-evenly overflow-hidden md:h-[700px] ">
           <motion.div
             ref={ref}
             initial={"hidden"}
@@ -59,7 +59,7 @@ export default function Hero() {
             <p className="w-72 text-sm md:text-lg">{t("skills-text")}</p>
           </motion.div>
 
-          <div className="mb-8 flex h-full flex-col-reverse rounded-xl border-2 border-black backdrop-blur-sm dark:border-white dark:backdrop-blur-none md:w-full md:max-w-[98%] md:flex-row">
+          <div className="mb-8 flex h-full flex-col-reverse rounded-xl border-2 border-black backdrop-blur-sm dark:border-white dark:backdrop-blur-none md:w-full md:max-w-[98%] md:flex-row max-w-[90%] ">
             <div className="flex h-full w-full">
               <MainSkillsIcons />
             </div>
@@ -110,7 +110,7 @@ export default function Hero() {
         />
       </div>
 
-      <Contact/>
+     
     </>
   );
 }

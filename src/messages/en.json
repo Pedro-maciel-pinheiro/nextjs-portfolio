@@ -1,5 +1,6 @@
 {
   "home": {
+    "main-h1": "Front-end Developer",
     "description": "My name is Pedro, I'm a developer with more than 2 years of experience  building  for the web.",
     "skills-h1": "Technologies ",
     "skills-p": "Experiences",
@@ -11,7 +12,7 @@
     "projects": "Projects",
     "about": "About",
     "contact": "Contact",
-    "resume":"Resume"
+    "resume": "Resume"
   },
 
   "experiences": {
@@ -24,14 +25,17 @@
   },
 
   "project": {
+    "tagline-1": "Project 01",
+    "tagline-2": "Project 02",
     "main-title": "Project E-commerce",
     "main-title-2": "Project Showcase",
     "subtitle": "Here is one of my latest project and some information about it",
     "title-h3": "Technologies used in this project",
     "info-text-1": "Next.js e-commerce project is built using React, Next.js, TypeScript, Redux, and Tailwind CSS. It features a dynamic product catalog fetched from an API, with functionalities like filtering based on categories, brands, and prices. The Redux store manages the global state, ensuring seamless updates across components.",
     "info-text-2": "Tailwind CSS is used for responsive, modern UI design. The app includes pages for product listings, detailed product views, shopping cart, and checkout, with real-time updates and optimized performance for a smooth user experience across devices.",
-    "info-text-3": "The Next.js showcase project uses React, Next.js, TypeScript, and Tailwind CSS. It features a dynamic phone catalog, including iPhone 15 and RedMagic 9 Pro. Showcase pages highlight these phones' unique features with animations created using Framer Motion. The Redux store efficiently manages global state, ensuring real-time updates with filtering options for brand, specs, and price.",
-    "info-text-4": "Tailwind CSS ensures a modern, responsive UI design across devices. The app includes pages for phone listings, detailed views, shopping cart, and checkout, all optimized for performance. Framer Motion provides visually appealing interactions, enhancing the shopping experience."
+    "info-text-3": "The Next.js showcase project uses React, Next.js, TypeScript, and Tailwind CSS. It features a dynamic phone catalog, including iPhone 15 and RedMagic 9 Pro. Showcase pages highlight these phones' unique features with animations created using Framer Motion.",
+    "info-text-4": "Tailwind CSS ensures a modern, responsive UI design across devices. The app includes pages for phone listings, detailed views, shopping cart, and checkout, all optimized for performance. Framer Motion provides visually appealing interactions, enhancing the shopping experience.",
+    "button-text":"Online WebSite"
   },
 
   "contact": {
@@ -41,6 +45,6 @@
     "email": "Email",
     "type": "Type your message",
     "button": "Send Email",
-    "social":"Social media"
+    "social": "Social media"
   }
 }
