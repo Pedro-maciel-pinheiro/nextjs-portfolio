@@ -22,10 +22,10 @@ export default function Skills() {
           variants={slideInFromBottom(0.2)}
           className="mt-16 flex flex-col items-center justify-center gap-2 text-center"
         >
-          <h1 className="flex text-center text-3xl md:text-6xl">
+          <h1 className="flex text-center font-semibold text-3xl md:text-6xl">
             {t("skills-h1")}
           </h1>
-          <p className="w-72 text-sm md:text-lg">{t("skills-text")}</p>
+          <p className="w-72 text-sm md:text-lg font-semibold">{t("skills-text")}</p>
         </motion.div>
 
         <motion.div

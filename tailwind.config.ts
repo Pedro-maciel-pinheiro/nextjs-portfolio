@@ -71,11 +71,17 @@ const config = {
           "0": { transform: "translateX(0)" },
           "100%": { transform: "translateX(calc(-50% - 20px))" },
         },
+        "border-spin": {
+          "100%": {
+            transform: "rotate(-360deg)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "infinite-scroll": "infinite-scroll 15s linear infinite",
+        "border-spin": "border-spin 3s linear infinite",
       },
     },
   },

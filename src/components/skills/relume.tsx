@@ -76,7 +76,7 @@ export const ProjectShowCase = (props: ProjectShowCaseProps) => {
   });
 
   const scales = calculateScales(featureSections.length, scrollYProgress);
-
+  const t = useTranslations("project");
   return (
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
@@ -84,7 +84,7 @@ export const ProjectShowCase = (props: ProjectShowCaseProps) => {
           <h1 className="mb-5 text-2xl font-bold md:mb-6 md:text-4xl lg:text-5xl">
             {heading}
           </h1>
-          <p className="md:text-md mb-20">{description}</p>
+          <p className="md:text-md mb-20">{t(description)}</p>
         </div>
 
         <div
@@ -209,7 +209,7 @@ const FeatureSection = ({
 export const Layout408Defaults: ProjectShowCaseProps = {
   tagline: "",
   heading: "My Projects",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  description: "main-page-subtitle",
   featureSections: [
     {
       tagline: "tagline-1",

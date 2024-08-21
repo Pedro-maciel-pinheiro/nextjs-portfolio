@@ -51,7 +51,7 @@ export default function Contact() {
         className="flex min-h-screen w-full flex-col items-center justify-center bg-primary dark:bg-black/80"
       >
         <motion.div variants={slideInFromBottom(0.6)}>
-          <h1 className="mb-16 text-4xl font-semibold lg:text-6xl">
+          <h1 className="mt-16 mb-4 md:mb-16 text-4xl font-semibold lg:text-6xl">
             {t("main-title")}
           </h1>
         </motion.div>
@@ -64,7 +64,7 @@ export default function Contact() {
             className="flex h-full w-full max-w-xl flex-col items-center justify-center gap-3 rounded-lg bg-black font-semibold text-white dark:text-white"
           >
             <h1 className="mb-8 text-2xl">{t("subtitle")}</h1>
-            <div className="flex w-full flex-col items-start justify-center gap-4 md:w-96">
+            <div className="flex w-64 flex-col items-start justify-center gap-4 md:w-96">
               <Label>{t("name")}</Label>
               <Input
                 type="text"
@@ -90,13 +90,14 @@ export default function Contact() {
             </div>
             <Button
               type="submit"
-              className="mt-4 w-full bg-white font-bold text-black dark:bg-white dark:text-black md:w-96"
+              className="mt-4 w-64 bg-white font-bold text-black
+               dark:bg-white dark:text-black md:w-96 mb-4 md:mb-0"
             >
               {t("button")}
             </Button>
           </form>
 
-          <div className="h-full w-full">
+          <div className="h-full w-full ">
             <h1 className="mb-4 mt-12 text-center text-2xl font-semibold md:mb-0">
               {t("social")}
             </h1>

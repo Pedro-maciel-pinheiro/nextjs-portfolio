@@ -2,18 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
 
 .navHover {
-  @apply hover:-translate-y-[2px] transition-all duration-300 hover:underline;
+  @apply transition-all duration-300 hover:-translate-y-[2px] hover:underline;
+}
 
+.card-wrapper {
+  position: relative;
+  
+}
+
+.card-wrapper::before,
+.card-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: -.2rem;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    blue,
+    red,
+    blue
+  );
+  border-radius: inherit;
+  filter: blur(1.2rem);
+  animation: rotation 5s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+.img-card {
+  background-image: conic-gradient(red, blue, red);
 }
 
 body {
   --background-image: var(--background-image-light);
   background-image: var(--background-gradient), var(--background-image);
- 
 }
 
 .dark body {
@@ -134,4 +169,3 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
