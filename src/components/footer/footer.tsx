@@ -36,7 +36,7 @@ function Footer() {
       <aside
         className="text-lg font-bold text-black dark:text-white"
       >
-        <span>Pedro Maciel Pinheiro</span>
+        <span>João Pedro Maciel Pinheiro</span>
         <span className="bg-gradient-to-r hover:bg-gradient-to-l
             transition-all duration-300 
              from-purple-500 to-blue-500 bg-clip-text text-transparent"> Front-end Devoloper & Web designer</span>
