@@ -1,5 +1,6 @@
 import { IconType } from "react-icons/lib";
-import { FaGithub, FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsappSquare ,FaPhoneVolume } from "react-icons/fa";
+import { FaSquarePhone } from "react-icons/fa6";
 
 interface SocialProps {
   title: string;
@@ -26,6 +27,12 @@ export const social_media: SocialProps[] = [
     icon: FaWhatsappSquare,
     href: "https://web.whatsapp.com/send?phone=5561998516239",
     style:"hover:text-green-500"
+  },
+  {
+    title: "55+ 61 99851-6239",
+    icon: FaSquarePhone,
+    href: "",
+    style:"hover:text-green-600"
   },
  
 ];

@@ -51,13 +51,13 @@ export default function Contact() {
         className="flex min-h-screen w-full flex-col items-center justify-center bg-primary dark:bg-black/80"
       >
         <motion.div variants={slideInFromBottom(0.6)}>
-          <h1 className="mt-16 mb-4 md:mb-16 text-4xl font-semibold lg:text-6xl">
+          <h1 className="mb-4 mt-16 text-4xl font-semibold md:mb-16 lg:text-6xl">
             {t("main-title")}
           </h1>
         </motion.div>
         <motion.div
           variants={slideInFromBottom(0.8)}
-          className="mb-4 grid h-full w-full max-w-[90%] grid-cols-1 items-center justify-center rounded-lg border-2 border-black bg-white p-2 dark:border-white dark:bg-black/50 md:h-[600px] xl:max-w-7xl md:grid-cols-2"
+          className="mb-4 grid h-full w-full max-w-[90%] grid-cols-1 items-center justify-center rounded-lg border-2 border-black bg-white p-2 dark:border-white dark:bg-black/50 md:h-[600px] md:grid-cols-2 xl:max-w-7xl"
         >
           <form
             onSubmit={handleSubmit}
@@ -90,14 +90,13 @@ export default function Contact() {
             </div>
             <Button
               type="submit"
-              className="mt-4 w-64 bg-white font-bold text-black
-               dark:bg-white dark:text-black md:w-96 mb-4 md:mb-0"
+              className="mb-4 mt-4 w-64 bg-white font-bold text-black dark:bg-white dark:text-black md:mb-0 md:w-96"
             >
               {t("button")}
             </Button>
           </form>
 
-          <div className="h-full w-full ">
+          <div className="h-full w-full">
             <h1 className="mb-4 mt-12 text-center text-2xl font-semibold md:mb-0">
               {t("social")}
             </h1>
@@ -115,13 +114,15 @@ export default function Contact() {
                   <Link
                     href={social.href}
                     target="blank"
-                    className="navHover flex w-48 items-center gap-2 rounded-lg border-2 border-black p-1 dark:border-white"
+                    className={`navHover flex w-56 items-center gap-2 rounded-lg border-2
+                     border-black p-1 dark:border-white ${social.style}`}
                   >
-                    <social.icon size={40} className={`${social.style}`} />
+                    <social.icon size={40} className={``} />
                     <span>{social.title}</span>
                   </Link>
                 </motion.div>
               ))}
+             
             </div>
           </div>
         </motion.div>
