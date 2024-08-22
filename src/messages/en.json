@@ -27,6 +27,7 @@
   "project": {
     "tagline-1": "Project 01",
     "tagline-2": "Project 02",
+    "title-h1-page": "My Projects",
     "main-title": "Project E-commerce",
     "main-title-2": "Project Showcase",
     "main-page-subtitle": "Here is my latests projects and some information about it",
@@ -36,7 +37,7 @@
     "info-text-2": "Tailwind CSS is used for responsive, modern UI design. The app includes pages for product listings, detailed product views, shopping cart, and checkout, with real-time updates and optimized performance for a smooth user experience across devices.",
     "info-text-3": "The Next.js showcase project uses React, Next.js, TypeScript, and Tailwind CSS. It features a dynamic phone catalog, including iPhone 15 and RedMagic 9 Pro. Showcase pages highlight these phones' unique features with animations created using Framer Motion.",
     "info-text-4": "Tailwind CSS ensures a modern, responsive UI design across devices. The app includes pages for phone listings, detailed views, shopping cart, and checkout, all optimized for performance. Framer Motion provides visually appealing interactions, enhancing the shopping experience.",
-    "button-text":"Online WebSite"
+    "button-text": "Online WebSite"
   },
 
   "contact": {
@@ -47,5 +48,11 @@
     "type": "Type your message",
     "button": "Send Email",
     "social": "Social media"
+  },
+
+  "about": {
+    "title": "About me",
+    "subtitle":"Brazilian / 26 years old",
+    "lorem": "I Am a front-end developer and web designer with 2 years of experience, specialized in creating visually appealing and highly functional interfaces. I have a solid knowledge of HTML, CSS and JavaScript, and expertise in advanced technologies such as React, Next.js, Tailwind CSS and TypeScript. In addition, I use web design tools such as WebFlow and Figma. Committed to delivering highquality results, I am ready to add value to your team"
   }
 }

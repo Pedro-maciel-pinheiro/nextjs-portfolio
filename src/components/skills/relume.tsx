@@ -81,10 +81,10 @@ export const ProjectShowCase = (props: ProjectShowCaseProps) => {
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="container text-center">
-          <h1 className="mb-5 text-2xl font-bold md:mb-6 md:text-4xl lg:text-5xl">
-            {heading}
+          <h1 className="mb-5 text-2xl font-bold md:mb-6 md:text-4xl lg:text-6xl">
+            {t(heading)}
           </h1>
-          <p className="md:text-md mb-20">{t(description)}</p>
+          <p className="md:text-md mb-20 font-semibold">{t(description)}</p>
         </div>
 
         <div
@@ -127,7 +127,7 @@ const FeatureSection = ({
   iconlinks: SkillDataProps[];
 }) => {
   const { ref, inView } = useInViewHook();
-  const isMobile = useMediaQuery("(max-width: 767px)");
+  const isMobile = useMediaQuery("(max-width: 1150px)");
   const Section = isMobile ? "div" : motion.div;
   const t = useTranslations("project");
   const animationDelay = 0.5;
@@ -141,7 +141,9 @@ const FeatureSection = ({
       ref={ref}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      className="static mb-0 grid h-auto grid-cols-1 content-center items-stretch overflow-hidden rounded-xl border-2 border-black bg-white p-4 dark:border-white dark:bg-black md:sticky md:top-[10%] md:mb-[10vh] md:h-[65vh] lg:grid-cols-2"
+      className="static mb-0 grid h-auto grid-cols-1 content-center items-stretch overflow-hidden 
+       rounded-xl border-2 border-black bg-white p-4 dark:border-white dark:bg-black lg:sticky 
+       lg:top-[10%] lg:mb-[10vh] xl:h-[65vh] xl:grid-cols-2"
       style={{ scale: scale as never }}
     >
       {/* {Information} */}
@@ -153,12 +155,12 @@ const FeatureSection = ({
         )}
       >
         <p className="mb-2 font-semibold">{t(tagline)}</p>
-        <h2 className="mb-5 text-2xl font-bold leading-[1.2] md:mb-6 md:text-4xl lg:text-5xl">
+        <h2 className="mb-5 text-xl font-bold leading-[1.2] md:mb-6 md:text-4xl lg:text-5xl">
           {heading}
         </h2>
-        <p className="text-justify font-semibold ">{t(description)}</p>
+        <p className="md:text-justify font-semibold ">{t(description)}</p>
 
-        <ul className="mt-6 flex items-center gap-x-4 md:mt-8 md:mb-8">
+        <ul className="mt-6 flex flex-wrap md:flex-row justify-center md:justify-start items-center gap-4 md:mt-8 md:mb-8">
           {iconlinks.map((item, index) => (
             <motion.li
               key={item.skill_name}
@@ -167,15 +169,15 @@ const FeatureSection = ({
               transition={{ delay: index * animationDelay, duration: 1 }}
               className="flex flex-col items-center font-semibold"
             >
-              <item.Image size={40} className={`${item.text_style}`} />
-              {item.skill_name}
+              <item.Image size={35} className={`${item.text_style}`} />
+              <p className="text-[12px] md:text-sm">{item.skill_name}</p>
             </motion.li>
           ))}
         </ul>
 
         <motion.div 
         variants={fadeIn(1)}
-        className="flex items-center justify-start ">
+        className="flex items-center justify-center md:justify-start mt-4 md:mt-0">
           <MaskButton
             linkBasePath={linkPath}
             title={t(button_title)}
@@ -192,13 +194,13 @@ const FeatureSection = ({
           imageOrder,
         )}
       >
-        <Link href={linkPath} target="blank">
+        <Link href={linkPath} target="blank" className="w-full h-full">
           <Image
             src={image.src}
             alt={image.alt as string}
             width={800}
             height={800}
-            className="rounded-lg"
+            className="rounded-lg object-cover w-full h-full"
           />
         </Link>
       </motion.div>
@@ -208,7 +210,7 @@ const FeatureSection = ({
 
 export const Layout408Defaults: ProjectShowCaseProps = {
   tagline: "",
-  heading: "My Projects",
+  heading: "title-h1-page",
   description: "main-page-subtitle",
   featureSections: [
     {

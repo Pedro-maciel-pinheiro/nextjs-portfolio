@@ -37,7 +37,7 @@ export const CustomCardProject = ({
           {projectText(h1_text)}
           </h1>
           <p
-            className="text-sm md:text-lg font-medium text-center
+            className="text-sm md:text-lg  font-semibold text-center
            md:text-start max-w-[80%] md:max-w-[100%]"
           >
             {projectText(h3_text)}

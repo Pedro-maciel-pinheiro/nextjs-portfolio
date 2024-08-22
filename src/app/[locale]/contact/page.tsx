@@ -57,7 +57,7 @@ export default function Contact() {
         </motion.div>
         <motion.div
           variants={slideInFromBottom(0.8)}
-          className="mb-4 grid h-full w-full max-w-[90%] grid-cols-1 items-center justify-center rounded-lg border-2 border-black bg-white p-2 dark:border-white dark:bg-black/50 md:h-[600px] md:max-w-7xl md:grid-cols-2"
+          className="mb-4 grid h-full w-full max-w-[90%] grid-cols-1 items-center justify-center rounded-lg border-2 border-black bg-white p-2 dark:border-white dark:bg-black/50 md:h-[600px] xl:max-w-7xl md:grid-cols-2"
         >
           <form
             onSubmit={handleSubmit}

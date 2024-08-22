@@ -66,21 +66,14 @@ export const CardContent = ({
               </h3>
               <div className="flex justify-center md:justify-evenly items-center w-full h-20 gap-3">
                 <MaskButton
-                  title={"Live"}
+                  title={t("button-text")}
                   btnColor={
-                    "md:w-36 bg-black dark:bg-white after:bg-blue-500 hover:text-white font-semibold"
+                    "w-64 md:w-96 bg-black dark:bg-white after:bg-blue-500 hover:text-white font-semibold"
                   }
                   linkBasePath={href_1}
                   target={"blank"}
                 />
-                <MaskButton
-                  title={"Learn more"}
-                  btnColor={
-                    "md:w-36 bg-black dark:bg-white after:bg-blue-500 hover:text-white font-semibold"
-                  }
-                  linkBasePath={href_2}
-                  target={""}
-                />
+                
               </div>
             </div>
           </div>
@@ -93,7 +86,7 @@ export const CardContent = ({
           <h1 className="text-lg md:text-3xl lg:text-3xl font-semibold mb-2">
             {title}
           </h1>
-          <div className="flex  flex-col md:ml-12 h-48 md:h-72  gap-2   overflow-y-scroll">
+          <div className="flex  flex-col md:ml-12 h-48 md:h-72  gap-2   overflow-y-scroll  font-medium">
             <p className="text-sm+ lg:text-lg">{t(project_info_1)}</p>
             <p className="text-sm+ lg:text-lg hidden md:block">
               {t(project_info_2)}

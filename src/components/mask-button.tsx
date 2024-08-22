@@ -25,7 +25,7 @@ const MaskButton = ({
       <Button
         disabled={disable}
         onClick={handleclick}
-        className={`relative z-20 w-28 overflow-hidden border-2 shadow-xl transition-all duration-1000 after:absolute after:bottom-0 after:right-full after:h-[50px] after:w-72 after:translate-y-2 after:rounded-tr-full after:duration-1000 hover:after:translate-x-full active:translate-y-1 ${btnColor} `}
+        className={`relative z-20 w-28 overflow-hidden border-2 shadow-xl transition-all duration-1000 after:absolute after:bottom-0 after:right-full after:h-[50px] after:w-[400px] after:translate-y-2 after:rounded-tr-full after:duration-1000 hover:after:translate-x-full active:translate-y-1 ${btnColor} `}
       >
         <p className="absolute z-10">{title}</p>
       </Button>

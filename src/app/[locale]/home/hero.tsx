@@ -44,7 +44,7 @@ export default function Hero() {
 
       {/* Skills */}
 
-      <div className="flex h-full w-full  items-center justify-center border-white bg-primary dark:bg-black/80">
+      <div className="flex h-full w-full  items-center justify-center  bg-primary dark:bg-black/80">
         <div className="mb-14 mt-14 flex h-full w-full  max-w-7xl flex-col items-center justify-evenly overflow-hidden md:h-[700px] ">
           <motion.div
             ref={ref}
