@@ -29,7 +29,7 @@ export const CardContent = ({
   href_1,
   href_2,
 }: CardProps) => {
-  const { ref, inView } = useInViewHook();
+ 
   const t = useTranslations("project");
   const animationDelay = 0.5;
 
@@ -37,9 +37,10 @@ export const CardContent = ({
     <div className="w-full h-full pt-5 ">
       {/* project video / links */}
       <motion.div
-        ref={ref}
+       
         initial={"hidden"}
-        animate={inView ? "visible" : "hidden"}
+        whileInView={"visible"}
+        viewport={{once:true}}
         className="gap-5 w-full h-full grid grid-cols-1 lg:grid-cols-2 
         container content-center  items-stretch"
       >
@@ -102,9 +103,8 @@ export const CardContent = ({
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: 20 }}
-                  animate={
-                    inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
-                  }
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{once:true}}
                   transition={{ delay: index * animationDelay, duration: 1 }}
                 >
                   <Link

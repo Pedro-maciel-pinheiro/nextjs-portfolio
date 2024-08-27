@@ -5,11 +5,10 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export const SkillsIcons = () => {
-  const { ref, inView } = useInViewHook();
   const animationDelay = 0.5;
   return (
     <motion.div
-      ref={ref}
+      
       className="flex h-full max-w-7xl flex-col items-center justify-center gap-7 rounded-lg backdrop-blur-md dark:backdrop-blur-none"
     >
       <ul className="flex gap-4">
@@ -17,7 +16,8 @@ export const SkillsIcons = () => {
           <motion.li
             key={index}
             initial={{ opacity: 0, y: -120 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -120 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{once:true}}
             transition={{ delay: index * animationDelay, duration: 1 }}
           >
             <Link
@@ -39,7 +39,8 @@ export const SkillsIcons = () => {
           <motion.li
             key={index}
             initial={{ opacity: 0, y: 120 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 120 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{once:true}}
             transition={{ delay: index * animationDelay, duration: 1 }}
           >
             <Link

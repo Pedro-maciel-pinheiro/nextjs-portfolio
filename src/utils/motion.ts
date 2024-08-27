@@ -56,6 +56,8 @@ export const letterVariant = {
     },
   }),
 };
+
+
 export function underlineVariant(duration: number) {
   return {
     hidden: { width: 0 },

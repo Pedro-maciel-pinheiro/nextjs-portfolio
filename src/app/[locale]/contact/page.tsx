@@ -13,7 +13,6 @@ import { social_media } from "@/constant/social";
 import Link from "next/link";
 
 export default function Contact() {
-  const { ref, inView } = useInViewHook();
   const t = useTranslations("contact");
   const animationDelay = 1;
   async function handleSubmit(event: any) {
@@ -45,9 +44,8 @@ export default function Contact() {
   return (
     <>
       <motion.section
-        ref={ref}
         initial="hidden"
-        animate={inView ? "visible" : "hidden"}
+        whileInView={"visible"}
         className="flex min-h-screen w-full flex-col items-center justify-center bg-primary dark:bg-black/80"
       >
         <motion.div variants={slideInFromBottom(0.6)}>
@@ -103,26 +101,21 @@ export default function Contact() {
             <div className="flex w-full flex-col items-center justify-evenly gap-3 md:h-96 md:gap-0">
               {social_media.map((social, index) => (
                 <motion.div
-                  ref={ref}
                   key={social.title}
                   initial={{ opacity: 0, x: 120 }}
-                  animate={
-                    inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 120 }
-                  }
+                  whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * animationDelay, duration: 2 }}
                 >
                   <Link
                     href={social.href}
                     target="blank"
-                    className={`navHover flex w-56 items-center gap-2 rounded-lg border-2
-                     border-black p-1 dark:border-white ${social.style}`}
+                    className={`navHover flex w-56 items-center gap-2 rounded-lg border-2 border-black p-1 dark:border-white ${social.style}`}
                   >
                     <social.icon size={40} className={``} />
                     <span>{social.title}</span>
                   </Link>
                 </motion.div>
               ))}
-             
             </div>
           </div>
         </motion.div>

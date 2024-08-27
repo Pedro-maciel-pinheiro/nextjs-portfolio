@@ -1,5 +1,7 @@
 "use client";
+import { fadeIn } from "@/utils/motion";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
+import { motion } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -27,7 +29,7 @@ export default function LanguageSelector() {
         </span>
       </button>
       {isDropDownOpen && (
-        <div className="absolute right-0 mt-3 bg-white dark:bg-black/80 rounded-lg shadow-lg z-10">
+        <motion.div initial="hidden" animate="visible" variants={fadeIn(0.1)} className="absolute right-0 mt-3 bg-white dark:bg-black/80 rounded-lg shadow-lg z-10">
           <ul className="flex flex-col text-sm rounded-lg ">
             <li
               onClick={() => handleLanguageChange("en")}
@@ -54,7 +56,7 @@ export default function LanguageSelector() {
               JP
             </li>
           </ul>
-        </div>
+        </motion.div>
       )}
     </div>
   );

@@ -18,14 +18,14 @@ export const CustomCardProject = ({
   h1_text,
   h3_text,
 }: CustomCardProps) => {
-  const { ref, inView } = useInViewHook();
+
   const projectText = useTranslations("project");
   return (
     <>
       <motion.div
-        ref={ref}
+        
         initial={"hidden"}
-        animate={inView ? "visible" : "hidden"}
+        whileInView={"visible"}
         className="min-h-[95vh] w-full flex flex-col  
       items-center justify-center  max-w-7xl mx-auto "
       >
