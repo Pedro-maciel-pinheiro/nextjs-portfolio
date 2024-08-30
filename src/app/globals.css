@@ -2,49 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-@property --gradient-angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
+
+
+html{
+  scroll-behavior: smooth;
 }
 
-.navHover {
-  @apply transition-all duration-300 hover:-translate-y-[2px] hover:underline;
-}
 
-.card-wrapper {
-  position: relative;
-  
-}
 
-.card-wrapper::before,
-.card-wrapper::after {
-  content: "";
-  position: absolute;
-  inset: -.2rem;
-  background: conic-gradient(
-    from var(--gradient-angle),
-    blue,
-    red,
-    blue
-  );
-  border-radius: inherit;
-  filter: blur(1.2rem);
-  animation: rotation 5s linear infinite;
-}
 
-@keyframes rotation {
-  0% {
-    --gradient-angle: 0deg;
-  }
-  100% {
-    --gradient-angle: 360deg;
-  }
-}
 
-.img-card {
-  background-image: conic-gradient(red, blue, red);
-}
+
+
+
 
 body {
   --background-image: var(--background-image-light);
@@ -103,7 +73,7 @@ body {
     --background-image-dark: url("../../public/img/japan-night.jpg");
     --background-gradient: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.644),
       rgba(0, 0, 0, 0)
     );
     --foreground: 222.2 84% 4.9%;
@@ -167,5 +137,93 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+
+.circle {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  transform-style: preserve-3d;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+
+.view {
+  
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  perspective: 300px;
+}
+
+.plane {
+  width: 220px;
+  height: 220px;
+  transform-style: preserve-3d;
+}
+
+.plane-after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  transform: rotateX(60deg) rotateZ(-30deg);
+  animation: rotate 20s infinite linear;
+}
+
+.circle::before,
+.circle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 10%;
+  height: 10%;
+  border-radius: 100%;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.circle::before {
+  transform: translateZ(-90px);
+}
+.circle::after {
+  transform: translateZ(90px);
+}
+
+.circle:nth-child(1) {
+  transform: rotateZ(0deg) rotateX(63.435deg);
+}
+.circle:nth-child(2) {
+  transform: rotateZ(72deg) rotateX(63.435deg);
+}
+.circle:nth-child(3) {
+  transform: rotateZ(144deg) rotateX(63.435deg);
+}
+.circle:nth-child(4) {
+  transform: rotateZ(216deg) rotateX(63.435deg);
+}
+.circle:nth-child(5) {
+  transform: rotateZ(288deg) rotateX(63.435deg);
+}
+.circle:nth-child(6) {
+  transform: rotateZ(360deg) rotateX(63.435deg);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
   }
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useInViewHook } from "@/hooks/in-view";
+
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { fadeIn, slideInFromBottom } from "@/utils/motion";

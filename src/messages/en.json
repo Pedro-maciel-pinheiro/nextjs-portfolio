@@ -1,18 +1,45 @@
 {
   "home": {
-    "main-h1": "Front-end Developer",
-    "description": "My name is Pedro, I'm a developer with more than 2 years of experience  building  for the web.",
-    "skills-h1": "Technologies ",
-    "skills-p": "Experiences",
-    "skills-text": "Using the latest tech this world has to offer"
+    "title-h1": "Welcome",
+    "title-h2": "I'm Maciel Pinheiro",
+    "subtitle-h2": "A Front-end developer & Web designer"
   },
   "nav": {
     "home": "Home",
-    "skills": "Skills",
+    "experience": "experience",
     "projects": "Projects",
     "about": "About",
-    "contact": "Contact",
-    "resume": "Resume"
+    "contact": "Contact"
+  },
+
+  "section-header-text": {
+    "title_about": "About Me",
+    "title_skill": "Skills",
+    "title_project": "Projects",
+    "title_exp": "Experiences",
+    "title_contact":"Contact"
+  },
+
+  "experience": {
+    "date_1": "2016 - 2020",
+    "date_2": "2020 - 2021",
+    "date_3": "2022 - present",
+
+    "title_1": "Career Transition",
+    "description_1": "I began my career transition from computer technician to web designer",
+
+    "title_2": "Web Designer",
+    "description_2": "I spent a year as a freelance web designer before transitioning into front-end development to merge my design skills with technical expertise",
+
+    "title_3": "Front-End Developer",
+    "description_3": "I'm now a Front-End developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind CSS, and Framer Motion. I'm open to full-time opportunities."
+  },
+
+  "resume": {
+    "download": "Download Resume",
+    "language_1": "English",
+    "language_2": "Portuguese",
+    "language_3": "Japanese"
   },
 
   "experiences": {
@@ -52,7 +79,7 @@
 
   "about": {
     "title": "About me",
-    "subtitle":"Brazilian / 26 years old",
+    "subtitle": "Hello, my name is Maciel Pinheiro. I'm a 26-year-old Brazilian.",
     "lorem": "I Am a front-end developer and web designer with 2 years of experience, specialized in creating visually appealing and highly functional interfaces. I have a solid knowledge of HTML, CSS and JavaScript, and expertise in advanced technologies such as React, Next.js, Tailwind CSS and TypeScript. In addition, I use web design tools such as WebFlow and Figma. Committed to delivering highquality results, I am ready to add value to your team"
   }
 }

@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      boxShadow: {
+        custom: "0 0 60px rgb(0, 0, 0), inset 0 0 60px rgb(0, 0, 0)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -25,7 +28,7 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "rgb(255 255 255 / 0.9)",
+          DEFAULT: "rgb(255 255 255 / 0.8)",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -85,7 +88,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("daisyui")],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
 
 export default config;

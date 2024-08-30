@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Anek_Devanagari } from "next/font/google";
 import "../globals.css";
 
 import { NextIntlClientProvider } from "next-intl";
@@ -7,13 +7,12 @@ import { getMessages } from "next-intl/server";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
+import ActiveSectionContextProvider from "@/context/active-section";
+import { siteMetadata } from "@/constant/metadata";
 
-const inter = Inter({ subsets: ["latin"] });
+const anek = Anek_Devanagari({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Pedro Maciel Pinheiro",
-  description: "My Portfolio",
-};
+export const metadata: Metadata = siteMetadata
 
 export default async function RootLayout({
   children,
@@ -24,21 +23,23 @@ export default async function RootLayout({
 }>) {
   const messages = await getMessages();
   return (
-    <html lang={locale} className={inter.className} suppressHydrationWarning>
-      <body className="bg-fixed ">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <NextIntlClientProvider messages={messages}>
-            <Navbar />
-            {children}
-            <Footer/>
-          </NextIntlClientProvider>
-        </ThemeProvider>
-      </body>
+    <html lang={locale} className={anek.className} suppressHydrationWarning>
+      <ActiveSectionContextProvider>
+        <body className="bg-fixed">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <NextIntlClientProvider messages={messages}>
+              <Navbar />
+              {children}
+              <Footer />
+            </NextIntlClientProvider>
+          </ThemeProvider>
+        </body>
+      </ActiveSectionContextProvider>
     </html>
   );
 }

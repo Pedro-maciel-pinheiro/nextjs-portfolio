@@ -6,15 +6,20 @@ import { useTranslations } from "next-intl";
 import ThemeSwitch from "../theme-switch";
 import { useEffect, useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
-import { DownloadResume } from "./download-resume";
+
 import { motion } from "framer-motion";
-import { fadeIn, slideInFromBottom, slideInFromLeft } from "@/utils/motion";
+import { slideInFromTop } from "@/utils/motion";
 import { ModeToggle } from "../mode-toggle";
 import { Nav_links } from "@/constant/nav-links";
+import clsx from "clsx";
+import { useActiveSectionContext } from "@/context/active-section";
 
 const Navbar = () => {
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
   const [navScroll, setNavScroll] = useState(false);
   const [navIsOpen, setNavIsOpen] = useState(false);
+
   const animationDelay = 0.5;
 
   useEffect(() => {
@@ -38,7 +43,9 @@ const Navbar = () => {
   return (
     <>
       <nav className="fixed z-30 h-10 w-full">
-        <div
+        <motion.div
+          initial={"hidden"}
+          animate={"visible"}
           className={`relative mx-auto hidden items-center justify-center rounded-md px-4 transition-all duration-1000 lg:flex ${
             navScroll
               ? "mt-0 h-12 max-w-7xl bg-white dark:bg-black"
@@ -50,35 +57,49 @@ const Navbar = () => {
             target="blank"
             className="absolute left-0 z-10 px-2 font-bold uppercase"
           >
-            <h1>Maciel Pinheiro</h1>
+            <motion.h1 variants={slideInFromTop(0.5)}>
+              Maciel Pinheiro
+            </motion.h1>
           </Link>
-          <ul className="z-10 flex items-center justify-center gap-5 font-semibold">
-            <li className="navHover">
-              <Link href={"/"}>{t("home")}</Link>
-            </li>
-            <li className="navHover">
-              <Link href={"/skills"}>{t("skills")}</Link>
-            </li>
-            <li className="navHover">
-              <Link href={"/projects"}>{t("projects")}</Link>
-            </li>
-            <li className="navHover">
-              <Link href={"/about"}>{t("about")}</Link>
-            </li>
-            <li className="navHover">
-              <Link href={"/contact"}>{t("contact")}</Link>
-            </li>
+          <ul className="z-10 mt-2 flex items-center justify-center gap-5 font-semibold">
+            {Nav_links.map((link, index) => (
+              <motion.li
+                key={index}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * animationDelay, duration: 0.8 }}
+                className="relative flex items-center text-gray-700 dark:text-gray-300"
+              >
+                <Link
+                  href={link.href}
+                  onClick={() => {
+                    setActiveSection(link.title),
+                      setTimeOfLastClick(Date.now());
+                  }}
+                  className={clsx(`font-bold transition-colors duration-500`, {
+                    "text-black dark:text-white": link.title === activeSection,
+                  })}
+                >
+                  {t(link.title)}
+                </Link>
+                {link.title === activeSection && (
+                  <motion.span
+                    layoutId="activeSection"
+                    transition={{ type: "spring", stiffness: 280, damping: 30 }}
+                    className="absolute mt-4 h-[2px] w-full rounded-full bg-blue-500"
+                  />
+                )}
+              </motion.li>
+            ))}
           </ul>
-
-          <div className="absolute flex w-full items-center justify-end px-2 gap-3">
+          <motion.div
+            variants={slideInFromTop(0.5)}
+            className="absolute flex w-full items-center justify-end gap-3 px-2"
+          >
             <LanguageSelector />
             <ThemeSwitch />
-
-            <div>
-              <DownloadResume />
-            </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </nav>
 
       <nav className="-z-50 block lg:hidden">
@@ -99,40 +120,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {navIsOpen && (
-        <nav className="fixed z-30 mt-6">
-          <motion.section
-            initial="hidden"
-            animate={navIsOpen ? "visible" : "hidden"}
-            variants={fadeIn(0.1)}
-            className="absolute mt-8 flex h-96 w-40 flex-col items-center justify-center gap-3 rounded-xl border-2 border-white bg-black text-white dark:border-black dark:bg-white dark:text-black"
-          >
-            <motion.ul
-              onClick={() => setNavIsOpen(false)}
-              className="z-10 mt-2 flex w-32 flex-col items-center justify-center gap-5 font-semibold"
-            >
-              {Nav_links.map((item, index) => (
-                <motion.li
-                  key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={
-                    navIsOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                  }
-                  transition={{ delay: index * animationDelay, duration: 0.3 }}
-                  className="w-full rounded-full p-1 text-center shadow shadow-white dark:shadow-black"
-                >
-                  <Link href={item.href} key={item.title}>
-                    {t(item.title)}
-                  </Link>
-                </motion.li>
-              ))}
-              <motion.div variants={fadeIn(2)} className="rounded-full">
-                <DownloadResume />
-              </motion.div>
-            </motion.ul>
-          </motion.section>
-        </nav>
-      )}
+      {navIsOpen && <nav></nav>}
     </>
   );
 };

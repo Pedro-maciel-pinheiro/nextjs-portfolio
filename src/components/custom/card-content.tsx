@@ -1,16 +1,15 @@
-import { SkillDataProps } from "@/constant/icons-index";
-import { ImagesProps } from "@/constant/projects-images";
+
 import { Link } from "@/navigation";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import MaskButton from "../mask-button";
-import { useInViewHook } from "@/hooks/in-view";
+
 import { slideInFromBottom, slideInFromLeft, slideInFromRight } from "@/utils/motion";
 
 interface CardProps {
   title: string;
-  icons: SkillDataProps[];
+ 
   videopath: string;
   videolink: string;
   project_info_1: string;
@@ -21,7 +20,7 @@ interface CardProps {
 
 export const CardContent = ({
   title,
-  icons,
+ 
   videopath,
   videolink,
   project_info_1,
@@ -99,23 +98,7 @@ export const CardContent = ({
               {t("title-h3")}
             </h3>
             <div className=" flex flex-wrap items-center justify-center gap-6 h-20">
-              {icons.map((icon, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{once:true}}
-                  transition={{ delay: index * animationDelay, duration: 1 }}
-                >
-                  <Link
-                    href={icon.href}
-                    className="flex flex-col items-center text-center text-sm"
-                  >
-                    <icon.Image className={`${icon.text_style}`} size={30} />
-                    <p className="text-[12px] ">{icon.skill_name}</p>
-                  </Link>
-                </motion.div>
-              ))}
+            
             </div>
           </div>
         </motion.div>

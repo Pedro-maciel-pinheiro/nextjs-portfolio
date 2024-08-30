@@ -1,18 +1,45 @@
 {
   "home": {
-    "main-h1": "Desenvolvedor Front-end",
-    "description": "Meu nome é Pedro, sou um desenvolvedor com mais de 2 anos de experiência construindo para a web.",
-    "skills-h1": "Tecnologias",
-    "skills-p": "Experiências",
-    "skills-text": "Usando as tecnologia mais recente do mercado"
+    "title-h1": "Bem-vindo",
+    "title-h2": "Eu sou Maciel Pinheiro",
+    "subtitle-h2": "Um desenvolvedor Front-end & Web designer"
   },
   "nav": {
     "home": "Início",
-    "skills": "Habilidades",
+    "experience": "Habilidades",
     "projects": "Projetos",
     "about": "Sobre",
-    "contact": "Contato",
-    "resume": "Currículo"
+    "contact": "Contato"
+  },
+
+  "section-header-text": {
+    "title_about": "Sobre Mim",
+    "title_skill": "Habilidades",
+    "title_project": "Projetos",
+    "title_exp": "Experiências",
+    "title_contact": "Contato"
+  },
+
+  "experience": {
+    "date_1": "2016 - 2020",
+    "date_2": "2020 - 2021",
+    "date_3": "2022 - presente",
+
+    "title_1": "Transição de Carreira",
+    "description_1": "Iniciei minha transição de carreira de técnico em informática para web designer",
+
+    "title_2": "Web Designer",
+    "description_2": "Passei um ano como web designer freelancer antes de migrar para o desenvolvimento front-end, unindo minhas habilidades de design com expertise técnica",
+
+    "title_3": "Desenvolvedor Front-End",
+    "description_3": "Atualmente sou desenvolvedor Front-End trabalhando como freelancer. Meu stack inclui React, Next.js, TypeScript, Tailwind CSS e Framer Motion. Estou aberto a oportunidades em tempo integral."
+  },
+
+  "resume": {
+    "download": "Baixar Currículo",
+    "language_1": "Inglês",
+    "language_2": "Português",
+    "language_3": "Japonês"
   },
   "experiences": {
     "title-1": "Técnico de informática",
@@ -48,7 +75,7 @@
   },
   "about": {
     "title": "Sobre mim",
-    "subtitle": "Brasileiro / 26 anos",
+    "subtitle": "Olá, meu nome é Maciel Pinheiro. Sou brasileiro e tenho 26 anos.",
     "lorem": "Sou um desenvolvedor front-end e designer de web com 2 anos de experiência, especializado em criar interfaces visualmente atraentes e altamente funcionais. Tenho um conhecimento sólido de HTML, CSS e JavaScript, e expertise em tecnologias avançadas como React, Next.js, Tailwind CSS e TypeScript. Além disso, utilizo ferramentas de design web como WebFlow e Figma. Comprometido em entregar resultados de alta qualidade, estou pronto para agregar valor à sua equipe."
   }
 }
