@@ -28,31 +28,31 @@ export default function Hero() {
         className="flex min-h-screen w-full items-center justify-center
          bg-primary dark:bg-black/80"
       >
-        <motion.div variants={fadeIn(0.1)} className="relative grid h-auto 
-        min-h-[400px] content-between gap-2  text-xl md:grid-cols-2 md:content-center">
+        <motion.div variants={fadeIn(0.1)} className="relative grid h-auto  mx-auto
+        min-h-[400px] content-between gap-2   md:grid-cols-2 md:content-center">
           <SpinAnimation />
 
-          <motion.div className="relative z-10 flex flex-col
-          items-center md:items-start justify-center  font-semibold">
+          <motion.div className="relative z-10 flex flex-col gap-4 md:gap-0
+          items-center md:items-start justify-center  font-semibold w-96 md:w-full max-w-[90%] mx-auto md:mx-0">
             <motion.h1 variants={slideInFromTop(0.2)} className="text-5xl md:text-6xl">
             {t("title-h1")}
             </motion.h1>
             <motion.h2
               variants={slideInFromLeft(0.5)}
-              className="mx-2 text-3xl  md:text-4xl"
+              className="mx-2 text-xl  md:text-4xl"
             >
               {t("title-h2")}
             </motion.h2>
             <motion.h2
               variants={slideInFromBottom(0.8)}
-              className="mx-2 text-xl  md:text-3xl"
+              className="mx-2  md:text-3xl"
             >
               {t("subtitle-h2")}
             </motion.h2>
 
             <motion.div 
             variants={slideInFromBottom(1)}
-            className="mt-4 flex items-center justify-center gap-3 mx-2">
+            className="mt-4 flex flex-col md:flex-row items-center justify-center gap-3 mx-2 ">
               <DownloadResume />{" "}
               <div className="flex items-center gap-2">
                 {" "}

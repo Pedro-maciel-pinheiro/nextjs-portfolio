@@ -15,7 +15,10 @@ export const DownloadResume = () => {
     <div className="relative h-auto w-fit">
       <Button
         onClick={() => setResumeLanguage((prev) => !prev)}
-        className="flex h-9 w-fit gap-1 rounded-md border border-white bg-black transition-colors duration-500 hover:bg-blue-600 hover:text-white dark:border-white dark:bg-white dark:hover:bg-blue-600 dark:hover:text-white"
+        className="flex h-9 w-fit gap-1 rounded-md border border-white
+         bg-black transition-colors duration-500 hover:bg-blue-600
+          hover:text-white dark:border-white dark:bg-white dark:hover:bg-blue-600
+           dark:hover:text-white"
       >
         <p className="mt-2 text-lg font-semibold">{t("download")}</p>
         <GoDownload size={18} />
@@ -42,7 +45,7 @@ export const DownloadResume = () => {
                 alt={item.title}
                 width={32}
                 height={32}
-                className="absolute right-0 mx-2 rounded-full"
+                className="absolute right-0 mx-2 "
               />
             </Link>
           ))}

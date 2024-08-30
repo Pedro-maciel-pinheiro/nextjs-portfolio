@@ -1,4 +1,4 @@
-import united_flag from "@/assets/united-states.png";
+import united_flag from "@/assets/united.png";
 import brazil_flag from "@/assets/brazil.png";
 import japan_flag from "@/assets/japan.png";
 
