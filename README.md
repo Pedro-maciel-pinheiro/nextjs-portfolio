@@ -22,7 +22,7 @@ Usage
 
 1. Main Page
 Home Page: Displays an overview of my portfolio with animations.
-  <img src="/github">
+<img src="/github/welcome.png" alt=" welcome image" />
 
 
 
@@ -31,14 +31,21 @@ Home Page: Displays an overview of my portfolio with animations.
 
 2. Language Options
 Language Selector: Allows users to switch between English, Portuguese, and Japanese.
-<img src="/github">
+<img src="/github/language.gif" alt="language image" />
 
 
 
 
-3. Projects Carousel
+3. About Me
+Information about me and my skills
+<img src="/github/about.png" alt="about me image" />
+
+
+
+
+4. Projects Carousel
 Projects Carousel: Browse through my featured projects.
-<img src="/github">
+<img src="/github/project.png" alt="project image" />
 
 
 

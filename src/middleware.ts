@@ -13,3 +13,4 @@ export const config = {
   // Match only internationalized pathnames
   matcher: ['/', '/(pt|en|jp)/:path*']
 };
+
