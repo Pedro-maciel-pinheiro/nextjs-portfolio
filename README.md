@@ -45,6 +45,8 @@ Contact
 Feel free to reach out if you have any questions or suggestions!
 
 Email: shionlk98@gmail.com
+
 LinkedIn: [your-linkedin-profile](https://www.linkedin.com/in/jpmp1998/)
+
 live Portfolio: https://nextjs-portfolio-pedro-maciel.vercel.app/en
 
