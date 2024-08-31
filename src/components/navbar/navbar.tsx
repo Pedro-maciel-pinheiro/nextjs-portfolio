@@ -8,7 +8,12 @@ import { useEffect, useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 
 import { motion } from "framer-motion";
-import { slideInFromTop } from "@/utils/motion";
+import {
+  fadeIn,
+  fadeInFromNegativeX,
+  fadeInFromX,
+  slideInFromTop,
+} from "@/utils/motion";
 import { ModeToggle } from "../mode-toggle";
 import { Nav_links } from "@/constant/nav-links";
 import clsx from "clsx";
@@ -48,7 +53,7 @@ const Navbar = () => {
           animate={"visible"}
           className={`relative mx-auto hidden items-center justify-center rounded-md px-4 transition-all duration-1000 lg:flex ${
             navScroll
-              ? "mt-0 h-12 max-w-7xl bg-white dark:bg-black"
+              ? "mt-0 h-12 max-w-7xl bg-white/90 backdrop-blur-sm dark:bg-black/90"
               : "mt-1 h-8 max-w-6xl"
           }`}
         >
@@ -96,14 +101,18 @@ const Navbar = () => {
             variants={slideInFromTop(0.5)}
             className="absolute flex w-full items-center justify-end gap-3 px-2"
           >
-            <LanguageSelector />
-            <ThemeSwitch />
+            <span className="mt-1">
+              <LanguageSelector />
+            </span>
+            <span>
+              <ThemeSwitch />
+            </span>
           </motion.div>
         </motion.div>
       </nav>
 
       <nav className="-z-50 block lg:hidden">
-        <div className="fixed z-40 flex h-12 w-full items-center justify-between bg-white backdrop-blur-3xl dark:bg-black/80">
+        <div className="fixed z-50 flex h-12 w-full items-center justify-between bg-white/90 backdrop-blur-3xl dark:bg-black/80">
           <div className="flex items-center gap-2">
             <button
               onClick={() => setNavIsOpen((prev) => !prev)}
@@ -113,14 +122,52 @@ const Navbar = () => {
             </button>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="mx-3 flex items-center gap-4">
             <LanguageSelector />
-            <ModeToggle />
+
+            <ThemeSwitch />
           </div>
         </div>
       </nav>
 
-      {navIsOpen && <nav></nav>}
+      {navIsOpen && (
+        <motion.nav
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            delay: 0,
+            duration: 0.5,
+            type: "spring",
+            stiffness: 20,
+            damping: 5,
+            mass: 0.5,
+          }}
+          className="fixed z-40 flex min-h-screen w-full backdrop-blur-3xl"
+        >
+          <ul
+            onClick={() => setNavIsOpen(false)}
+            className="my-20 flex w-full flex-col gap-3 text-2xl"
+          >
+            {Nav_links.map((link, index) => (
+              <motion.li
+                key={index}
+                initial={"hidden"}
+                whileInView={"visible"}
+                custom={index}
+                variants={fadeInFromNegativeX}
+                className="w-full"
+              >
+                <Link
+                  href={link.href}
+                  className="flex h-16 w-full items-end border-b"
+                >
+                  <p className="mx-2 font-semibold uppercase">{link.title}</p>
+                </Link>
+              </motion.li>
+            ))}
+          </ul>
+        </motion.nav>
+      )}
     </>
   );
 };

@@ -29,7 +29,7 @@ export const DownloadResume = () => {
           initial={"hidden"}
           animate={"visible"}
           variants={fadeIn(0.1)}
-          className="b bg- absolute mt-1 flex h-16 w-full flex-col rounded-sm text-white dark:text-black"
+          className="backdrop-blur-3xl absolute mt-1 flex h-16 w-full flex-col  rounded-sm text-white dark:text-black"
         >
           {download_text.map((item) => (
             <Link
@@ -37,7 +37,8 @@ export const DownloadResume = () => {
               href={item.href}
               download={item.href}
               target="blank"
-              className="my-1 flex h-9 w-full items-center justify-center gap-1 rounded-md border bg-black transition-colors duration-300 hover:bg-blue-600 hover:text-white dark:border-white dark:bg-white dark:hover:bg-blue-600 dark:hover:text-white"
+              className="my-1 flex h-9 w-full items-center justify-center gap-1 
+              rounded-md border bg-black transition-colors duration-300 hover:bg-blue-600 hover:text-white dark:border-white dark:bg-white dark:hover:bg-blue-600 dark:hover:text-white"
             >
               <p className="mt-2">{t(item.title)}</p>
               <Image

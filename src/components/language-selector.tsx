@@ -20,7 +20,7 @@ export default function LanguageSelector() {
     <div className="relative w-10">
       <button
         onClick={() => setIsDropDownOpen(!isDropDownOpen)}
-        className="  flex items-center bg-transparent dark:bg-black/60 
+        className="  flex items-center bg-transparent 
         font-bold border-none text-sm"
       >
         {currentLocale.toUpperCase()}{" "}

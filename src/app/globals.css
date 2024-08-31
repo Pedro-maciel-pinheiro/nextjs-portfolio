@@ -73,7 +73,7 @@ body {
     --background-image-dark: url("../../public/img/japan-night.jpg");
     --background-gradient: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.644),
+      rgba(0, 0, 0, 0.767),
       rgba(0, 0, 0, 0)
     );
     --foreground: 222.2 84% 4.9%;

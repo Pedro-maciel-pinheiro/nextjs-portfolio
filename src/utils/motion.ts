@@ -75,7 +75,26 @@ export const fadeInFromX = {
     },
   }),
 };
+;
 
+export const fadeInFromNegativeX = {
+  hidden: {
+    opacity: 0,
+    x: -50,
+  },
+
+  visible: (index: number ) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.3 * index,
+      stiffness: 10, 
+      damping: 5, 
+      mass: 0.2, 
+     
+    },
+  }),
+};
 
 export const fadeInSlider = {
   hidden: {
@@ -98,24 +117,7 @@ export const fadeInSlider = {
 
 
 
-export const fadeInFromNegativeX = {
-  hidden: {
-    opacity: 0,
-    y: -100,
-  },
 
-  visible: (index: number ) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.4 * index,
-      stiffness: 20, 
-      damping: 10, 
-      mass: 0.2, 
-     
-    },
-  }),
-};
 
 export function underlineVariant(duration: number) {
   return {
@@ -254,9 +256,9 @@ export function fadeIn(delay: number) {
         delay: 0,
         duration: 0.2,
         type: "spring",
-        stiffness: 30,
-        damping: 10,
-        mass: 0.5,
+        stiffness: 5,
+        damping: 5,
+        mass: 0.1,
       },
     },
     visible: {

@@ -29,12 +29,13 @@ export default function Hero() {
          bg-primary dark:bg-black/80"
       >
         <motion.div variants={fadeIn(0.1)} className="relative grid h-auto  mx-auto
-        min-h-[400px] content-between gap-2   md:grid-cols-2 md:content-center">
+        min-h-[400px] content-between gap-2    md:grid-cols-2 md:content-center">
           <SpinAnimation />
 
-          <motion.div className="relative z-10 flex flex-col gap-4 md:gap-0
-          items-center md:items-start justify-center  font-semibold w-96 md:w-full max-w-[90%] mx-auto md:mx-0">
-            <motion.h1 variants={slideInFromTop(0.2)} className="text-5xl md:text-6xl">
+          <motion.div className="mt-40 md:mt-0 flex flex-col gap-4 md:gap-0
+          items-center md:items-start justify-center
+            font-semibold  mx-auto md:mx-0">
+            <motion.h1 variants={slideInFromTop(0.2)} className="text-5xl md:text-6xl mx-1">
             {t("title-h1")}
             </motion.h1>
             <motion.h2
@@ -43,12 +44,12 @@ export default function Hero() {
             >
               {t("title-h2")}
             </motion.h2>
-            <motion.h2
+            <motion.h3
               variants={slideInFromBottom(0.8)}
-              className="mx-2  md:text-3xl"
+              className="mx-2 text-[15px]  md:text-3xl flex "
             >
               {t("subtitle-h2")}
-            </motion.h2>
+            </motion.h3>
 
             <motion.div 
             variants={slideInFromBottom(1)}
