@@ -14,7 +14,8 @@ export default function About() {
     <section
       ref={ref}
       id="about"
-      className="flex h-auto w-full scroll-m-8 flex-col items-center justify-center bg-primary dark:bg-black/80 md:h-screen"
+      className="flex h-auto w-full scroll-m-8 flex-col
+       items-center justify-center bg-primary dark:bg-black/80 md:h-screen"
     >
       <motion.div
         initial={"hidden"}
@@ -32,7 +33,8 @@ export default function About() {
         </motion.article>
       </motion.div>
 
-      <div className="flex h-full w-full max-w-[90%] flex-col items-center md:max-w-xl lg:max-w-3xl xl:max-w-4xl">
+      <div className="flex h-full w-full max-w-[90%] 
+      flex-col items-center md:max-w-xl lg:max-w-3xl xl:max-w-4xl">
         <Skills />
       </div>
     </section>

@@ -1,6 +1,4 @@
-import Link from "next/link";
 import React from "react";
-import { FaGithub, FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -8,7 +6,7 @@ function Footer() {
     
       <aside className="flex flex-col items-center justify-center text-lg font-bold text-black dark:text-white">
         <span>João Pedro Maciel Pinheiro</span>
-        <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent transition-all duration-300 hover:bg-gradient-to-l">
+        <span className="text-sm md:text-lg bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent transition-all duration-300 hover:bg-gradient-to-l">
           {" "}
           Front-end Devoloper & Web designer
         </span>

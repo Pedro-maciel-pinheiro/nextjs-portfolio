@@ -96,6 +96,8 @@ export const fadeInFromNegativeX = {
   }),
 };
 
+
+
 export const fadeInSlider = {
   hidden: {
     opacity: 0,

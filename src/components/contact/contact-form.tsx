@@ -17,7 +17,7 @@ import { useSectionInView } from "@/hooks/hooks";
 export default function Contact() {
   const { ref } = useSectionInView("contact");
   const t = useTranslations("contact");
-  const animationDelay = 0.8;
+  const animationDelay = 0.5;
   async function handleSubmit(event: any) {
     event.preventDefault();
     const formData = new FormData(event.target);

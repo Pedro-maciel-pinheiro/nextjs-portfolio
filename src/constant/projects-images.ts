@@ -56,12 +56,7 @@ export const Skill_data_ecommerce: SkillsProps[] = [
     href: "https://nextjs.org/",
     text_style: "",
   },
-  {
-    name: "Next-Auth",
-    logo: React.createElement(IoShieldCheckmark),
-    href: "https://next-auth.js.org/",
-    text_style: "hover:text-pink-500",
-  },
+  
 
   {
     name: "TypeScript",
@@ -76,24 +71,6 @@ export const Skill_data_ecommerce: SkillsProps[] = [
     text_style: "hover:text-blue-500",
   },
 
-  {
-    name: "Shadcn/ui",
-    logo: React.createElement(SiShadcnui),
-    href: "https://ui.shadcn.com/",
-    text_style: "hover:bg-black hover:text-white",
-  },
-  {
-    name: "Framer",
-    logo: React.createElement(SiFramer),
-    href: "https://www.framer.com/motion/",
-    text_style: "hover:text-pink-500",
-  },
-  {
-    name: "Swiper",
-    logo: React.createElement(SiSwiper),
-    href: "https://swiperjs.com/",
-    text_style: "hover:text-blue-600",
-  },
 
   {
     name: "Neon-db",
@@ -129,18 +106,6 @@ export const Skill_data_phoneshop: SkillsProps[] = [
     text_style: "hover:text-blue-500",
   },
   {
-    name: "Swiper",
-    logo: React.createElement(SiSwiper),
-    href: "https://swiperjs.com/",
-    text_style: "hover:text-blue-600",
-  },
-  {
-    name: "Shadcn/ui",
-    logo: React.createElement(SiShadcnui),
-    href: "https://ui.shadcn.com/",
-    text_style: "hover:bg-black hover:text-white",
-  },
-  {
     name: "Framer",
     logo: React.createElement(SiFramer),
     href: "https://www.framer.com/motion/",
@@ -162,21 +127,21 @@ export const project_info: ProjectProps[] = [
   {
     id: 2,
     tagline: "tagline-2",
-    title: "main-title",
+    title: "main-title-2",
     description: "info-text-3",
     title_button: "button-text",
     images: image_redmagic,
     project_link: "https://phone-shop-mu.vercel.app/redmagic-9-pro",
     data: Skill_data_phoneshop,
   },
-  {
-    id: 3,
-    tagline: "tagline-2",
-    title: "main-title",
-    description: "info-text-3",
-    title_button: "button-text",
-    images: image_phone,
-    project_link: "https://phone-shop-mu.vercel.app/",
-    data: Skill_data_phoneshop,
-  },
+  // {
+  //   id: 3,
+  //   tagline: "tagline-2",
+  //   title: "main-title",
+  //   description: "info-text-3",
+  //   title_button: "button-text",
+  //   images: image_phone,
+  //   project_link: "https://phone-shop-mu.vercel.app/",
+  //   data: Skill_data_phoneshop,
+  // },
 ];
