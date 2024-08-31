@@ -21,21 +21,21 @@ Usage
 
 
 1. Main Page
-Home Page: Displays an overview of my portfolio with animations.
+ Displays an overview of my portfolio with animations.
 <img src="/github/welcome.png" alt=" welcome image"  />
 
 
 
 
-3. About Me
+2. 
 Information about me and my skills
 <img src="/github/about.png" alt="about me image"  />
 
 
 
 
-4. Projects Carousel
-Projects Carousel: Browse through my featured projects.
+3. Projects Carousel
+Browse through my featured projects.
 <img src="/github/project.png" alt="project image"  />
 
 
