@@ -131,7 +131,7 @@ export const project_info: ProjectProps[] = [
     description: "info-text-3",
     title_button: "button-text",
     images: image_redmagic,
-    project_link: "https://phone-shop-mu.vercel.app/redmagic-9-pro",
+    project_link: "https://phone-shop-mu.vercel.app/",
     data: Skill_data_phoneshop,
   },
   // {
