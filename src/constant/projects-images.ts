@@ -1,4 +1,4 @@
-import { IoShieldCheckmark } from "react-icons/io5";
+
 import image_valorant from "@/assets/project-1.webp";
 import image_ecomme from "@/assets/project-2.png";
 import image_phone from "@/assets/project-3.png";
@@ -10,9 +10,7 @@ import {
   SiNextdotjs,
   SiRedux,
   SiTailwindcss,
-  SiShadcnui,
   SiFramer,
-  SiSwiper,
 } from "react-icons/si";
 
 import React from "react";
@@ -172,7 +170,7 @@ export const project_info: ProjectProps[] = [
     description: "info-text-3",
     title_button: "button-text",
     images: image_phone,
-    project_link: "https://phone-shop-mu.vercel.app",
+    project_link: "https://phone-shop-mu.vercel.app/redmagic-9-pro",
     data: Skill_data_phoneshop,
   },
 ];
