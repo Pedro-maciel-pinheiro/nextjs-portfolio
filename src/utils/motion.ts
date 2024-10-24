@@ -96,7 +96,24 @@ export const fadeInFromNegativeX = {
   }),
 };
 
+export const fadeInFromY = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
 
+  visible: (index: number ) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.1 * index,
+      type: "spring",
+      stiffness: 40,
+      damping: 15,
+      mass: 0.5,
+    },
+  }),
+};
 
 export const fadeInSlider = {
   hidden: {

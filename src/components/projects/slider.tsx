@@ -1,81 +1,104 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { project_info } from "@/constant/projects-images";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import MaskButton from "../mask-button";
-import { fadeInSlider } from "@/utils/motion";
+import { SectionHeading } from "../section-heading";
+import "swiper/css";
+import "swiper/css/pagination";
+import Link from "next/link";
+import { fadeInFromY, slideInFromBottom } from "@/utils/motion";
+import { FaChevronRight } from "react-icons/fa";
 
 export const Slider = () => {
-  const slideRef = useRef<HTMLDivElement | null>(null);
-  const [constraint, setConstraint] = useState(0);
+  const [slidesPerView, setSlidesPerView] = useState<number>(3);
   const t = useTranslations("project");
 
   useEffect(() => {
-    if (slideRef.current) {
-      const slideWidth = slideRef.current.offsetWidth;
-      const totalWidth = slideRef.current.scrollWidth;
-      setConstraint(slideWidth - totalWidth);
-    }
+    const updateSlidesPerView = () => {
+      const slideResize = window.innerWidth;
+
+      if (slideResize < 1100) {
+        setSlidesPerView(1);
+      } else {
+        setSlidesPerView(2);
+      }
+    };
+    updateSlidesPerView();
+    window.addEventListener("resize", updateSlidesPerView);
+    return () => window.removeEventListener("resize", updateSlidesPerView);
   }, []);
 
   return (
-    <motion.section
-      ref={slideRef}
-      className="mt-16 h-full w-full overflow-hidden"
-    >
-      <motion.ul
-        drag="x"
-        dragConstraints={{ right: 0, left: constraint }}
-        className="flex h-full w-full cursor-grab gap-6"
-      >
-        {project_info.map((item, index) => (
-          <motion.li
-            key={index}
-            initial={"hidden"}
-            whileInView={"visible"}
-            viewport={{ once: true }}
-            variants={fadeInSlider}
-            custom={index}
-            className="relative min-h-[520px] min-w-[280px] rounded-lg
-             border-2 border-black dark:border-white md:min-w-[450px] xl:min-w-[550px]"
-          >
-            <Image
-              draggable={false}
-              src={item.images}
-              alt=""
-              width={600}
-              height={600}
-              className="rounded-se-lg border-b-4 border-gray-500 object-cover"
-            />
-            <p className="absolute z-10 mx-2 text-sm font-bold hidden md:block">
-              {t(item.tagline)}
-            </p>
-            <div className="flex h-64 w-full flex-col items-center justify-between bg-white/80 font-semibold dark:bg-black/80">
-              <div className="mt-2 flex flex-col items-center ">
-                <h2 className="text-xl border-b-2 border-b-black dark:border-white">{t(item.title)}</h2>
-                <div className="mt-2 flex flex-wrap items-center justify-center gap-4">
-                  <p className="text-start md:text-justify md:w-[400px] max-w-[90%]">
-                    {t(item.description)}
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex h-12 w-full items-center justify-center">
-                <MaskButton
-                  linkBasePath={item.project_link}
-                  title={item.title_button}
-                  btnColor={
-                    "border-white dark:border-black bg-black text-white dark:bg-white dark:text-black w-56 md:w-80 font-semibold after:bg-blue-600 text-lg hover:text-white "
-                  }
-                  target={"blank"}
-                />
-              </div>
-            </div>
-          </motion.li>
-        ))}
-      </motion.ul>
-    </motion.section>
+    <>
+      <div className="flex w-full flex-col items-center justify-center">
+        <SectionHeading heading={"title_project"} />
+        <motion.p initial="hidden" whileInView={"visible"} variants={slideInFromBottom(0)} className="flex items-center justify-center font-semibold text-lg mb-4">
+         {t("slide")}<FaChevronRight className="animate-bounce mb-1" />
+        </motion.p>
+      </div>
+      <motion.section className="h-auto max-w-4xl overflow-hidden lg:mx-auto">
+        <Swiper
+          slidesPerView={slidesPerView}
+          spaceBetween={30}
+          speed={1200}
+          grabCursor={true}
+          className={`max-w-[90%]`}
+        >
+          {project_info.map((info, index) => (
+            <SwiperSlide key={info.id} className="h-full w-full px-2 py-2">
+              <Link
+                href={info.project_link}
+                target="blank"
+                className="flex h-auto w-full flex-col items-center justify-center"
+              >
+                <motion.ul
+                  initial={"hidden"}
+                  whileInView={"visible"}
+                  viewport={{ once: true }}
+                  variants={fadeInFromY}
+                  custom={index}
+                  className="flex max-w-[90%] cursor-grab flex-col items-center active:cursor-grabbing"
+                >
+                  <li className="flex">
+                    <Image
+                      src={info.images}
+                      alt={info.title}
+                      width={400}
+                      height={400}
+                      className="rounded-lg border-2 border-black dark:border-white"
+                    />
+                  </li>
+                  <li className="mt-4 flex w-96 max-w-[99%] flex-col items-center justify-center gap-2">
+                    <h1 className="mt-2 text-2xl font-medium md:text-3xl">
+                      {t(info.title)}
+                    </h1>
+                    <p className="w-64 text-justify dark:text-white/90 md:w-80">
+                      {t(info.description)}
+                    </p>
+                    <h2 className="text-lg font-medium md:text-xl">
+                      {t("title-h3")}
+                    </h2>
+                    <div className="grid grid-cols-4 gap-1 md:grid-cols-5">
+                      {info.data.map((icon) => (
+                        <div
+                          key={icon.name}
+                          className="flex flex-col items-center"
+                        >
+                          <p className="text-2xl">{icon.logo}</p>
+                          <p className="text-sm font-medium">{icon.name}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </li>
+                </motion.ul>
+              </Link>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </motion.section>
+    </>
   );
 };

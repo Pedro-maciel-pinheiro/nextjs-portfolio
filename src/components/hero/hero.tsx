@@ -26,7 +26,7 @@ export default function Hero() {
         id="home"
         viewport={{once:true}}
         className="flex min-h-screen w-full items-center justify-center
-         bg-primary dark:bg-black/80"
+         "
       >
         <motion.div variants={fadeIn(0.1)} className="relative grid h-auto  mx-auto
         min-h-[400px] content-between gap-2    md:grid-cols-2 md:content-center">

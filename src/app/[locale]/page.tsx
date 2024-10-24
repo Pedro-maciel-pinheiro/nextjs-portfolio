@@ -8,13 +8,15 @@ import Experience from "@/components/exp/experiences";
 export default function Home() {
   return (
     <main
-      className={`mx-auto flex min-h-screen w-full flex-col items-center justify-center overflow-hidden`}
+      className={`mx-auto flex min-h-screen w-full flex-col items-center
+         justify-center overflow-hidden bg-primary dark:bg-black/80`}
     >
       <Hero />
       <About />
       <Experience />
       <Projects />
       <Contact />
+      
     </main>
   );
 }

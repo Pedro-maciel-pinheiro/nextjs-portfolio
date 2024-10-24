@@ -53,14 +53,14 @@ export default function Contact() {
         whileInView={"visible"}
         viewport={{ once: true }}
         className="flex min-h-screen w-full flex-col items-center 
-        justify-center bg-primary dark:bg-black/80"
+        justify-center "
       >
         <SectionHeading heading={"title_contact"} />
         <motion.div
           variants={slideInFromBottom(0.8)}
           className="mb-4 grid h-full w-full max-w-[90%] grid-cols-1 
           content-center rounded-lg border-2 border-white bg-black p-2
-           dark:border-white dark:bg-black/50 md:h-[550px] md:grid-cols-2 xl:max-w-5xl"
+           dark:border-white dark:bg-black/50 md:h-[550px] md:grid-cols-2 xl:max-w-4xl"
         >
           <form
             onSubmit={handleSubmit}

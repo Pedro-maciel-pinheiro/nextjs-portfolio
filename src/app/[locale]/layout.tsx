@@ -25,7 +25,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} className={anek.className} suppressHydrationWarning>
       <ActiveSectionContextProvider>
-        <body className="bg-fixed">
+        <body className="bg-fixed ">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

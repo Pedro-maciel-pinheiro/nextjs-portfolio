@@ -52,16 +52,17 @@
   "project": {
     "tagline-1": "Projeto 01",
     "tagline-2": "Projeto 02",
+    "slide": "Deslize para",
     "title-h1-page": "Meus Projetos",
-    "main-title": "Projeto E-commerce",
-    "main-title-2": "Projeto Showcase",
+    "main-title-1": "Projeto Valorant",
+    "main-title-2": "Projeto E-commerce",
+    "main-title-3": "Projeto Phone",
     "main-page-subtitle": "Aqui estão meus últimos projetos e algumas informações sobre eles",
     "subtitle": "Aqui está um dos meus últimos projetos e algumas informações sobre ele",
     "title-h3": "Tecnologias utilizadas neste projeto",
-    "info-text-1": "O projeto de e-commerce em Next.js é construído usando React, Next.js, TypeScript, Redux e Tailwind CSS. Ele possui um catálogo de produtos dinâmico buscado de uma API, com funcionalidades como filtragem por categorias, marcas e preços. A loja Redux gerencia o estado global, garantindo atualizações contínuas entre os componentes.",
-    "info-text-2": "O Tailwind CSS é usado para um design de UI moderno e responsivo. O aplicativo inclui páginas para listagem de produtos, visualização detalhada de produtos, carrinho de compras e checkout, com atualizações em tempo real e desempenho otimizado para uma experiência de usuário fluida em todos os dispositivos.",
-    "info-text-3": "O projeto de showcase em Next.js usa React, Next.js, TypeScript e Tailwind CSS. Ele apresenta um catálogo dinâmico de telefones, incluindo iPhone 15 e RedMagic 9 Pro. As páginas de showcase destacam as características únicas desses telefones com animações criadas usando Framer Motion.",
-    "info-text-4": "O Tailwind CSS garante um design de UI moderno e responsivo em todos os dispositivos. O aplicativo inclui páginas de listagem de telefones, visualizações detalhadas, carrinho de compras e checkout, todos otimizados para desempenho. O Framer Motion oferece interações visualmente atraentes, aprimorando a experiência de compra.",
+    "info-text-1": "Este projeto usa a API de Valorant para praticar o uso de APIs, incorporando filtros baseados em parâmetros de busca. A busca de dados é feita no lado do servidor, utilizando Next.js para uma integração perfeita.",
+    "info-text-2": "Este projeto é um mercado de desenvolvimento usando Redux para gerenciar informações em todo o aplicativo. Inclui uma barra de pesquisa para filtrar produtos, permite adicionar itens ao carrinho e tem uma função de checkout",
+    "info-text-3": "Este projeto é uma vitrine de celulares inspirada nos sites do iPhone e RedMagic. Ele possui filtros de uma API de celulares e inclui várias animações feitas com Framer Motion.",
     "button-text": "Site Online"
   },
   "contact": {
