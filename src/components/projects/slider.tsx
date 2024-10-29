@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { project_info } from "@/constant/projects-images";
 import Image from "next/image";
 import { SectionHeading } from "../section-heading";
@@ -13,7 +13,8 @@ import { fadeInFromY, slideInFromBottom } from "@/utils/motion";
 import { FaChevronRight } from "react-icons/fa";
 
 export const Slider = () => {
-  const [slidesPerView, setSlidesPerView] = useState<number>(3);
+  const [slidesPerView, setSlidesPerView] = useState<number>(2);
+  const [progress, setProgress] = useState<number>(0);
   const t = useTranslations("project");
 
   useEffect(() => {
@@ -22,8 +23,10 @@ export const Slider = () => {
 
       if (slideResize < 1100) {
         setSlidesPerView(1);
+        setProgress((1 / project_info.length) * 100);
       } else {
         setSlidesPerView(2);
+        setProgress((2 / project_info.length) * 100);
       }
     };
     updateSlidesPerView();
@@ -31,21 +34,52 @@ export const Slider = () => {
     return () => window.removeEventListener("resize", updateSlidesPerView);
   }, []);
 
+  const handleSlideChange = (swiper: SwiperClass) => {
+    const totalSlides = project_info.length;
+    const visibleSlides = Math.min(slidesPerView, totalSlides);
+    const currentIndex = swiper.activeIndex;
+
+    const progressPercent =
+      ((currentIndex + visibleSlides) / totalSlides) * 100;
+    setProgress(progressPercent);
+  };
+
   return (
     <>
       <div className="flex w-full flex-col items-center justify-center">
         <SectionHeading heading={"title_project"} />
-        <motion.p initial="hidden" whileInView={"visible"} variants={slideInFromBottom(0)} className="flex items-center justify-center font-semibold text-lg mb-4">
-         {t("slide")}<FaChevronRight className="animate-bounce mb-1" />
+        <motion.p
+          initial="hidden"
+          whileInView={"visible"}
+          variants={slideInFromBottom(0)}
+          className="mb-4 flex items-center justify-center text-lg font-semibold"
+        >
+          {t("slide")}
+          <FaChevronRight className="mb-1 animate-bounce" />
         </motion.p>
       </div>
       <motion.section className="h-auto max-w-4xl overflow-hidden lg:mx-auto">
+        <motion.div
+          initial="hidden"
+          whileInView={"visible"}
+          viewport={{ once: true }}
+          variants={slideInFromBottom(0)}
+          className="mx-auto mt-4 h-1 w-full max-w-[80%] overflow-hidden rounded-lg bg-gray-300 mb-10"
+        >
+          <motion.div
+            initial={{ width: `${progress}%` }}
+            animate={{ width: `${progress}%` }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="h-full bg-blue-500"
+          />
+        </motion.div>
         <Swiper
           slidesPerView={slidesPerView}
           spaceBetween={30}
           speed={1200}
           grabCursor={true}
           className={`max-w-[90%]`}
+          onSlideChange={handleSlideChange}
         >
           {project_info.map((info, index) => (
             <SwiperSlide key={info.id} className="h-full w-full px-2 py-2">
