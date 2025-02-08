@@ -1,4 +1,4 @@
-import { FaReact } from "react-icons/fa";
+import { FaCcStripe, FaReact } from "react-icons/fa";
 import {
   SiReactquery,
   SiRedux,
@@ -13,11 +13,13 @@ import {
   SiSwiper,
   SiWebflow,
   SiMongodb,
+  SiPayloadcms,
 } from "react-icons/si";
 import { TbBrandReactNative, TbBrandHeadlessui } from "react-icons/tb";
 import { IoShieldCheckmark } from "react-icons/io5";
 import { AiFillDatabase } from "react-icons/ai";
 import React from "react";
+import { FaNodeJs, FaShopify } from "react-icons/fa6";
 
 export const Skill_data_1 = [
   {
@@ -93,13 +95,13 @@ export const Skill_data_2 = [
     name: "Shadcn/ui",
     logo: React.createElement(SiShadcnui),
     href: "https://ui.shadcn.com/",
-    text_style: "hover:bg-black hover:text-white",
+    text_style: "hover:text-grey-500",
   },
   {
     name: "Headlessui",
     logo: React.createElement(TbBrandHeadlessui),
     href: "https://headlessui.com/",
-    text_style: "hover:bg-black hover:text-white",
+    text_style: "hover:text-grey-500",
   },
   {
     name: "Framer",
@@ -108,25 +110,37 @@ export const Skill_data_2 = [
     text_style: "hover:text-pink-500",
   },
   {
-    name: "Swiper",
-    logo: React.createElement(SiSwiper),
-    href: "https://swiperjs.com/",
-    text_style: "hover:text-blue-600",
+    name: "Node.js",
+    logo: React.createElement(FaNodeJs),
+    href: "https://nodejs.org/pt",
+    text_style: "hover:text-green-500",
   },
   {
-    name: "WebFlow",
-    logo: React.createElement(SiWebflow),
-    href: "https://webflow.com/",
-    text_style: "hover:text-blue-600",
+    name: "Shopify",
+    logo: React.createElement(FaShopify),
+    href: "https://www.shopify.com/br",
+    text_style: "hover:text-shopify",
+  },
+  {
+    name: "Payload",
+    logo: React.createElement(SiPayloadcms),
+    href: "https://payloadcms.com/",
+    text_style: "hover:text-gray-300",
+  },
+  {
+    name: "Stripe",
+    logo: React.createElement(FaCcStripe),
+    href: "https://stripe.com/br",
+    text_style: "hover:text-cyan-500",
   },
   {
     name: "Mongodb",
     logo: React.createElement(SiMongodb),
     href: "https://www.mongodb.com",
-    text_style: "hover:text-green-500",
+    text_style: "hover:text-green-700",
   },
   {
-    name: "Neon-tech",
+    name: "Neon",
     logo: React.createElement(AiFillDatabase),
     href: "https://neon.tech/",
     text_style: "hover:text-green-400",

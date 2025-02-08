@@ -1,7 +1,9 @@
-export const Nav_links = [
+import { NavlinksProps } from "@/types";
+
+export const Nav_links: NavlinksProps[] = [
   {
     title: "home",
-    href: "#home",
+    href: "/",
   },
   {
     title: "about",
@@ -19,4 +21,4 @@ export const Nav_links = [
     title: "contact",
     href: "#contact",
   },
-] as const;
+];

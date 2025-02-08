@@ -7,7 +7,7 @@ import { useSectionInView } from "@/hooks/hooks";
 export default function Projects() {
   const { ref } = useSectionInView("projects");
   return (
-    <section ref={ref} id="projects" className="w-full h-full">
+    <section ref={ref} id="projects" className="h-full w-full">
       <Slider />
     </section>
   );

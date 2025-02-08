@@ -63,35 +63,31 @@ export const fadeInFromX = {
     x: 100,
   },
 
-  visible: (index: number ) => ({
+  visible: (index: number) => ({
     opacity: 1,
     x: 0,
     transition: {
       delay: 0.4 * index,
-      stiffness: 20, 
-      damping: 10, 
-      mass: 0.2, 
-     
+      stiffness: 20,
+      damping: 10,
+      mass: 0.2,
     },
   }),
 };
-;
-
 export const fadeInFromNegativeX = {
   hidden: {
     opacity: 0,
     x: -50,
   },
 
-  visible: (index: number ) => ({
+  visible: (index: number) => ({
     opacity: 1,
     x: 0,
     transition: {
       delay: 0.3 * index,
-      stiffness: 10, 
-      damping: 5, 
-      mass: 0.2, 
-     
+      stiffness: 10,
+      damping: 5,
+      mass: 0.2,
     },
   }),
 };
@@ -102,7 +98,7 @@ export const fadeInFromY = {
     y: 100,
   },
 
-  visible: (index: number ) => ({
+  visible: (index: number) => ({
     opacity: 1,
     y: 0,
     transition: {
@@ -121,7 +117,7 @@ export const fadeInSlider = {
     x: 100,
   },
 
-  visible: (index: number ) => ({
+  visible: (index: number) => ({
     opacity: 1,
     x: 0,
     transition: {
@@ -133,10 +129,6 @@ export const fadeInSlider = {
     },
   }),
 };
-
-
-
-
 
 export function underlineVariant(duration: number) {
   return {
@@ -286,6 +278,25 @@ export function fadeIn(delay: number) {
     },
   };
 }
+
+export const fadeInSkills = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+
+  visible: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.1 * index,
+      type: "spring",
+      stiffness: 40,
+      damping: 20,
+      mass: 1,
+    },
+  }),
+};
 
 // <motion.div
 // key={item._id}

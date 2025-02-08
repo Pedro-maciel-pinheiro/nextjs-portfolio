@@ -15,31 +15,18 @@ Getting Started
 Prerequisites
 Node.js (v16 or later)
 
-
-
 Usage
 
-
 1. Main Page
- Displays an overview of my portfolio with animations.
-<img src="/github/welcome.png" alt=" welcome image"  />
+   Displays an overview of my portfolio with animations.
+   <img src="/github/welcome.png" alt=" welcome image"  />
 
-
-
-
-2. 
-Information about me and my skills
-<img src="/github/about.png" alt="about me image"  />
-
-
-
+2. Information about me and my skills
+   <img src="/github/about.png" alt="about me image"  />
 
 3. Projects Carousel
-Browse through my featured projects.
-<img src="/github/project.png" alt="project image"  />
-
-
-
+   Browse through my featured projects.
+   <img src="/github/project.png" alt="project image"  />
 
 Contact
 Feel free to reach out if you have any questions or suggestions!
@@ -49,4 +36,3 @@ Email: shionlk98@gmail.com
 LinkedIn: [your-linkedin-profile](https://www.linkedin.com/in/jpmp1998/)
 
 live Portfolio: https://nextjs-portfolio-pedro-maciel.vercel.app/en
-

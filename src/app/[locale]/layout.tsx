@@ -4,15 +4,16 @@ import "../globals.css";
 
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 import ActiveSectionContextProvider from "@/context/active-section";
 import { siteMetadata } from "@/constant/metadata";
+import { Toaster } from "@/components/ui/toaster";
 
 const anek = Anek_Devanagari({ subsets: ["latin"] });
 
-export const metadata: Metadata = siteMetadata
+export const metadata: Metadata = siteMetadata;
 
 export default async function RootLayout({
   children,
@@ -25,7 +26,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} className={anek.className} suppressHydrationWarning>
       <ActiveSectionContextProvider>
-        <body className="bg-fixed ">
+        <body className="h-full w-full bg-fixed">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -35,6 +36,7 @@ export default async function RootLayout({
             <NextIntlClientProvider messages={messages}>
               <Navbar />
               {children}
+              <Toaster />
               <Footer />
             </NextIntlClientProvider>
           </ThemeProvider>

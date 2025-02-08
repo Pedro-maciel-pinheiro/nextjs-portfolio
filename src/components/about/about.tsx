@@ -14,8 +14,7 @@ export default function About() {
     <section
       ref={ref}
       id="about"
-      className="flex h-auto w-full scroll-m-8 flex-col
-       items-center justify-center  md:h-screen"
+      className="flex h-auto w-full scroll-m-8 flex-col items-center justify-center md:h-screen"
     >
       <motion.div
         initial={"hidden"}
@@ -26,15 +25,14 @@ export default function About() {
       >
         <SectionHeading heading={"title_about"} />
 
-        <motion.article className="mx-auto flex max-w-[90%] flex-col items-start gap-2 rounded-lg border-2 border-black p-8 font-semibold backdrop-blur-sm dark:border-white md:max-w-xl lg:max-w-3xl xl:max-w-4xl">
+        <motion.article className="mx-auto flex flex-col items-start gap-2 rounded-lg border-2 border-black p-8 font-semibold backdrop-blur-sm dark:border-white">
           <motion.h2 className="text-xl">{t("subtitle")}</motion.h2>
 
           <motion.p className="text-lg">{t("lorem")}</motion.p>
         </motion.article>
       </motion.div>
 
-      <div className="flex h-full w-full max-w-[90%] 
-      flex-col items-center md:max-w-xl lg:max-w-3xl xl:max-w-4xl">
+      <div className="flex h-full w-full flex-col items-center">
         <Skills />
       </div>
     </section>

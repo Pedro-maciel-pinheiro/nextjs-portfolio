@@ -2,7 +2,7 @@
   "home": {
     "title-h1": "Welcome",
     "title-h2": "I'm Maciel Pinheiro",
-    "subtitle-h2": "A Front-end developer & Web designer"
+    "subtitle-h2": "A Full-stack developer "
   },
   "nav": {
     "home": "Home",
@@ -17,22 +17,22 @@
     "title_skill": "Skills",
     "title_project": "Projects",
     "title_exp": "Experiences",
-    "title_contact":"Contact"
+    "title_contact": "Contact"
   },
 
   "experience": {
-    "date_1": "2016 - 2020",
-    "date_2": "2020 - 2021",
-    "date_3": "2022 - present",
+    "date_1": "2018 - 2022",
+    "date_2": "2022 - 2023",
+    "date_3": "2024 - present",
 
     "title_1": "Career Transition",
     "description_1": "I began my career transition from computer technician to web designer",
 
-    "title_2": "Web Designer",
+    "title_2": "Front-end Developer",
     "description_2": "I spent a year as a freelance web designer before transitioning into front-end development to merge my design skills with technical expertise",
 
-    "title_3": "Front-End Developer",
-    "description_3": "I'm now a Front-End developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind CSS, and Framer Motion. I'm open to full-time opportunities."
+    "title_3": "Full-stack Developer",
+    "description_3": "I'm now a Full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Node.js. I'm open to full-time opportunities."
   },
 
   "resume": {
@@ -51,22 +51,44 @@
     "dialog-text-3": "Now. I work as a freelancer doing different types of work like complete websites and apps using all the technologies alongside"
   },
 
-  "project": {
-    "tagline-1": "Project 01",
-    "tagline-2": "Project 02",
-    "slide":"Slide to",
-    "title-h1-page": "My Projects",
-    "main-title": "Project Valorant API",
-    "main-title-1": "Project Valorant",
-    "main-title-2": "Project E-commerce",
-    "main-title-3": "Project Phone",
-    "main-page-subtitle": "Here is my latests projects and some information about it",
-    "subtitle": "Here is one of my latest project and some information about it",
-    "title-h3": "Technologies used in this project",
-    "info-text-1": "This project uses the Valorant API to practice handling APIs, incorporating filters based on search parameters. The data fetching is handled server-side, utilizing Next.js for seamless integration.",
-    "info-text-2": "This project is a development market using Redux to manage information across the app. It includes a search bar to filter products, allows adding items to the cart, and has a checkout feature",
-    "info-text-3": "This project is a phone showcase inspired by iPhone and RedMagic websites. It features filters from a phone API and incorporates numerous animations using Framer Motion.",
-    "button-text": "Online WebSite"
+  "buttons": {
+    "button-text-online": "online",
+    "button-text-github": "on Github",
+    "button-text-detail": "more info"
+  },
+
+  "projects": {
+    "title_project": "My Projects",
+    "slide": "Slide to see more",
+
+    "project-title-1": "Perfect Shine Payload",
+    "info-text-1": "E-commerce platform showcasing cutting-edge web technologies",
+
+    "project-title-2": "E-commerce Shopify",
+    "info-text-2": "Modern Shopify storefront application",
+
+    "perfect-shine-payload": {
+      "title": "Perfect Shine Payload",
+      "subtitle": "E-commerce platform showcasing cutting-edge web technologies",
+      "description": "A modern e-commerce platform built with Next.js and Payload CMS",
+      "technologies": [
+        "Frontend: Next.js, TypeScript, Tailwind CSS, Framer Motion",
+        "Backend: Payload CMS, Express, tRPC, MongoDB",
+        "Payment: Stripe API for secure transactions",
+        "Deployment: Railway"
+      ]
+    },
+    "perfect-shine-clothes-shopify": {
+      "title": "Perfect shine Shopify",
+      "subtitle": "Modern Shopify storefront application",
+      "description": "A feature-rich e-commerce platform built with Shopify",
+      "technologies": [
+        "Frontend: Next.js, TypeScript, Tailwind CSS",
+        "Backend: Shopify API, GraphQL",
+        "Payment: Shopify Payments",
+        "Deployment: Vercel"
+      ]
+    }
   },
 
   "contact": {

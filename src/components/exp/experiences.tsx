@@ -10,9 +10,9 @@ export default function Experience() {
     <section
       ref={ref}
       id="experience"
-      className="flex h-full w-full scroll-m-20 flex-col items-center "
+      className="flex h-full w-full scroll-m-20 flex-col items-center"
     >
-      <div className="flex h-full w-full max-w-[90%] flex-col items-center md:max-w-xl lg:max-w-3xl xl:max-w-4xl">
+      <div className="flex h-full w-full flex-col items-center">
         <SectionHeading heading={"title_exp"} />
         <Timeline />
       </div>

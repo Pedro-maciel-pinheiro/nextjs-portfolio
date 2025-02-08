@@ -4,19 +4,18 @@ import About from "@/components/about/about";
 import Projects from "@/components/projects/projects";
 
 import Experience from "@/components/exp/experiences";
+import MaxWidth from "@/components/max-width";
 
 export default function Home() {
   return (
-    <main
-      className={`mx-auto flex min-h-screen w-full flex-col items-center
-         justify-center overflow-hidden bg-primary dark:bg-black/80`}
-    >
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
-      
+    <main className="w-full bg-primary dark:bg-black/80">
+      <MaxWidth>
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Contact />
+      </MaxWidth>
     </main>
   );
 }

@@ -21,18 +21,18 @@
   },
 
   "experience": {
-    "date_1": "2016 - 2020",
-    "date_2": "2020 - 2021",
-    "date_3": "2022 - presente",
+    "date_1": "2018 - 2022",
+    "date_2": "2022 - 2023",
+    "date_3": "2024 - presente",
 
     "title_1": "Transição de Carreira",
     "description_1": "Iniciei minha transição de carreira de técnico em informática para web designer",
 
-    "title_2": "Web Designer",
-    "description_2": "Passei um ano como web designer freelancer antes de migrar para o desenvolvimento front-end, unindo minhas habilidades de design com expertise técnica",
+    "title_2": "Desenvolvedor Front-end",
+    "description_2": "Passei um ano como web designer freelancer antes de migrar para o desenvolvimento front-end para combinar minhas habilidades de design com expertise técnica",
 
-    "title_3": "Desenvolvedor Front-End",
-    "description_3": "Atualmente sou desenvolvedor Front-End trabalhando como freelancer. Meu stack inclui React, Next.js, TypeScript, Tailwind CSS e Framer Motion. Estou aberto a oportunidades em tempo integral."
+    "title_3": "Desenvolvedor Full-stack",
+    "description_3": "Atualmente sou desenvolvedor Full-stack e trabalho como freelancer. Minha stack inclui React, Next.js, TypeScript e Node.js. Estou aberto a oportunidades em tempo integral."
   },
 
   "resume": {
@@ -49,22 +49,41 @@
     "dialog-text-2": "Foi aqui que comecei a mudar de carreira, mas continuei trabalhando com computadores. Estudei por 2 anos antes de começar a trabalhar como desenvolvedor.",
     "dialog-text-3": "Agora, trabalho como freelancer fazendo diferentes tipos de trabalho como sites completos e apps usando todas as tecnologias ao lado"
   },
-  "project": {
-    "tagline-1": "Projeto 01",
-    "tagline-2": "Projeto 02",
-    "slide": "Deslize para",
-    "title-h1-page": "Meus Projetos",
-    "main-title-1": "Projeto Valorant",
-    "main-title-2": "Projeto E-commerce",
-    "main-title-3": "Projeto Phone",
-    "main-page-subtitle": "Aqui estão meus últimos projetos e algumas informações sobre eles",
-    "subtitle": "Aqui está um dos meus últimos projetos e algumas informações sobre ele",
-    "title-h3": "Tecnologias utilizadas neste projeto",
-    "info-text-1": "Este projeto usa a API de Valorant para praticar o uso de APIs, incorporando filtros baseados em parâmetros de busca. A busca de dados é feita no lado do servidor, utilizando Next.js para uma integração perfeita.",
-    "info-text-2": "Este projeto é um mercado de desenvolvimento usando Redux para gerenciar informações em todo o aplicativo. Inclui uma barra de pesquisa para filtrar produtos, permite adicionar itens ao carrinho e tem uma função de checkout",
-    "info-text-3": "Este projeto é uma vitrine de celulares inspirada nos sites do iPhone e RedMagic. Ele possui filtros de uma API de celulares e inclui várias animações feitas com Framer Motion.",
-    "button-text": "Site Online"
+
+  "buttons": {
+    "button-text-online": "online",
+    "button-text-github": "no Github",
+    "button-text-detail": "mais informações"
   },
+
+  "projects": {
+    "title_project": "Meus Projetos",
+    "slide": "Deslize para ver mais",
+
+    "perfect-shine-payload": {
+      "title": "Perfect Shine Payload",
+      "subtitle": "Plataforma de e-commerce exibindo tecnologias web de ponta",
+      "description": "Uma plataforma moderna de e-commerce construída com Next.js e Payload CMS",
+      "technologies": [
+        "Frontend: Next.js, TypeScript, Tailwind CSS, Framer Motion",
+        "Backend: Payload CMS, Express, tRPC, MongoDB",
+        "Pagamento: Stripe API para transações seguras",
+        "Deploy: Railway"
+      ]
+    },
+    "perfect-shine-clothes-shopify": {
+      "title": "Perfect Shine Shopify",
+      "subtitle": "Aplicação moderna de loja Shopify",
+      "description": "Uma plataforma de e-commerce completa construída com Shopify",
+      "technologies": [
+        "Frontend: Next.js, TypeScript, Tailwind CSS",
+        "Backend: Shopify API, GraphQL",
+        "Pagamento: Shopify Payments",
+        "Deploy: Vercel"
+      ]
+    }
+  },
+
   "contact": {
     "main-title": "Contato",
     "subtitle": "Contato por Email",
