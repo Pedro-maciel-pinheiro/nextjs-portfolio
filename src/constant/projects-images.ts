@@ -1,5 +1,6 @@
-import { IoShieldCheckmark } from "react-icons/io5";
-import image_valorant from "@/assets/project-1.webp";
+import image_shopify from "@/assets/shopify.png";
+import image_payload from "@/assets/payload.png";
+
 import image_ecomme from "@/assets/project-2.png";
 import image_phone from "@/assets/project-3.png";
 
@@ -10,7 +11,10 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiFramer,
-  SiSwiper,
+  SiPayloadcms,
+  SiTrpc,
+  SiExpress,
+  SiMongodb,
 } from "react-icons/si";
 
 import { ProjectProps, SkillsProps } from "@/types";
@@ -86,7 +90,7 @@ export const project_info: ProjectProps[] = [
     link_website: "https://perfect-shine-production.up.railway.app/",
     link_github: "https://github.com/Pedro-maciel-pinheiro/perfect-shine",
     image_thumb: image_payload,
-    video: "/video/gtr-mkv.mkv",
+    video: "/video/payload.mkv",
     data: Skill_data_valorant,
     technologies: "technologies-project-1",
     button_text_online: "button-text-online",
@@ -95,22 +99,17 @@ export const project_info: ProjectProps[] = [
   },
   {
     id: 2,
-    tagline: "tagline-1",
-    title: "main-title-2",
-    description: "info-text-2",
-    title_button: "button-text",
-    images: image_ecomme,
-    project_link: "https://dev-market-redux.vercel.app/",
-    data: Skill_data_ecommerce,
-  },
-  {
-    id: 3,
-    tagline: "tagline-2",
-    title: "main-title-3",
-    description: "info-text-3",
-    title_button: "button-text",
-    images: image_phone,
-    project_link: "https://phone-shop-mu.vercel.app",
-    data: Skill_data_phoneshop,
+    name: "perfect-shine-clothes-shopify",
+    title: "project-title-1",
+    link_website: "https://perfect-shine-clothes-shop.vercel.app/",
+    link_github:
+      "https://github.com/Pedro-maciel-pinheiro/Perfect-shine-clothes-shop",
+    image_thumb: image_shopify,
+    video: "/video/shopify.mkv",
+    data: Skill_data_valorant,
+    technologies: "technologies-project-1",
+    button_text_online: "button-text-online",
+    button_text_github: "button-text-github",
+    button_text_detail: "button-text-detail",
   },
 ];

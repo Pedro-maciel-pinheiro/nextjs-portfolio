@@ -43,7 +43,7 @@ export default function page({ params }: SearchParamsProps) {
   return (
     <div className="mx-auto flex min-h-screen w-full items-center justify-center bg-white/80 dark:bg-black/80">
       <motion.div
-        ref={ref}
+      
         className="mx-4 my-8 w-full h-full flex flex-col "
         variants={fadeIn(0)}
         initial="hidden"
