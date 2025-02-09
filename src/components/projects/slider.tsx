@@ -18,21 +18,32 @@ import { Link as NavLink } from "@/navigation";
 
 export const Slider = () => {
   const [slidesPerView, setSlidesPerView] = useState<number>(3);
-  const [progress, setProgress] = useState<number>(0);
-  const t = useTranslations("projects");
-  
-  // Update slidesPerView based on screen size on mount and window resize
+  const t = useTranslations("project");
+
   useEffect(() => {
     const updateSlidesPerView = () => {
       const slideResize = window.innerWidth;
-      const slides = slideResize < 768 ? 1 : slideResize < 1100 ? 2 : 2;
-      setSlidesPerView(slides);
-      setProgress((slides / project_info.length) * 100);
+
+      if (slideResize < 1100) {
+        setSlidesPerView(1);
+      } else {
+        setSlidesPerView(2);
+      }
     };
     updateSlidesPerView();
     window.addEventListener("resize", updateSlidesPerView);
     return () => window.removeEventListener("resize", updateSlidesPerView);
   }, []);
+
+  const handleSlideChange = (swiper: SwiperClass) => {
+    const totalSlides = project_info.length;
+    const visibleSlides = Math.min(slidesPerView, totalSlides);
+    const currentIndex = swiper.activeIndex;
+
+    const progressPercent =
+      ((currentIndex + visibleSlides) / totalSlides) * 100;
+    setProgress(progressPercent);
+  };
 
 
   // Update progress bar based on slide changes (slide change event)
@@ -50,41 +61,17 @@ export const Slider = () => {
     <>
       <div className="flex w-full flex-col items-center justify-center">
         <SectionHeading heading={"title_project"} />
-        <motion.p
-          initial="hidden"
-          whileInView={"visible"}
-          viewport={{ once: true }}
-          variants={slideInFromBottom(0)}
-          className="mb-4 flex items-center justify-center text-lg font-semibold"
-        >
-          {t("slide")}
-          <FaChevronRight className="mb-1 animate-bounce" />
+        <motion.p initial="hidden" whileInView={"visible"} variants={slideInFromBottom(0)} className="flex items-center justify-center font-semibold text-lg mb-4">
+         {t("slide")}<FaChevronRight className="animate-bounce mb-1" />
         </motion.p>
       </div>
-      <motion.section className="h-auto overflow-hidden lg:mx-auto">
-        <motion.div
-          initial="hidden"
-          whileInView={"visible"}
-          viewport={{ once: true }}
-          variants={slideInFromBottom(0)}
-          className="mx-auto mb-10 mt-4 h-1 w-full rounded-lg bg-gray-300"
-        >
-          <motion.div
-            initial={{ width: `${progress}%` }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="relative flex h-full items-center bg-blue-500"
-          >
-            <span className="absolute right-0 h-4 w-4 rounded-full bg-white" />
-          </motion.div>
-        </motion.div>
+      <motion.section className="h-auto max-w-4xl overflow-hidden lg:mx-auto">
         <Swiper
           slidesPerView={slidesPerView}
           spaceBetween={30}
           speed={1200}
           grabCursor={true}
-          className={`max-w-[100%]`}
-          onSlideChange={handleSlideChange}
+          className={`max-w-[90%]`}
         >
           {project_info.map((info, index) => (
             <SwiperSlide key={info.id} className="h-full w-full py-2">
