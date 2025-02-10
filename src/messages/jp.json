@@ -1,8 +1,8 @@
 {
   "home": {
-    "title-h1": "Welcome",
-    "title-h2": "わたしはマシエル・ピニェイロです",
-    "subtitle-h2": "フロントエンド でべろっぱー ＆ Web デザイナー"
+    "title-h1": "ヨウコソ",
+    "title-h2": "ワタシ ワ Maciel Pinheiro",
+    "subtitle-h2": "フルスタック デベロッパー"
   },
   "nav": {
     "home": "ホーム",
@@ -61,6 +61,18 @@
     "title_project": "ワタシ ノ プロジェクト",
     "slide": "スライド シテ モット ",
 
+    "project-title-1": "Perfect Shine Payload",
+    "info-text-1": "Eコマース プラットフォーム、サイシン ウェブ ギジュツ ヲ シヨウ",
+
+    "project-title-2": "E-commerce Shopify",
+    "info-text-2": "モダン Shopify ショップ アプリケーション",
+
+    "project-title-3": "フィルター React Query",
+    "info-text-3": "モダン ウェブ アプリケーション、React Query ト React Query DevTools ヲ ツカウ",
+
+    "project-title-4": "Valorant API",
+    "info-text-4": "サーバー サイド フェッチ ト サーバー サイド レンダリング ヲ レンシュウ スル タメ",
+
     "perfect-shine-payload": {
       "title": "Perfect Shine Payload",
       "subtitle": "サイシン ノ ウェブ ギジュツ ヲ ショウカイ スル イーコマース プラットフォーム",
@@ -82,6 +94,22 @@
         "シハライ: Shopify Payments",
         "デプロイ: Vercel"
       ]
+    },
+    "filter-react-query": {
+      "title": "フィルター React Query",
+      "subtitle": "モダン ウェブ アプリケーション、React Query ヲ ツカッテ ショウヒン ヲ フィルター スル",
+      "description": "React Query ト React Query DevTools ヲ レンシュウ スル タメ ニ コノ プロジェクト ヲ サクッタ",
+      "technologies": [
+        "Frontend: Next.js, React-Query, TypeScript, Tailwind CSS, Shadcn UI",
+        "Backend: Upstash, React-Query DevTools",
+        "Deployment: Vercel"
+      ]
+    },
+    "valorant-api": {
+      "title": "Valorant API",
+      "subtitle": "サーバー サイド フェッチ ト サーバー サイド レンダリング ヲ レンシュウ スル タメ ノ プロジェクト",
+      "description": "コノ プロジェクト ワ Valorant API ヲ ツカッテ パラメーター カラ データ ヲ シュウシュウ シ、ページ ニ ヒョウジ スル",
+      "technologies": ["Frontend: Next.js, TypeScript, Tailwind CSS", "Deployment: Vercel"]
     }
   },
 

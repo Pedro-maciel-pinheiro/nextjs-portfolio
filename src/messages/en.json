@@ -67,12 +67,18 @@
     "project-title-2": "E-commerce Shopify",
     "info-text-2": "Modern Shopify storefront application",
 
+    "project-title-3": "Filter react query",
+    "info-text-3": "modern web application using React Query and React Query Devtools",
+
+    "project-title-4": "Valorant API",
+    "info-text-4": "Made to again practice server side fetch and server side rendering",
+
     "perfect-shine-payload": {
       "title": "Perfect Shine Payload",
       "subtitle": "E-commerce platform showcasing cutting-edge web technologies",
       "description": "A modern e-commerce platform built with Next.js and Payload CMS",
       "technologies": [
-        "Frontend: Next.js, TypeScript, Tailwind CSS, Framer Motion",
+        "Frontend: Next.js, TypeScript, Tailwind CSS, Framer Motion , Shadcn UI",
         "Backend: Payload CMS, Express, tRPC, MongoDB",
         "Payment: Stripe API for secure transactions",
         "Deployment: Railway"
@@ -83,9 +89,28 @@
       "subtitle": "Modern Shopify storefront application",
       "description": "A feature-rich e-commerce platform built with Shopify",
       "technologies": [
-        "Frontend: Next.js, TypeScript, Tailwind CSS",
+        "Frontend: Next.js, TypeScript, Tailwind CSS , Shadcn UI",
         "Backend: Shopify API, GraphQL",
         "Payment: Shopify Payments",
+        "Deployment: Vercel"
+      ]
+    },
+    "filter-react-query": {
+      "title": "Filter react query",
+      "subtitle": "modern web application using React Query to Filter products",
+      "description": "I made this project to practice react query and react query devtools",
+      "technologies": [
+        "Frontend: Next.js , React-Query, TypeScript, Tailwind CSS , Shadcn UI",
+        "Backend: Upstash , React-Query Devtools",
+        "Deployment: Vercel"
+      ]
+    },
+    "valorant-api": {
+      "title": "Valorant API",
+      "subtitle": "Made to again practice server side fetch and server side rendering",
+      "description": "This project used the valorant api to fetch the data from params and render it on the page",
+      "technologies": [
+        "Frontend: Next.js, TypeScript, Tailwind CSS",
         "Deployment: Vercel"
       ]
     }

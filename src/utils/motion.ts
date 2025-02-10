@@ -60,14 +60,14 @@ export const letterVariant = {
 export const fadeInFromX = {
   hidden: {
     opacity: 0,
-    x: 100,
+    y: 100,
   },
 
   visible: (index: number) => ({
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: {
-      delay: 0.4 * index,
+      delay: 0.2 * index,
       stiffness: 20,
       damping: 10,
       mass: 0.2,
@@ -104,9 +104,9 @@ export const fadeInFromY = {
     transition: {
       delay: 0.1 * index,
       type: "spring",
-      stiffness: 40,
-      damping: 15,
-      mass: 0.5,
+      stiffness: 25,
+      damping: 10,
+      mass: 0.3,
     },
   }),
 };

@@ -53,12 +53,6 @@ export const Skill_data_1 = [
     text_style: "",
   },
   {
-    name: "Next-Auth",
-    logo: React.createElement(IoShieldCheckmark),
-    href: "https://next-auth.js.org/",
-    text_style: "hover:text-pink-500",
-  },
-  {
     name: "JavaScript",
     logo: React.createElement(SiJavascript),
     href: "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript",
@@ -76,9 +70,6 @@ export const Skill_data_1 = [
     href: "https://developer.mozilla.org/pt-BR/docs/Web/CSS",
     text_style: "hover:text-blue-500",
   },
-] as const;
-
-export const Skill_data_2 = [
   {
     name: "Tailwind",
     logo: React.createElement(SiTailwindcss),
@@ -145,4 +136,8 @@ export const Skill_data_2 = [
     href: "https://neon.tech/",
     text_style: "hover:text-green-400",
   },
+] as const;
+
+export const Skill_data_2 = [
+  
 ] as const;

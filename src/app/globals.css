@@ -274,9 +274,11 @@ body {
     rgba(var(--solid-color-background), 1);
 }
 
-@theme {
-  --color-shopify: #633CFF;
-}
+
+ .stipe {
+  color: #633CFF;
+ }
+
 
 .linear-mask {
   mask-image: linear-gradient(

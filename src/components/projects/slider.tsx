@@ -108,11 +108,11 @@ export const Slider = () => {
                   </li>
                 </NavLink>
                 <li
-                  className="mt-4 flex w-full flex-col  gap-2 h-48 
+                  className="mt-4 flex w-full flex-col  gap-2 h-32 
                 "
                 >
                   <h1
-                    className="mt-2 text-2xl font-semibold md:text-4xl border-b-2 border-black
+                    className="mt-2 text-2xl font-semibold md:text-4xl border-b border-black
                    dark:border-gray-400 dark:text-gray-200"
                   >
                     {t(`${info.name}.title`)}
@@ -120,9 +120,7 @@ export const Slider = () => {
                   <p className="text-lg font-medium md:text-xl dark:text-gray-200">
                     {t(`${info.name}.subtitle`)}
                   </p>
-                  <h2 className="text-sm font-medium md:text-lg dark:text-gray-200">
-                    {t(`${info.name}.description`)}
-                  </h2>
+                  
                 </li>
                 <div
                   className=" flex items-start  justify-start gap-6   

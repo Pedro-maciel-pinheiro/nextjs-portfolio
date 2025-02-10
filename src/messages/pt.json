@@ -2,7 +2,7 @@
   "home": {
     "title-h1": "Bem-vindo",
     "title-h2": "Eu sou Maciel Pinheiro",
-    "subtitle-h2": "Um desenvolvedor Front-end & Web designer"
+    "subtitle-h2": "Um desenvolvedor Full-stack"
   },
   "nav": {
     "home": "Início",
@@ -60,6 +60,18 @@
     "title_project": "Meus Projetos",
     "slide": "Deslize para ver mais",
 
+    "project-title-1": "Perfect Shine Payload",
+    "info-text-1": "Plataforma de e-commerce exibindo tecnologias web de ponta",
+
+    "project-title-2": "E-commerce Shopify",
+    "info-text-2": "Aplicação moderna de loja virtual no Shopify",
+
+    "project-title-3": "Filtro React Query",
+    "info-text-3": "Aplicação web moderna usando React Query e React Query DevTools",
+
+    "project-title-4": "Valorant API",
+    "info-text-4": "Criado para praticar novamente o fetch e a renderização no servidor",
+
     "perfect-shine-payload": {
       "title": "Perfect Shine Payload",
       "subtitle": "Plataforma de e-commerce exibindo tecnologias web de ponta",
@@ -81,6 +93,22 @@
         "Pagamento: Shopify Payments",
         "Deploy: Vercel"
       ]
+    },
+    "filter-react-query": {
+      "title": "Filtro React Query",
+      "subtitle": "Aplicação web moderna usando React Query para filtrar produtos",
+      "description": "Fiz este projeto para praticar React Query e React Query DevTools",
+      "technologies": [
+        "Frontend: Next.js, React-Query, TypeScript, Tailwind CSS, Shadcn UI",
+        "Backend: Upstash, React-Query DevTools",
+        "Deployment: Vercel"
+      ]
+    },
+    "valorant-api": {
+      "title": "Valorant API",
+      "subtitle": "Criado para praticar novamente o fetch e a renderização no servidor",
+      "description": "Este projeto utilizou a Valorant API para buscar os dados a partir de parâmetros e renderizá-los na página",
+      "technologies": ["Frontend: Next.js, TypeScript, Tailwind CSS", "Deployment: Vercel"]
     }
   },
 

@@ -7,17 +7,19 @@ import React from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { fadeIn } from "@/utils/motion";
+import { fadeIn, slideInFromBottom } from "@/utils/motion";
 import { CustomButtom } from "@/components/custom-button";
 import { SiGithub } from "react-icons/si";
-import { useSectionInView } from "@/hooks/hooks";
+;
 
 export default function page({ params }: SearchParamsProps) {
   const { project_name } = params;
-  const { ref } = useSectionInView("projects");
+
   const t = useTranslations(`projects.${project_name}`);
 
   const project_data = project_info;
+
+  const animatedDelay = 0.2;
 
   // Find the project that matches the project name from the URL params
   const selectedProject = project_data.find(
@@ -38,57 +40,65 @@ export default function page({ params }: SearchParamsProps) {
     );
   }
 
-  const animatedDelay = 0.2;
+
 
   return (
-    <div className="mx-auto flex min-h-screen w-full items-center justify-center bg-white/80 dark:bg-black/80">
+    <div className="mx-auto flex min-h-screen w-full items-center
+     justify-center bg-white/80 dark:bg-black/80">
       <motion.div
-      
-        className="mx-4 my-8 w-full h-full flex flex-col "
+
+        className="mx-8 my-4 w-full h-full flex flex-col "
         variants={fadeIn(0)}
         initial="hidden"
         whileInView={"visible"}
       >
         <Card
-          className="flex h-full w-full lg:max-w-7xl items-center justify-center
+          className="flex h-full w-full lg:max-w-5xl items-center justify-center
          border-gray-100 bg-white/50 shadow-2xl shadow-black/80 dark:border-gray-400
           dark:bg-black/90 dark:shadow-white mx-auto "
         >
-          <CardContent className="relative grid h-full w-full gap-6 p-2
-           md:grid-cols-2 lg:max-h-[800px]">
+          <CardContent className="relative flex flex-col items-center  h-full w-full gap-4 p-3">
             <div className="h-full w-full">
-              <video
-                src={selectedProject.video}
-                autoPlay
-                loop
-                controls
-                className="h-72 w-full rounded-lg border border-gray-400 
-                object-cover object-center dark:border-gray-100 md:h-[700px]"
-              />
+              <div className="flex flex-col items-start gap-4">
+                <h1 className=" text-3xl font-bold md:text-5xl ">{t("title")}</h1>
+                <h2 className="text-xl font-semibold md:text-2xl">{t("subtitle")}</h2>
+              </div>
+              <Link href={selectedProject.link_website} target="_blank" >
+                <video
+                  src={selectedProject.video}
+                  autoPlay
+                  loop
+                  controls
+                  className=" w-full  rounded-lg border border-gray-400 
+                object-cover dark:border-gray-100 h-full lg:max-h-[600px]"
+                />
+              </Link>
             </div>
-            <div className="flex flex-col justify-center items-center md:items-start p-1 gap-4">
-              <h1 className=" text-3xl font-bold md:text-5xl ">{t("title")}</h1>
-              <div className="flex flex-col gap-4 max-w-96 p-1">
-                <h2 className="text-xl font-semibold md:text-2xl">
+
+            <section className="flex flex-col justify-center items-center 
+            md:items-start  gap-4 w-full h-full p-1">
+
+              <div  className="flex flex-col gap-4  ">
+                <h2  className="text-xl font-semibold md:text-2xl">
                   {t("subtitle")}
                 </h2>
-                <div className="flex flex-col w-full lg:w-[450px] gap-2  p-1">
-                  <p className="text-start font-semibold text-lg">
+                <div className="flex flex-col w-full  gap-2  ">
+                  <p  className="text-start font-semibold text-lg md:text-xl">
                     {t("description")}
                   </p>
 
-                  <ul className="border-t border-gray-400 dark:border-gray-100 pt-2">
+                  <ul  className="border-t border-gray-400 dark:border-gray-100 pt-2">
                     {t
                       .raw("technologies")
                       .map((tech: string, index: number) => (
-                        <li className="text-sm  font-semibold" key={index}>
+                        <li className="text-sm md:text-lg  font-semibold" key={index}>
                           {tech}
                         </li>
                       ))}
                   </ul>
                 </div>
 
-                <motion.ul className="grid grid-cols-5 lg:grid-cols-7 gap-6 mt-2 px-1 overflow-hidden">
+                <motion.ul className="flex flex-wrap gap-6 mt-2 px-1 overflow-hidden">
                   {selectedProject.data.map((skill, index) => (
                     <motion.li
                       key={skill.name}
@@ -121,11 +131,11 @@ export default function page({ params }: SearchParamsProps) {
                   ))}
                 </motion.ul>
               </div>
-              <div
+              <motion.div initial={"hidden"} whileInView={"visible"} viewport={{ once: true }}
                 className="relative  my-4  border-t-2 border-black
-               dark:border-white w-full lg:w-[450px] mx-1"
+               dark:border-white w-full  mx-1"
               >
-                <div className="mt-6 flex items-center justify-center md:justify-start gap-6">
+                <motion.div variants={slideInFromBottom(0)} className="mt-4 flex items-center justify-center md:justify-start gap-6">
                   <Link href={selectedProject.link_website} target="blink">
                     <CustomButtom title={selectedProject.button_text_online} />
                   </Link>
@@ -135,9 +145,9 @@ export default function page({ params }: SearchParamsProps) {
                       Icon={SiGithub}
                     />
                   </Link>
-                </div>
-              </div>
-            </div>
+                </motion.div>
+              </motion.div>
+            </section>
           </CardContent>
         </Card>
       </motion.div>

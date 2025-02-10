@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const siteMetadata: Metadata = {
   title: "MP | Portfolio",
-  description: "This is my 2024 Porftfolio :) I hope u like it ",
+  description: "This is my 2025 Porftfolio :) I hope u like it ",
   openGraph: {
     title: "Maciel Pinheiro portfolio in Next.js",
     description: "Discover My porftolio and all my new projects!",
