@@ -14,7 +14,7 @@ const Navbar = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 
-  const animationDelay = 0.5;
+  const animationDelay = 0.3;
 
   const menu = Nav_links;
 
@@ -33,7 +33,6 @@ const Navbar = () => {
           <div className="relative mx-auto hidden h-12 md:max-w-3xl lg:block lg:max-w-5xl xl:max-w-6xl">
             <Link
               href={"/"}
-              target="blank"
               className="absolute z-50 flex h-12 items-center font-semibold"
             >
               <motion.h1 variants={slideInFromTop(0.5)} className="text-lg">
@@ -46,7 +45,7 @@ const Navbar = () => {
                   key={index}
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * animationDelay, duration: 0.8 }}
+                  transition={{ delay: index * animationDelay, duration: 0.5 }}
                   className="relative flex items-center text-gray-700 dark:text-gray-300"
                 >
                   <Link
