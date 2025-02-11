@@ -38,7 +38,7 @@ export const CustomButtom = ({ title, Icon }: CustomButtomProps) => {
           mass: 0.1,
         },
       }}
-      className="radial-gradient relative h-10 w-32 lg:w-44 border-2 border-gray-700 shadow-md shadow-black dark:border-gray-300 dark:shadow-white"
+      className="radial-gradient relative h-10 w-fit px-4 border-2  border-gray-700 shadow-md shadow-black dark:border-gray-300 dark:shadow-white"
     >
       <span className="linear-mask relative flex h-full w-full items-center justify-center text-center font-semibold tracking-wide dark:text-neutral-100">
         <p className="mt-[3px] flex gap-2 hover:-translate-y-1 transition-all duration-300 mx-2 capitalize">

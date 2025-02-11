@@ -25,7 +25,7 @@ const Navbar = () => {
         <motion.div
           initial={"hidden"}
           animate={"visible"}
-          className={`relative items-center justify-center bg-white/90 dark:bg-black/95`}
+          className={`relative items-center justify-center bg-white dark:bg-black/95`}
         >
           <div className="block lg:hidden">
             <MobileNav menu={menu} />
@@ -72,7 +72,7 @@ const Navbar = () => {
                         stiffness: 280,
                         damping: 30,
                       }}
-                      className="absolute mt-4 h-[2px] w-full rounded-full bg-blue-500"
+                      className="absolute mt-4 h-[2px] w-full rounded-full bg-rose-600"
                     />
                   )}
                 </motion.li>

@@ -10,6 +10,7 @@ import Footer from "@/components/footer/footer";
 import ActiveSectionContextProvider from "@/context/active-section";
 import { siteMetadata } from "@/constant/metadata";
 import { Toaster } from "@/components/ui/toaster";
+import { WelcomeToast } from "@/components/welcome-toast";
 
 const anek = Anek_Devanagari({ subsets: ["latin"] });
 
@@ -37,6 +38,7 @@ export default async function RootLayout({
               <Navbar />
               {children}
               <Toaster />
+              <WelcomeToast/>
               <Footer />
             </NextIntlClientProvider>
           </ThemeProvider>

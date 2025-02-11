@@ -42,3 +42,9 @@ export type SearchParamsProps = {
     project_name: string;
   };
 };
+
+
+export type VideoPlayerProps = {
+  videoSrc:string
+  className?:string
+}

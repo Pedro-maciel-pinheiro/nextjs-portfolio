@@ -10,11 +10,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { fadeInFromY, slideInFromBottom } from "@/utils/motion";
-import { FaChevronRight } from "react-icons/fa";
+
 
 import { CustomButtom } from "../custom-button";
 import Link from "next/link";
 import { Link as NavLink } from "@/navigation";
+import {  ArrowRight } from "lucide-react";
 
 export const Slider = () => {
   const [slidesPerView, setSlidesPerView] = useState<number>(3);
@@ -25,7 +26,7 @@ export const Slider = () => {
   useEffect(() => {
     const updateSlidesPerView = () => {
       const slideResize = window.innerWidth;
-      const slides = slideResize < 768 ? 1 : slideResize < 1100 ? 2 : 2;
+      const slides = slideResize < 768 ? 1 : slideResize < 1100 ? 2 : 3;
       setSlidesPerView(slides);
       setProgress((slides / project_info.length) * 100);
     };
@@ -58,7 +59,7 @@ export const Slider = () => {
           className="mb-4 flex items-center justify-center text-lg font-semibold"
         >
           {t("slide")}
-          <FaChevronRight className="mb-1 animate-bounce" />
+          <ArrowRight className="mb-1 " />
         </motion.p>
       </div>
       <motion.section className="h-auto overflow-hidden lg:mx-auto">
@@ -67,15 +68,15 @@ export const Slider = () => {
           whileInView={"visible"}
           viewport={{ once: true }}
           variants={slideInFromBottom(0)}
-          className="mx-auto mb-10 mt-4 h-1 w-full rounded-lg bg-gray-300"
+          className="mx-auto mb-10 mt-4 h-1 w-full rounded-lg bg-gray-300 dark:bg-gray-500"
         >
           <motion.div
             initial={{ width: `${progress}%` }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="relative flex h-full items-center bg-blue-500"
+            className="relative flex h-full items-center bg-rose-600"
           >
-            <span className="absolute right-0 h-4 w-4 rounded-full bg-white" />
+            <span className="absolute right-0 h-4 w-4 rounded-full bg-gray-700 dark:bg-white" />   
           </motion.div>
         </motion.div>
         <Swiper
@@ -101,9 +102,10 @@ export const Slider = () => {
                     <Image
                       src={info.image_thumb}
                       alt={info.title}
-                      width={500}
-                      height={500}
-                      className="w-full rounded-lg border-2 border-black object-center dark:border-white"
+                      width={800}
+                      height={800}
+                      className=" rounded-lg border-2 w-full
+                       border-black object-center dark:border-white"
                     />
                   </li>
                 </NavLink>
@@ -112,12 +114,12 @@ export const Slider = () => {
                 "
                 >
                   <h1
-                    className="mt-2 text-2xl font-semibold md:text-4xl border-b border-black
+                    className="mt-2 text-2xl font-semibold md:text-2xl border-b border-black
                    dark:border-gray-400 dark:text-gray-200"
                   >
                     {t(`${info.name}.title`)}
                   </h1>
-                  <p className="text-lg font-medium md:text-xl dark:text-gray-200">
+                  <p className="text-lg font-medium md:text-lg dark:text-gray-200">
                     {t(`${info.name}.subtitle`)}
                   </p>
                   

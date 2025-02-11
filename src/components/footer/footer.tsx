@@ -7,7 +7,7 @@ function Footer() {
         <span>João Pedro Maciel Pinheiro</span>
         <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-sm text-transparent transition-all duration-300 hover:bg-gradient-to-l md:text-lg">
           {" "}
-          Front-end Devoloper & Web designer
+          Full-Stack Devoloper
         </span>
       </aside>
     </footer>

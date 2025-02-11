@@ -6,7 +6,7 @@ export default function MaxWidth({ children, className }: MaxWidthProps) {
   return (
     <div
       className={cn(
-        "mx-auto px-4 md:max-w-3xl lg:max-w-4xl xl:max-w-5xl",
+        "mx-auto px-4 md:max-w-4xl lg:max-w-5xl xl:max-w-6xl",
         className,
       )}
     >

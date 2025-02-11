@@ -104,9 +104,9 @@ export const fadeInFromY = {
     transition: {
       delay: 0.1 * index,
       type: "spring",
-      stiffness: 25,
+      stiffness: 15,
       damping: 10,
-      mass: 0.3,
+      mass: 0.1,
     },
   }),
 };
@@ -265,11 +265,11 @@ export function fadeIn(delay: number) {
       opacity: 0,
       transition: {
         delay: 0,
-        duration: 0.2,
+        duration: 0.1,
         type: "spring",
-        stiffness: 5,
-        damping: 5,
-        mass: 0.1,
+        stiffness: 20,
+        damping: 80,
+        mass: 0.5,
       },
     },
     visible: {

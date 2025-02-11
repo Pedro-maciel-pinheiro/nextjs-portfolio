@@ -15,7 +15,7 @@ export const DownloadResume = () => {
     <div className="relative h-auto w-fit">
       <Button
         onClick={() => setResumeLanguage((prev) => !prev)}
-        className="flex h-9 w-fit gap-1 rounded-md border border-white bg-black transition-colors duration-500 hover:bg-blue-600 hover:text-white dark:border-white dark:bg-white dark:hover:bg-blue-600 dark:hover:text-white"
+        className="flex h-9 w-fit gap-1 rounded-md border border-white bg-black transition-colors duration-500 hover:bg-rose-600 hover:text-white dark:border-white dark:bg-white dark:hover:bg-rose-600 dark:hover:text-white"
       >
         <p className="mt-2 text-lg font-semibold">{t("download")}</p>
         <GoDownload size={18} />
@@ -34,15 +34,15 @@ export const DownloadResume = () => {
               href={item.href}
               download={item.href}
               target="blank"
-              className="my-1 flex h-9 w-full items-center justify-center gap-1 rounded-md border bg-black transition-colors duration-300 hover:bg-blue-600 hover:text-white dark:border-white dark:bg-white dark:hover:bg-blue-600 dark:hover:text-white"
+              className="my-1 flex h-9 w-full items-center justify-center gap-1 rounded-md border bg-black transition-colors duration-300 hover:bg-rose-600 hover:text-white dark:border-white dark:bg-white dark:hover:bg-rose-600 dark:hover:text-white"
             >
-              <p className="mt-2">{t(item.title)}</p>
+              <p className="mt-2 font-semibold">{t(item.title)}</p>
               <Image
                 src={item.flag}
                 alt={item.title}
                 width={32}
                 height={32}
-                className="absolute right-0 mx-2"
+                className="absolute right-0 mx-2 border-2 rounded-xl"
               />
             </Link>
           ))}

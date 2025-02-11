@@ -42,14 +42,14 @@ export default function Contact() {
     if (result.success) {
       toast({
         variant: "default",
-        description: "Your message has been sent successfully.",
+        description: t('successfully-description'),
       });
       console.log(result);
     } else {
       toast({
         variant: "destructive",
-        title: "Uh oh! Something went wrong.",
-        description: "There was a problem with your request.",
+        title: t('toast-negative-title'),
+        description: t('toast-negative-description'),
       });
     }
   }
@@ -67,11 +67,14 @@ export default function Contact() {
         <SectionHeading heading={"title_contact"} />
         <motion.div
           variants={slideInFromBottom(0.8)}
-          className="mb-4 grid h-full w-full max-w-[90%] grid-cols-1 content-center rounded-lg border-2 border-white bg-black p-2 dark:border-white dark:bg-black/50 md:h-[550px] md:max-w-3xl md:grid-cols-2 lg:max-w-4xl xl:max-w-5xl"
+          className="mb-4 grid h-full w-full 
+           md:grid-cols-2 content-center rounded-lg border-2 border-white bg-black
+             dark:border-white dark:bg-black/50 md:h-[550px] py-2 "
         >
           <form
             onSubmit={handleSubmit}
-            className="flex h-full w-full max-w-xl flex-col items-center justify-center gap-3 rounded-lg bg-black font-semibold text-white dark:text-white sm:mx-0 md:mx-4 lg:mx-0"
+            className="flex h-full w-full  flex-col items-center justify-center gap-3 rounded-lg bg-black font-semibold text-white dark:text-white
+             "
           >
             <h1 className="mb-8 text-2xl">{t("subtitle")}</h1>
             <div className="flex w-64 flex-col items-start justify-center gap-4 md:w-96">
@@ -107,22 +110,22 @@ export default function Contact() {
           </form>
 
           <div className="h-full w-full">
-            <h1 className="mt-2 text-center text-2xl font-semibold md:mb-0">
+            <h1 className="mt-2 text-center text-2xl font-semibold md:mb-0 text-white">
               {t("social")}
             </h1>
-            <div className="mt-12 flex w-full flex-col items-center justify-evenly gap-3 md:h-96 md:gap-0">
-              {social_media.map((social, index) => (
+            <div className="mt-6 flex w-full flex-col items-center justify-evenly gap-3 md:h-96 md:gap-0">
+              {social_media.map((social) => (
                 <motion.div key={social.title}>
                   <Link
                     href={social.href}
                     target="blank"
-                    className={`navHover flex w-56 items-center gap-2 rounded-lg border-2 border-white p-1`}
+                    className={`navHover group flex w-56 items-center gap-2 rounded-lg border-2 border-white p-1 ${social.style}`}
                   >
                     <social.icon
                       size={40}
-                      className={`text-white ${social.style}`}
+                      className={`text-white group ${social.style}`}
                     />
-                    <span className="text-white">{social.title}</span>
+                    <span className={`font-medium text-white`}>{social.title}</span>
                   </Link>
                 </motion.div>
               ))}

@@ -109,11 +109,14 @@
       "title": "Valorant API",
       "subtitle": "Made to again practice server side fetch and server side rendering",
       "description": "This project used the valorant api to fetch the data from params and render it on the page",
-      "technologies": [
-        "Frontend: Next.js, TypeScript, Tailwind CSS",
-        "Deployment: Vercel"
-      ]
+      "technologies": ["Frontend: Next.js, TypeScript, Tailwind CSS", "Deployment: Vercel"]
     }
+  },
+
+  "nav-project": {
+    "back-button": "Back",
+    "projects-page": "projects",
+    "next-button": "Next"
   },
 
   "contact": {
@@ -123,12 +126,20 @@
     "email": "Email",
     "type": "Type your message",
     "button": "Send Email",
-    "social": "Social media"
+    "social": "Social media",
+    "toast-negative-title": "Uh oh! Something went wrong.",
+    "toast-negative-description": "There was a problem with your request",
+    "toast-successfully-description": "Your message has been sent successfully."
   },
 
   "about": {
     "title": "About me",
     "subtitle": "Hello, my name is Maciel Pinheiro. I'm a 26-year-old Brazilian.",
     "lorem": "I Am a front-end developer and web designer with 2 years of experience, specialized in creating visually appealing and highly functional interfaces. I have a solid knowledge of HTML, CSS and JavaScript, and expertise in advanced technologies such as React, Next.js, Tailwind CSS and TypeScript. In addition, I use web design tools such as WebFlow and Figma. Committed to delivering highquality results, I am ready to add value to your team"
+  },
+
+  "toast": {
+    "title": "Welcome to My Portfolio!",
+    "description": "Excited to share my journey with you! Check out my latest project on GitHub."
   }
 }

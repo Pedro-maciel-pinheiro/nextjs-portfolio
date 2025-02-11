@@ -24,15 +24,15 @@ export default function MobileNav({ menu }: MenuProps) {
           <SheetTrigger className="flex h-8 w-8 items-center">
             <Hamburger size={30} toggled={isOpen} />
           </SheetTrigger>
-          <SheetContent side={"left"} className="border-white/50 bg-black/90">
+          <SheetContent side={"left"} className="bg-white border-black dark:border-white/50 dark:bg-black/90">
             <SheetHeader>
               <SheetTitle>Menu</SheetTitle>
             </SheetHeader>
 
             <ul className="mt-4 flex flex-col gap-2">
               {menu.map((link) => (
-                <li key={link.title} className="mt-3 border-b uppercase">
-                  <Link href={link.href} className="" onClick={closeIsOpen}>
+                <li key={link.title} className="mt-3 border-b border-black dark:border-gray-500 uppercase">
+                  <Link href={link.href} className="font-semibold" onClick={closeIsOpen}>
                     {link.title}
                   </Link>
                 </li>

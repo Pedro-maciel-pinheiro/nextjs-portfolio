@@ -32,29 +32,33 @@ export default function LanguageSelector() {
           initial="hidden"
           animate="visible"
           variants={fadeIn(0.1)}
-          className="absolute right-0 z-10 mt-3 rounded-lg bg-white shadow-lg dark:bg-black/80"
+          className="absolute right-0 mx-1 z-10 mt-3 rounded-lg bg-white shadow-lg dark:bg-black"
         >
-          <ul className="flex flex-col rounded-lg text-sm">
+          <ul className="flex flex-col rounded-lg text-sm border border-black dark:border-gray-500">
             <li
               onClick={() => handleLanguageChange("en")}
-              className={`cursor-pointer px-4 py-2 font-bold hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg${
-                currentLocale === "en" ? "text-red-500" : ""
+              className={`cursor-pointer px-4 py-2 font-bold hover:bg-slate-100 hover:rounded-lg
+                 dark:hover:bg-gray-900 rounded-lg ${
+                currentLocale === "en" ? "text-rose-600" : ""
               }`}
             >
               EN
             </li>
             <li
               onClick={() => handleLanguageChange("pt")}
-              className={`cursor-pointer px-4 py-2 font-bold hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg${
-                currentLocale === "pt" ? "text-red-500" : ""
+              className={`cursor-pointer px-4 py-2 font-bold hover:bg-slate-100 border-t border-black dark:border-gray-500
+                 dark:hover:bg-gray-900  ${
+                currentLocale === "pt" ? "text-rose-600" : ""
               }`}
             >
               PT
             </li>
             <li
               onClick={() => handleLanguageChange("jp")}
-              className={`cursor-pointer px-4 py-2 font-bold hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg${
-                currentLocale === "jp" ? "text-red-500" : ""
+              className={`cursor-pointer px-4 py-2 font-bold hover:bg-slate-100
+                 border-t border-black dark:border-gray-500 hover:rounded-b-lg
+                 dark:hover:bg-gray-900  ${
+                currentLocale === "jp" ? "text-rose-600 " : ""
               }`}
             >
               JP
