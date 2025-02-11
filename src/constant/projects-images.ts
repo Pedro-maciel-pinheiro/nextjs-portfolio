@@ -174,7 +174,6 @@ export const Skill_data_Filter_project: SkillsProps[] = [
     href: 'https://ui.shadcn.com/',
     text_style: 'hover:text-grey-500',
   },
-  
 ]
 export const Skill_data_Valorant_project: SkillsProps[] = [
   {

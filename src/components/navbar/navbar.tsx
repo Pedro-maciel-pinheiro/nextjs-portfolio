@@ -1,40 +1,36 @@
-"use client";
-import LanguageSelector from "../language-selector";
-import { Link } from "@/navigation";
-import { useTranslations } from "next-intl";
-import ThemeSwitch from "../theme/theme-switch";
-import { motion } from "framer-motion";
-import { slideInFromTop } from "@/utils/motion";
-import { Nav_links } from "@/constant/nav-links";
-import clsx from "clsx";
-import { useActiveSectionContext } from "@/context/active-section";
-import MobileNav from "./mobile";
+'use client'
+import LanguageSelector from '../language-selector'
+import { Link } from '@/navigation'
+import { useTranslations } from 'next-intl'
+import ThemeSwitch from '../theme/theme-switch'
+import { motion } from 'framer-motion'
+import { slideInFromTop } from '@/utils/motion'
+import { Nav_links } from '@/constant/nav-links'
+import clsx from 'clsx'
+import { useActiveSectionContext } from '@/context/active-section'
+import MobileNav from './mobile'
 
 const Navbar = () => {
-  const { activeSection, setActiveSection, setTimeOfLastClick } =
-    useActiveSectionContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
 
-  const animationDelay = 0.3;
+  const animationDelay = 0.3
 
-  const menu = Nav_links;
+  const menu = Nav_links
 
-  const t = useTranslations("nav");
+  const t = useTranslations('nav')
   return (
     <>
       <nav className="sticky top-0 z-50 h-auto w-full">
         <motion.div
-          initial={"hidden"}
-          animate={"visible"}
+          initial={'hidden'}
+          animate={'visible'}
           className={`relative items-center justify-center bg-white dark:bg-black/95`}
         >
           <div className="block lg:hidden">
             <MobileNav menu={menu} />
           </div>
           <div className="relative mx-auto hidden h-12 md:max-w-3xl lg:block lg:max-w-5xl xl:max-w-6xl">
-            <Link
-              href={"/"}
-              className="absolute z-50 flex h-12 items-center font-semibold"
-            >
+            <Link href={'/'} className="absolute z-50 flex h-12 items-center font-semibold">
               <motion.h1 variants={slideInFromTop(0.5)} className="text-lg">
                 Maciel Pinheiro
               </motion.h1>
@@ -51,16 +47,11 @@ const Navbar = () => {
                   <Link
                     href={link.href}
                     onClick={() => {
-                      setActiveSection(link.title),
-                        setTimeOfLastClick(Date.now());
+                      setActiveSection(link.title), setTimeOfLastClick(Date.now())
                     }}
-                    className={clsx(
-                      `font-bold transition-colors duration-500`,
-                      {
-                        "text-black dark:text-white":
-                          link.title === activeSection,
-                      },
-                    )}
+                    className={clsx(`font-bold transition-colors duration-500`, {
+                      'text-black dark:text-white': link.title === activeSection,
+                    })}
                   >
                     {t(link.title)}
                   </Link>
@@ -68,7 +59,7 @@ const Navbar = () => {
                     <motion.span
                       layoutId="activeSection"
                       transition={{
-                        type: "spring",
+                        type: 'spring',
                         stiffness: 280,
                         damping: 30,
                       }}
@@ -93,7 +84,7 @@ const Navbar = () => {
         </motion.div>
       </nav>
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

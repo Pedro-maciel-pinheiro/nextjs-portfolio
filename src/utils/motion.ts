@@ -1,4 +1,4 @@
-import { Variants } from "framer-motion";
+import { Variants } from 'framer-motion'
 
 export const smoothTransition = {
   hidden: {
@@ -6,7 +6,7 @@ export const smoothTransition = {
     transition: {
       delay: 0,
       duration: 1,
-      type: "spring",
+      type: 'spring',
       stiffness: 30,
       damping: 20,
       mass: 0.5,
@@ -18,13 +18,13 @@ export const smoothTransition = {
     transition: {
       delay: 0,
       duration: 0.5,
-      type: "spring",
+      type: 'spring',
       stiffness: 50,
       damping: 20,
       mass: 0.5,
     },
   },
-};
+}
 
 export const smoothScale = {
   initial: { scale: 1.5, opacity: 0 },
@@ -34,13 +34,13 @@ export const smoothScale = {
     transition: {
       delay: 0.5,
       duration: 0.3,
-      type: "spring",
+      type: 'spring',
       stiffness: 30,
       damping: 20,
       mass: 0.5,
     },
   },
-};
+}
 
 export const letterVariant = {
   hidden: { x: -100, opacity: 0 },
@@ -50,12 +50,12 @@ export const letterVariant = {
     transition: {
       delay: delay,
       duration: 0.5,
-      type: "spring",
+      type: 'spring',
       stiffness: 50,
       damping: 20,
     },
   }),
-};
+}
 
 export const fadeInFromX = {
   hidden: {
@@ -73,7 +73,7 @@ export const fadeInFromX = {
       mass: 0.2,
     },
   }),
-};
+}
 export const fadeInFromNegativeX = {
   hidden: {
     opacity: 0,
@@ -90,7 +90,7 @@ export const fadeInFromNegativeX = {
       mass: 0.2,
     },
   }),
-};
+}
 
 export const fadeInFromY = {
   hidden: {
@@ -103,13 +103,13 @@ export const fadeInFromY = {
     y: 0,
     transition: {
       delay: 0.1 * index,
-      type: "spring",
+      type: 'spring',
       stiffness: 15,
       damping: 10,
       mass: 0.1,
     },
   }),
-};
+}
 
 export const fadeInSlider = {
   hidden: {
@@ -122,41 +122,41 @@ export const fadeInSlider = {
     x: 0,
     transition: {
       delay: 0.1 * index,
-      type: "spring",
+      type: 'spring',
       stiffness: 5,
       damping: 5,
       mass: 0.5,
     },
   }),
-};
+}
 
 export function underlineVariant(duration: number) {
   return {
     hidden: { width: 0 },
     visible: {
-      width: "100%",
+      width: '100%',
       transition: {
         delay: 0.5,
         duration: duration,
-        type: "tween",
-        ease: "easeInOut",
+        type: 'tween',
+        ease: 'easeInOut',
       },
     },
-  };
+  }
 }
 export function underlineHeight(duration: number) {
   return {
     hidden: { height: 0 },
     visible: {
-      height: "90%",
+      height: '90%',
       transition: {
         delay: 0.5,
         duration: duration,
-        type: "tween",
-        ease: "easeInOut",
+        type: 'tween',
+        ease: 'easeInOut',
       },
     },
-  };
+  }
 }
 
 export function getTransitionProps(delay: number) {
@@ -164,12 +164,12 @@ export function getTransitionProps(delay: number) {
     transition: {
       delay: delay,
       duration: 0.1, // Increase duration for a smoother transition
-      type: "spring",
+      type: 'spring',
       stiffness: 20, // Lower stiffness for a smoother, less rigid spring
       damping: 10, // Increase damping to reduce oscillation
       mass: 0.2, // Adjust mass to control the inertia of the spring
     },
-  };
+  }
 }
 
 export function slideInFromLeft(delay: number): Variants {
@@ -180,7 +180,7 @@ export function slideInFromLeft(delay: number): Variants {
       transition: {
         delay: 0,
         duration: 0.3,
-        type: "spring",
+        type: 'spring',
         stiffness: 50,
         damping: 20,
         mass: 0.5,
@@ -191,7 +191,7 @@ export function slideInFromLeft(delay: number): Variants {
       opacity: 1,
       ...getTransitionProps(delay),
     },
-  };
+  }
 }
 export function slideInFromRight(delay: number) {
   return {
@@ -201,7 +201,7 @@ export function slideInFromRight(delay: number) {
       transition: {
         delay: 0,
         duration: 0.3,
-        type: "spring",
+        type: 'spring',
         stiffness: 50,
         damping: 20,
         mass: 0.5,
@@ -212,7 +212,7 @@ export function slideInFromRight(delay: number) {
       opacity: 1,
       ...getTransitionProps(delay),
     },
-  };
+  }
 }
 
 export function slideInFromTop(delay: number) {
@@ -223,7 +223,7 @@ export function slideInFromTop(delay: number) {
       transition: {
         delay: 0,
         duration: 0.3,
-        type: "spring",
+        type: 'spring',
         stiffness: 50,
         damping: 20,
         mass: 0.5,
@@ -234,7 +234,7 @@ export function slideInFromTop(delay: number) {
       opacity: 1,
       ...getTransitionProps(delay),
     },
-  };
+  }
 }
 
 export function slideInFromBottom(delay: number) {
@@ -245,7 +245,7 @@ export function slideInFromBottom(delay: number) {
       transition: {
         delay: 0,
         duration: 0.3,
-        type: "spring",
+        type: 'spring',
         stiffness: 50,
         damping: 20,
         mass: 0.5,
@@ -256,7 +256,7 @@ export function slideInFromBottom(delay: number) {
       opacity: 1,
       ...getTransitionProps(delay),
     },
-  };
+  }
 }
 
 export function fadeIn(delay: number) {
@@ -266,7 +266,7 @@ export function fadeIn(delay: number) {
       transition: {
         delay: 0,
         duration: 0.1,
-        type: "spring",
+        type: 'spring',
         stiffness: 20,
         damping: 80,
         mass: 0.5,
@@ -276,7 +276,7 @@ export function fadeIn(delay: number) {
       opacity: 1,
       ...getTransitionProps(delay),
     },
-  };
+  }
 }
 
 export const fadeInSkills = {
@@ -290,13 +290,13 @@ export const fadeInSkills = {
     y: 0,
     transition: {
       delay: 0.1 * index,
-      type: "spring",
+      type: 'spring',
       stiffness: 40,
       damping: 20,
       mass: 1,
     },
   }),
-};
+}
 
 // <motion.div
 // key={item._id}

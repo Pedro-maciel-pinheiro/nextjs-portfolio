@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export const SpinAnimation = () => {
   return (
@@ -13,5 +13,5 @@ export const SpinAnimation = () => {
         <li className="circle shadow-custom shadow-black/90 dark:shadow-white/80" />
       </ul>
     </div>
-  );
-};
+  )
+}

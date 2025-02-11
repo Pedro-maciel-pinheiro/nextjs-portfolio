@@ -1,10 +1,10 @@
-import Contact from "@/components/contact/contact-form";
-import Hero from "@/components/hero/hero";
-import About from "@/components/about/about";
-import Projects from "@/components/projects/projects";
+import Contact from '@/components/contact/contact-form'
+import Hero from '@/components/hero/hero'
+import About from '@/components/about/about'
+import Projects from '@/components/projects/projects'
 
-import Experience from "@/components/exp/experiences";
-import MaxWidth from "@/components/max-width";
+import Experience from '@/components/exp/experiences'
+import MaxWidth from '@/components/max-width'
 
 export default function Home() {
   return (
@@ -17,5 +17,5 @@ export default function Home() {
         <Contact />
       </MaxWidth>
     </main>
-  );
+  )
 }

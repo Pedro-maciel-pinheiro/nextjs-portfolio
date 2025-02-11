@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function Footer() {
   return (
@@ -6,12 +6,12 @@ function Footer() {
       <aside className="flex flex-col items-center justify-center text-lg font-bold text-black dark:text-white">
         <span>João Pedro Maciel Pinheiro</span>
         <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-sm text-transparent transition-all duration-300 hover:bg-gradient-to-l md:text-lg">
-          {" "}
+          {' '}
           Full-Stack Devoloper
         </span>
       </aside>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer
