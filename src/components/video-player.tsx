@@ -21,7 +21,7 @@ export const VideoPlayer = ({ videoSrc, className }: VideoPlayerProps) => {
           loop
           controls
           onLoadedData={() => setIsLoading(false)}
-          style={{ opacity: isLoading ? 0 : 1 }}
+
           className="h-80 w-full rounded-lg border border-gray-400 object-cover dark:border-gray-100 md:h-full"
         />
       </div>

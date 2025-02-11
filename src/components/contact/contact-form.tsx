@@ -63,15 +63,16 @@ export default function Contact() {
     <motion.section
       ref={ref}
       id="contact"
-      initial="hidden"
-      whileInView={'visible'}
-      viewport={{ once: true }}
+
       className="flex min-h-screen w-full flex-col items-center justify-center"
     >
       <SectionHeading heading={'title_contact'} />
 
       <motion.div
-        variants={fadeIn(0)}
+        initial="hidden"
+        whileInView={'visible'}
+        viewport={{ once: true }}
+        variants={slideInFromBottom(0)}
         className="grid w-full h-full md:grid-cols-2 md:place-content-between bg-black border rounded-lg shadow-xl shadow-black/80 dark:shadow-white"
       >
         <form
@@ -111,7 +112,7 @@ export default function Contact() {
           </Button>
 
         </form>
- 
+
         <div className=" h-full w-full p-8 max-w-[80%] mx-auto">
           <h1 className="text-2xl font-semibold text-white md:mb-0 text-center">
             {t('social')}

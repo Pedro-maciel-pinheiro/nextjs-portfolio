@@ -240,13 +240,13 @@ export function slideInFromTop(delay: number) {
 export function slideInFromBottom(delay: number) {
   return {
     hidden: {
-      y: 100,
+      y: 80,
       opacity: 0,
       transition: {
         delay: 0,
-        duration: 0.3,
+        duration: 0.1,
         type: 'spring',
-        stiffness: 50,
+        stiffness: 40,
         damping: 20,
         mass: 0.5,
       },
