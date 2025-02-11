@@ -8,21 +8,24 @@ import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import { useTranslations } from 'next-intl'
 
-import { slideInFromBottom } from '@/utils/motion'
+import { fadeIn, slideInFromBottom } from '@/utils/motion'
 import { social_media } from '@/constant/social'
 import Link from 'next/link'
 import { SectionHeading } from '../section-heading'
 import { useSectionInView } from '@/hooks/hooks'
-import { toast, useToast } from '../ui/use-toast'
-import { title } from 'process'
+import { useToast } from '../ui/use-toast'
+import { useState } from 'react'
+import { Loader2 } from 'lucide-react'
 
 export default function Contact() {
   const { ref } = useSectionInView('contact')
-  const t = useTranslations('contact')
   const { toast } = useToast()
-  const animationDelay = 0.5
+  const t = useTranslations('contact')
+  const [loading, setLoading] = useState<boolean>(false)
+
   async function handleSubmit(event: any) {
     event.preventDefault()
+    setLoading(true)
     const formData = new FormData(event.target)
 
     formData.append('access_key', '7b98b54d-38bd-4e39-9225-6d19bb280ce5')
@@ -37,14 +40,16 @@ export default function Contact() {
         Accept: 'application/json',
       },
       body: json,
+
     })
+
     const result = await response.json()
     if (result.success) {
       toast({
         variant: 'default',
         description: t('successfully-description'),
       })
-      console.log(result)
+      setLoading(false)
     } else {
       toast({
         variant: 'destructive',
@@ -55,78 +60,85 @@ export default function Contact() {
   }
 
   return (
-    <>
-      <motion.section
-        ref={ref}
-        id="contact"
-        initial="hidden"
-        whileInView={'visible'}
-        viewport={{ once: true }}
-        className="flex min-h-screen w-full flex-col items-center justify-center"
-      >
-        <SectionHeading heading={'title_contact'} />
-        <motion.div
-          variants={slideInFromBottom(0.8)}
-          className="mb-4 grid h-full w-full content-center rounded-lg border-2 border-white bg-black py-2 dark:border-white dark:bg-black/50 md:h-[550px] md:grid-cols-2"
-        >
-          <form
-            onSubmit={handleSubmit}
-            className="flex h-full w-full flex-col items-center justify-center gap-3 rounded-lg bg-black font-semibold text-white dark:text-white"
-          >
-            <h1 className="mb-8 text-2xl">{t('subtitle')}</h1>
-            <div className="flex w-64 flex-col items-start justify-center gap-4 md:w-96">
-              <Label>{t('name')}</Label>
-              <Input
-                type="text"
-                name="name"
-                placeholder={t('name')}
-                required
-                className="bg-white text-black"
-              />
-              <Label>{t('email')}</Label>
-              <Input
-                type="email"
-                name="email"
-                placeholder={t('email')}
-                required
-                className="bg-white text-black"
-              />
-              <Label>{t('type')}</Label>
-              <Textarea
-                name="message"
-                placeholder={t('type')}
-                className="h-36 bg-white text-black"
-              />
-            </div>
-            <Button
-              type="submit"
-              className="mb-4 mt-4 w-64 bg-white font-bold text-black dark:bg-white dark:text-black md:mb-0 md:w-96"
-            >
-              {t('button')}
-            </Button>
-          </form>
+    <motion.section
+      ref={ref}
+      id="contact"
+      initial="hidden"
+      whileInView={'visible'}
+      viewport={{ once: true }}
+      className="flex min-h-screen w-full flex-col items-center justify-center"
+    >
+      <SectionHeading heading={'title_contact'} />
 
-          <div className="h-full w-full">
-            <h1 className="mt-2 text-center text-2xl font-semibold text-white md:mb-0">
-              {t('social')}
-            </h1>
-            <div className="mt-6 flex w-full flex-col items-center justify-evenly gap-3 md:h-96 md:gap-0">
-              {social_media.map((social) => (
-                <motion.div key={social.title}>
-                  <Link
-                    href={social.href}
-                    target="blank"
-                    className={`navHover group flex w-56 items-center gap-2 rounded-lg border-2 border-white p-1 ${social.style}`}
-                  >
-                    <social.icon size={40} className={`group text-white ${social.style}`} />
-                    <span className={`font-medium text-white`}>{social.title}</span>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
+      <motion.div
+        variants={fadeIn(0)}
+        className="grid w-full h-full md:grid-cols-2 md:place-content-between bg-black border rounded-lg shadow-xl shadow-black/80 dark:shadow-white"
+      >
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col w-full h-full gap-4 p-8  max-w-[80%] mx-auto"
+        >
+
+          <div>
+            <h1 className="text-2xl font-semibold text-white text-center">{t('subtitle')}</h1>
           </div>
-        </motion.div>
-      </motion.section>
-    </>
+
+          <ol className='flex flex-col w-full h-full gap-4'>
+            <li>
+              <Label className='text-white'>{t('name')}</Label>
+              <Input
+                type='text' name='name' required
+                placeholder={t('name')} className='text-black bg-white' />
+            </li>
+            <li>
+              <Label className='text-white'>{t('email')}</Label>
+              <Input
+                type='text' name='email' required
+                placeholder={t('email')} className='text-black bg-white' />
+            </li>
+            <li>
+              <Label className='text-white'>{t('type')}</Label>
+              <Textarea
+                name='message'
+                placeholder={t('type')} className='text-black bg-white h-20' />
+            </li>
+          </ol>
+
+          <Button type='submit' className='font-bold text-sm text-black bg-white'>
+            {loading ? (<>
+              <Loader2 className='animate-spin' />
+            </>) : (<p>{t('button')}</p>)}
+          </Button>
+
+        </form>
+ 
+        <div className=" h-full w-full p-8 max-w-[80%] mx-auto">
+          <h1 className="text-2xl font-semibold text-white md:mb-0 text-center">
+            {t('social')}
+          </h1>
+          <div className="flex flex-col mt-9 gap-6 w-full">
+            {social_media.map((social) => (
+              <motion.div key={social.title}>
+                {social.href ? (<Link
+                  href={social.href}
+                  target="blank"
+                  className={`w-full flex  items-center border relative   gap-2
+                     rounded-lg p-1  ${social.style}`}
+                >
+                  <social.icon size={40} className={`z-10 group text-white ${social.style}`} />
+                  <span className={`absolute w-full 
+                    font-medium text-white text-center `}>{social.title}</span>
+                </Link>) : (<span className='w-full flex border relative p-1 rounded-lg items-center'>
+                  <social.icon size={40} className={`z-10 group text-white ${social.style}`} />
+                  <span className={`absolute w-full 
+                    font-medium text-white text-center `}>{social.title}</span>
+                </span>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+    </motion.section >
   )
 }

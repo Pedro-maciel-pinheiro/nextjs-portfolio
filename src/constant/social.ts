@@ -5,7 +5,7 @@ import { FaSquarePhone } from 'react-icons/fa6'
 interface SocialProps {
   title: string
   icon: IconType
-  href: string
+  href?: string 
   style: string
 }
 
@@ -31,7 +31,6 @@ export const social_media: SocialProps[] = [
   {
     title: '55+ 61 99851-6239',
     icon: FaSquarePhone,
-    href: '',
     style: 'hover:text-green-600 hover:border-green-500',
   },
 ]
