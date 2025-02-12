@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { VideoPlayerProps } from '@/types/index'
 import { LoaderPinwheel } from 'lucide-react'
 
-export const VideoPlayer = ({ videoSrc, className }: VideoPlayerProps) => {
+export const VideoPlayer = ({ videoSrc}: VideoPlayerProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(true)
   return (
     <section className="relative h-full w-full rounded-lg border border-gray-400 dark:border-gray-100 lg:max-h-[600px]">
@@ -21,7 +21,7 @@ export const VideoPlayer = ({ videoSrc, className }: VideoPlayerProps) => {
           loop
           controls
           onLoadedData={() => setIsLoading(false)}
-          style={isLoading ? { opacity: 1 } : { opacity: 0 }}
+          style={isLoading ? { opacity: 0 } : { opacity: 1 }}
           className="h-80 w-full rounded-lg border border-gray-400 object-cover dark:border-gray-100 md:h-full"
         />
       </div>

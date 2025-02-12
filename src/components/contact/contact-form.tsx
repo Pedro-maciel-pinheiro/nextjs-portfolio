@@ -47,7 +47,7 @@ export default function Contact() {
     if (result.success) {
       toast({
         variant: 'default',
-        description: t('successfully-description'),
+        description: t('toast-successfully-description'),
       })
       setLoading(false)
     } else {
