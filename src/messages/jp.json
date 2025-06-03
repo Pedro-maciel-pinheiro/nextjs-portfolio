@@ -60,6 +60,8 @@
   "projects": {
     "title_project": "ワタシ ノ プロジェクト",
     "slide": "スライド シテ モット ",
+    "about": "プロジェクトについて",
+    "tech": "しようしたぎじゅつ",
 
     "project-title-1": "Perfect Shine Payload",
     "info-text-1": "Eコマース プラットフォーム、サイシン ウェブ ギジュツ ヲ シヨウ",
@@ -96,7 +98,7 @@
       ]
     },
     "filter-react-query": {
-      "title": "フィルター React Query",
+      "title": "React Query",
       "subtitle": "モダン ウェブ アプリケーション、React Query ヲ ツカッテ ショウヒン ヲ フィルター スル",
       "description": "React Query ト React Query DevTools ヲ レンシュウ スル タメ ニ コノ プロジェクト ヲ サクッタ",
       "technologies": [
@@ -116,7 +118,10 @@
   "nav-project": {
     "back-button": "バック",
     "projects-page": "プロジェクト",
-    "next-button": "ネクスト"
+    "next-button": "ネクスト",
+    "button-text-online": "オンライン",
+    "button-text-github": "ギットハブ で",
+    "button-text-detail": "モア インフォ"
   },
 
   "contact": {
@@ -129,12 +134,15 @@
     "social": "ソーシャルメディア",
     "negative-title": "ウワー! ナニカ ガ オカシイ。",
     "negative-description": "リクエスト ニ モンダイ ガ アリマシタ。",
-    "successfully-description": "メッセージ ガ セイコウ ニ オクレマシタ。"
+    "successfully-description": "メッセージ ガ セイコウ ニ オクレマシタ。",
+    "click": "クリックしてつなげる",
+    "response": "へんじじかん",
+    "usually": "たいてい24じかんいない"
   },
   "about": {
     "title": "わたしについて",
-    "subtitle": "こんにちは、わたしのなまえはマシエル・ピニェイロです。ブラジルじんで、26さいです。",
-    "lorem": "わたしは、2ねんのけいけんをもつフロントエンドかいはつしゃおよびウェブデザイナーで、みりょくてきではいのうりつなインターフェースのさくせいをせんもんとしています。HTML、CSS、JavaScriptのこうどなちしきがあり、React、Next.js、Tailwind CSS、およびTypeScriptなどのしんぽうしたテクノロジーにせんたくしていきます。そのうえ、WebFlowやFigmaなどのウェブデザインツールをしようしています。こうしつなけっかをたしかにていきょうすることにちゅうじつで、あなたのチームにかちをくわえるじゅんびができています。"
+    "subtitle": "こんにちは、わたしのなまえはマシエル・ピニェイロです。ブラジルじんで、27さいです。",
+    "lorem": "わたしは、2ねんのけいけんをもつフルスタックかいはつしゃおよびウェブデザイナーで、みりょくてきではいのうりつなインターフェースとバックエンドシステムのさくせいをせんもんとしています。HTML、CSS、JavaScriptのこうどなちしきがあり、React、Next.js、Tailwind CSS、TypeScript、Node.js、およびExpressなどのしんぽうしたテクノロジーにせんたくしていきます。そのうえ、WebFlowやFigmaなどのウェブデザインツールをしようしています。こうしつなけっかをたしかにていきょうすることにちゅうじつで、あなたのチームにかちをくわえるじゅんびができています"
   },
 
   "toast": {

@@ -11,6 +11,12 @@ export default function MobileNav({ menu }: MenuProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const closeIsOpen = () => setIsOpen(false)
 
+  const handleLinkClick = () => {
+    setTimeout(() => {
+      setIsOpen(false)
+    }, 500)
+  }
+
   return (
     <>
       <nav className="flex h-12 items-center justify-between">
@@ -32,7 +38,7 @@ export default function MobileNav({ menu }: MenuProps) {
                   key={link.title}
                   className="mt-3 border-b border-black uppercase dark:border-gray-500"
                 >
-                  <Link href={link.href} className="font-semibold" onClick={closeIsOpen}>
+                  <Link href={link.href} className="font-semibold" onClick={handleLinkClick}>
                     {link.title}
                   </Link>
                 </li>

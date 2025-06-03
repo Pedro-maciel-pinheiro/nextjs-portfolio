@@ -5,7 +5,7 @@ import { FaReact, FaNodeJs } from 'react-icons/fa'
 export const experiences_info = [
   {
     title: 'title_1',
-    location: 'Recife, PR',
+    location: 'Recife, BR',
     description: 'description_1',
     icon: React.createElement(RiComputerLine),
 

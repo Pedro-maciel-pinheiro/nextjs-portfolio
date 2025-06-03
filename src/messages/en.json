@@ -60,6 +60,8 @@
   "projects": {
     "title_project": "My Projects",
     "slide": "Slide to see more",
+    "about": "About Project",
+    "tech": "Technologies Used",
 
     "project-title-1": "Perfect Shine Payload",
     "info-text-1": "E-commerce platform showcasing cutting-edge web technologies",
@@ -116,7 +118,10 @@
   "nav-project": {
     "back-button": "Back",
     "projects-page": "projects",
-    "next-button": "Next"
+    "next-button": "Next",
+    "button-text-online": "online",
+    "button-text-github": "on Github",
+    "button-text-detail": "more info"
   },
 
   "contact": {
@@ -129,13 +134,16 @@
     "social": "Social media",
     "toast-negative-title": "Uh oh! Something went wrong.",
     "toast-negative-description": "There was a problem with your request",
-    "toast-successfully-description": "Your message has been sent successfully."
+    "toast-successfully-description": "Your message has been sent successfully.",
+    "click": "Click to connect",
+    "response":"Response time",
+    "usually":"Usually within 24 hours"
   },
 
   "about": {
     "title": "About me",
-    "subtitle": "Hello, my name is Maciel Pinheiro. I'm a 26-year-old Brazilian.",
-    "lorem": "I Am a front-end developer and web designer with 2 years of experience, specialized in creating visually appealing and highly functional interfaces. I have a solid knowledge of HTML, CSS and JavaScript, and expertise in advanced technologies such as React, Next.js, Tailwind CSS and TypeScript. In addition, I use web design tools such as WebFlow and Figma. Committed to delivering highquality results, I am ready to add value to your team"
+    "subtitle": "Hello, my name is Maciel Pinheiro. I'm a 27-year-old Brazilian.",
+    "lorem": "I am a full-stack developer and web designer with 2 years of experience, specializing in building attractive and high-performance interfaces and backend systems. I have advanced knowledge of HTML, CSS, and JavaScript, and I work with modern technologies such as React, Next.js, Tailwind CSS, TypeScript, Node.js, and Express. I also use web design tools like Webflow and Figma. I’m committed to delivering high-quality results and am ready to bring value to your team."
   },
 
   "toast": {
