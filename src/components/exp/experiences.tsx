@@ -13,7 +13,7 @@ export default function Experience() {
       className="flex h-full w-full scroll-m-20 flex-col items-center"
     >
       <div className="flex h-full w-full flex-col items-center">
-        <SectionHeading heading={'title_exp'} />
+        <SectionHeading heading={'title_exp'} className='my-10'/>
         <Timeline />
       </div>
     </section>

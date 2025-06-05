@@ -27,7 +27,7 @@ export const Timeline = () => {
   return (
     <div className="relative mb-5">
       <motion.ol
-        className="relative cursor-pointer space-y-8 md:space-y-16"
+        className="relative cursor-pointer space-y-8 md:space-y-10"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
